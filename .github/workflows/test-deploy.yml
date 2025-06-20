@@ -25,5 +25,5 @@ jobs:
         working-directory: docs
 
       - name: Test build website
-        run: npm build
+        run: npm run build
         working-directory: docs
