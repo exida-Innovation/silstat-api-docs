@@ -73,7 +73,7 @@ const config = {
         title: 'SILstat API Docs',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo-silstat.svg',
         },
         items: [
           {
@@ -112,6 +112,12 @@ const config = {
             ],
           },
         ],
+        logo: {
+          alt: 'exida Logo',
+          src: 'img/logo-exida.svg',
+          href: 'https://www.exida.com',
+          height: 80,
+        },
         copyright: `Copyright © ${new Date().getFullYear()} exida Innovation. Built with Docusaurus.`,
       },
       prism: {
@@ -120,7 +126,11 @@ const config = {
       },
     }),
     plugins: [
-
+      [ require.resolve('docusaurus-lunr-search'), {
+        languages: ['en'], // language codes
+        excludeRoutes : ['pages', 'blogs'],
+        highlightResult: true
+      }]
     ]
 };
 
