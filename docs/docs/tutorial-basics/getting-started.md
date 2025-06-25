@@ -14,7 +14,7 @@ Welcome to the Getting Started guide for the **SILstat API**. This guide will he
 
 Before making any requests, you must acquire an **access token**.
 
-👉 See the full [Authentication Guide](./authentication.md) for how to:
+👉 See the full [Authentication Guide](./congratulations.md) for how to:
 - Register an app
 - Acquire an OAuth2 token
 - Understand roles and permissions
@@ -97,8 +97,8 @@ var result = await client.Areas.GetAsync();
 
 ## 📚 Helpful Links
 
-- 🔐 [Authentication Guide](./authentication.md)
-- 🔄 [Eventing Overview](./eventing.md)
-- 🗂️ [Blob Resources](./blob-resources.md)
-- 📘 [API Reference](./api.md)
+- 🔐 [Authentication Guide](./congratulations.md)
+- 🔄 [Eventing Overview](./congratulations.md)
+- 🗂️ [Blob Resources](./congratulations.md)
+- 📘 [API Reference](./congratulations.md)
 - 📄 [Download OpenAPI Spec](https://api.example.com/openapi.yaml)
