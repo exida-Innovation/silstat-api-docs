@@ -8,7 +8,7 @@ Welcome to the Getting Started guide for the **SILstat API**. This guide will he
 
 ---
 
-## 🔐 Step 1: Get Access (Authentication Required)
+## 🔐 Step 1: Authentication - Acquiring a Token
 
 ---
 
@@ -23,9 +23,13 @@ Once you have your token, you can start making requests.
 
 ---
 
-## ⚙️ Step 2: Make Your First API Call
+## ⚙️ Step 2: Accessing the API 
 
 ---
+
+### 🖥️ Option A: Use the CLI (Curl or PowerShell)
+
+For quick testing or scripting, you can use standard command-line tools like Curl or PowerShell to interact with our API directly. This allows you to make authenticated requests, inspect responses, and automate workflows without writing application code.
 
 ### Using Curl
 
@@ -47,13 +51,12 @@ curl -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
 ---
 
 
-## 💻 Step 3: Use a C# Client (via Kiota)
+### 💻 Option B: Use a C# Client (via Kiota)
 
 To simplify development in C#, you can use **[Kiota](https://github.com/microsoft/kiota)** — a tool from Microsoft that generates a typed client library based on an OpenAPI document. This allows you to work with our API using strongly typed models and request builders.
 
----
 
-### 🧾 Steps to Get Started
+### 🧾 Steps to Get Started with Kiota
 
 1. **Install the Kiota CLI**
 
