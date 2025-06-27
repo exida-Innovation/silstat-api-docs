@@ -109,10 +109,8 @@ dotnet tool install --global Microsoft.OpenApi.Kiota
 Use the Kiota CLI to generate a client from the OpenAPI specification.
 
 ```bash
-kiota generate -l CSharp -d https://api.silstat.exsilentia.com/openapi.yaml -c ApiClient
+kiota generate -l CSharp -d https://github.com/exida-Innovation/silstat-api-docs/openapi/current.json -c ApiClient
 ```
-
-> Replace `https://api.silstat.exsilentia.com/openapi.yaml` with the actual URL of your OpenAPI spec.
 
 3. **Use the Client**
 
