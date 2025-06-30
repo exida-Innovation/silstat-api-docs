@@ -179,3 +179,61 @@ foreach ($appId in $appIds) {
 For more information about managing service principals with the Azure CLI, see the official Microsoft documentation:
 
 🔗 [Learn more about `az ad sp`](https://learn.microsoft.com/en-us/cli/azure/ad/sp)
+
+---
+
+## 🎟️ Fetching an Access Token
+
+---
+
+Once your application is registered and the correct permissions are configured, you can fetch an access token using the Azure CLI.
+
+This method uses the identity of the signed-in user and does not require a client secret.
+
+---
+
+### ✅ Step 1: Sign in to your tenant
+
+```bash
+az login --tenant YOUR_TENANT_ID
+```
+
+### ✅ Step 2: Get an access token
+```powershell
+$resourceURI = "api://YOUR_CLIENT_ID"
+$tenantId = "YOUR_TENANT_ID"
+
+$token = az account get-access-token --resource $resourceURI --tenant $tenantId | ConvertFrom-Json
+
+$token.accessToken
+```
+
+> 🔎 **Note:** Replace the placeholders with your actual values.
+
+---
+
+### 🔐 Use the token in API requests
+
+Once you've retrieved the access token, you can use it to authenticate your API requests.
+
+Include the token in the `Authorization` header using the **Bearer** scheme, like so:
+
+#### Using Curl
+
+```bash
+curl -H "Authorization: Bearer YOUR_ACCESS_TOKEN" -H "SelectedOrganizationId: YOUR_SELECTED_ORGANIZATION" \
+  https://api.silstat.exsilentia.com/api
+```
+
+#### Using PowerShell
+
+```powershell
+$headers = @{
+  Authorization = "Bearer YOUR_ACCESS_TOKEN"
+  # SelectedOrganizationId = "YOUR_SELECTED_ORGANIZATION" # Optional
+}
+
+Invoke-RestMethod -Uri "https://api.silstat.exsilentia.com/api" -Headers $headers
+```
+
+> 💡 **Note:** The Selected Organization Id is necessary in multi-organization scenarios. If the `SelectedOrganizationId` header is not provided, the API defaults to the last used Organization.
