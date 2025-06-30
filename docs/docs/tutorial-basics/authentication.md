@@ -40,9 +40,9 @@ Registering allows the customer to manage which identities have access to exida 
 
 ![exida Verification Diagram](/img/exida-verification-diagram.png)
 
-exida’s Authorisation and Authentication process involves users’ requesting to sign in to the relevant exida Software Application at which point the user is redirected to their matching Customer Tenant by the Microsoft Entra platform. Once redirected a special Access Token and Identity Token are generated for the user. These tokens are used by the exida to verify the identity of the user. 
+exida’s Authorisation and Authentication process involves users’ requesting to sign-in to the relevant exida Software Application at which point the user is redirected to their matching Customer Tenant by the Microsoft Entra platform. Once redirected a special Access Token and Identity Token are generated for the user. These tokens are used by the exida to verify the identity of the user. 
 
-To ensure that only valid customer sign in requests are allowed, the exida team will verify each customer’s email domain(s) and uniquely identify each Customer Tenant. 
+To ensure that only valid customer sign-in requests are allowed, the exida team will verify each customer’s email domain(s) and uniquely identify each Customer Tenant. 
 
 ![exida Verify Tenant Diagram](/img/exida-verify-tenant-diagram.png)
 
@@ -52,9 +52,9 @@ To ensure that only valid customer sign in requests are allowed, the exida team 
 
 ---
 
-Registering Entra Enterprise Applications allows the customer to manage and secure their identities effectively and efficiently. This ensures that exida fulfils it requirements under applicable standards for: 
+Registering Entra Enterprise Applications allows the customer to manage and secure their identities effectively and efficiently. This ensures that exida fulfils its requirements under applicable standards for: 
 
-1. **Governance:** Registering allows the customer to manage all aspects of the identities without sharing secrets with exida. The customer has full control over governing which identities are allowed to sign in. 
+1. **Governance:** Registering allows the customer to manage all aspects of the identities without sharing secrets with exida. The customer has full control over governing which identities are allowed to sign-in. 
 
 2. **Enhanced Security:** By treating identity as the primary security perimeter, Entra Enterprise Applications help protect against unauthorized access. Features like multi-factor authentication (MFA), conditional access policies, and role-based access control (RBAC) enhance security measures and are managed by the customer. 
 
@@ -71,16 +71,16 @@ To register the exida Entra Enterprise Applications an IT administrator (or simi
 The following Entra Enterprise Applications are to be registered by the Customer, please note that the order in which they are registered is important. 
 
 To support any exida software the following two Applications are required: 
-| Application Name | Application Ids | Purpose |
-|------------------|-----------------|---------|
-| **exida Licensing API** | api://api.identity.licensing.innovation.exida.com 216a3aa5-33e3-4d8c-bfdd-a8cb2e845a38 | Supports API access to Licensing for exida software and enables supporting API access to the Licensing Portal. |
-| **exida Licensing** | api://identity.licensing.innovation.exida.com fa02c858-f4f3-42e9-90ad-b07a0543a531 |Supports sign in to the Licensing Portal and allows customer maintenance of License and Licensing information. |
+| Application Name | Application URI | Application GUID | Purpose |
+|------------------|-----------------|------------------|---------|
+| **exida Licensing API** | api://api.identity.licensing.innovation.exida.com | 216a3aa5-33e3-4d8c-bfdd-a8cb2e845a38 | Supports API access to Licensing for exida software and enables supporting API access to the Licensing Portal. |
+| **exida Licensing** | api://identity.licensing.innovation.exida.com | fa02c858-f4f3-42e9-90ad-b07a0543a531 | Supports sign-in to the Licensing Portal and allows customer maintenance of License and Licensing information. |
 
 If the customer has SILstat™ licenses, they require the following Applications to be registered: 
 | Application Name | Application Id | Purpose |
 |------------------|----------------|---------|
 | **exida SILstat API** | api://api.identity.silstat.innovation.exida.com | Supports direct API access and enables supporting API access to SILstat. |
-| **exida SILstat** | api://identity.silstat.innovation.exida.com | Supports sign into SILstat and all its supporting applications (Dashboard, Admin, Support and Docs). |
+| **exida SILstat** | api://identity.silstat.innovation.exida.com | Supports sign-in to SILstat and all its supporting applications (Dashboard, Admin, Support and Docs). |
 
 If the customer has exSILentia® licenses and they wish to support in app SSO, they require the following Application to be registered: 
 | Application Name | Application Id | Purpose |
@@ -122,7 +122,7 @@ Before running the script in this section, please ensure your environment is set
 
 You must be signed in to your Microsoft 365 tenant to perform authenticated operations.
 
-```bash
+```powershell
 az login
 ```
 
@@ -130,17 +130,17 @@ az login
 
 Set the Application Id, based on your use case, choose the appropriate `Application Id` from the table above. Refer to [Entra Enterprise Apps for registration](#entra-enterprise-apps-for-registration).
 
-```bash
+```powershell
 # The Application Id from the above table
-$appId = 'YOUR_SELECTED_APPLICATION_ID'
+$appId = '<YOUR_SELECTED_APPLICATION_ID>'
 ```
 
 **Register the Enterprise Application**
 
 Once you’ve set the `appId`, you can run the command to register the application.
 
-```bash
-az ad sp create `
+```powershell
+az ad sp create
  --id $appId
  --query id `
  --output tsv
@@ -148,9 +148,9 @@ az ad sp create `
 
  **Register multiple Enterprise Applications**
 
- You can register multiple Enterprise Applications using a `for` loop in Bash by iterating through a list of `appId` values:
+ You can register multiple Enterprise Applications using a `foreach` loop in Powershell by iterating through a list of `appId` values:
 
- ```bash
+ ```powershell
  # Sign into Azure and choose the correct tenant
 # az login
 
@@ -161,7 +161,7 @@ $appIds = @(
     'api://identity.licensing.innovation.exida.com',
     # SILstat (Optional)
     'api://api.identity.silstat.innovation.exida.com',
-    'api://identity.silstat.innovation.exida.com'
+    'api://identity.silstat.innovation.exida.com',
     # exSILentia (Optional)
     'api://identity.exsilentia.innovation.exida.com'
 )
@@ -169,10 +169,7 @@ $appIds = @(
 foreach ($appId in $appIds) {
     # Registering the Enterprise Application (Service Principal)
     # See https://learn.microsoft.com/en-us/cli/azure/ad/sp
-    az ad sp create 
-    --id $appId `
-    --query id `
-    --output tsv`
+    az ad sp create --id $appId --query id --output tsv
 }
 ```
 
@@ -195,13 +192,13 @@ This method uses the identity of the signed-in user and does not require a clien
 ### ✅ Step 1: Sign in to your tenant
 
 ```bash
-az login --tenant YOUR_TENANT_ID
+az login --tenant <YOUR_TENANT_ID>
 ```
 
 ### ✅ Step 2: Get an access token
 ```powershell
-$resourceURI = "api://YOUR_CLIENT_ID"
-$tenantId = "YOUR_TENANT_ID"
+$resourceURI = "api://<YOUR_CLIENT_ID>"
+$tenantId = "<YOUR_TENANT_ID>"
 
 $token = az account get-access-token --resource $resourceURI --tenant $tenantId | ConvertFrom-Json
 
@@ -221,19 +218,20 @@ Include the token in the `Authorization` header using the **Bearer** scheme, lik
 #### Using Curl
 
 ```bash
-curl -H "Authorization: Bearer YOUR_ACCESS_TOKEN" -H "SelectedOrganizationId: YOUR_SELECTED_ORGANIZATION" \
+curl -H "Authorization: Bearer <YOUR_ACCESS_TOKEN>" -H "SelectedOrganizationId: <YOUR_SELECTED_ORGANIZATION>" \
   https://api.silstat.exsilentia.com/api
 ```
 
 #### Using PowerShell
 
+
 ```powershell
 $headers = @{
-  Authorization = "Bearer YOUR_ACCESS_TOKEN"
+  Authorization = "Bearer <YOUR_ACCESS_TOKEN>"
   # SelectedOrganizationId = "YOUR_SELECTED_ORGANIZATION" # Optional
 }
 
 Invoke-RestMethod -Uri "https://api.silstat.exsilentia.com/api" -Headers $headers
 ```
 
-> 💡 **Note:** The Selected Organization Id is necessary in multi-organization scenarios. If the `SelectedOrganizationId` header is not provided, the API defaults to the last used Organization.
+> 💡 **Note:** The SelectedOrganizationId is necessary in multi-organization scenarios. If your tenant only has one organization, this header is not required. If the `SelectedOrganizationId` header is not provided, the API defaults to the last used Organization. 
