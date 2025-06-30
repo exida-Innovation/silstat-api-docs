@@ -2,5 +2,180 @@
 sidebar_position: 8
 ---
 
-# Authentication Placeholder!
+# 🔐 Authentication Guide
 
+To interact with our API, users must authenticate via **Microsoft Entra ID** (formerly Azure Active Directory), which is included in all **Microsoft 365 tenants**.
+
+This guide walks you through how to:
+- Register an app in Microsoft Entra
+- Acquire an Access token
+- Use that token to authenticate requests to the **SILstat™ API**
+
+---
+
+## 🧾 Prerequisites
+
+---
+
+Before you begin:
+
+- You must have a **Microsoft 365 tenant**
+- Access to the **Microsoft Entra admin center** ([entra.microsoft.com](https://entra.microsoft.com))
+- Permission to register an app (or use one pre-registered by your admin)
+- The following values once the app is registered:
+  - `client_id`
+  - `tenant_id`
+
+---
+
+## 📌 Overview
+
+---
+
+To fully support Microsoft Entra Identity Provider the customer registers the exida Licensing Entra Enterprise Application and supporting applications depending on what exida software they have within their Microsoft Tenant.  
+
+![exida Tenant Diagram](/img/exida-tenant-diagram.png)
+
+Registering allows the customer to manage which identities have access to exida software and enable existing investments in identity management to be respected. Using this approach no secrets need to be exchanged, and no access is needed by the exida team to the customer’s Identity Provider.
+
+![exida Verification Diagram](/img/exida-verification-diagram.png)
+
+exida’s Authorisation and Authentication process involves users’ requesting to sign in to the relevant exida Software Application at which point the user is redirected to their matching Customer Tenant by the Microsoft Entra platform. Once redirected a special Access Token and Identity Token are generated for the user. These tokens are used by the exida to verify the identity of the user. 
+
+To ensure that only valid customer sign in requests are allowed, the exida team will verify each customer’s email domain(s) and uniquely identify each Customer Tenant. 
+
+![exida Verify Tenant Diagram](/img/exida-verify-tenant-diagram.png)
+
+---
+
+## 📝 Registering exida’s Entra Enterprise Apps 
+
+---
+
+Registering Entra Enterprise Applications allows the customer to manage and secure their identities effectively and efficiently. This ensures that exida fulfils it requirements under applicable standards for: 
+
+1. **Governance:** Registering allows the customer to manage all aspects of the identities without sharing secrets with exida. The customer has full control over governing which identities are allowed to sign in. 
+
+2. **Enhanced Security:** By treating identity as the primary security perimeter, Entra Enterprise Applications help protect against unauthorized access. Features like multi-factor authentication (MFA), conditional access policies, and role-based access control (RBAC) enhance security measures and are managed by the customer. 
+
+3. **Improved User Experience:** Single sign-on (SSO) capabilities provided by Entra Enterprise Applications simplify access for users, reducing the need for multiple passwords and improving productivity. 
+
+To register the exida Entra Enterprise Applications an IT administrator (or similar) with sufficient permissions to manage the Customer’s Entra Tenant invokes CLI (Command-Line Interface) commands that registers all exida Enterprise Applications. This is the recommended approach by the Microsoft Entra Tenant team as the customer can review the script and follow their cybersecurity policies.  
+
+---
+
+## 🏷️ Entra Enterprise Apps for registration 
+
+---
+
+The following Entra Enterprise Applications are to be registered by the Customer, please note that the order in which they are registered is important. 
+
+To support any exida software the following two Applications are required: 
+| Application Name | Application Ids | Purpose |
+|------------------|-----------------|---------|
+| **exida Licensing API** | api://api.identity.licensing.innovation.exida.com 216a3aa5-33e3-4d8c-bfdd-a8cb2e845a38 | Supports API access to Licensing for exida software and enables supporting API access to the Licensing Portal. |
+| **exida Licensing** | api://identity.licensing.innovation.exida.com fa02c858-f4f3-42e9-90ad-b07a0543a531 |Supports sign in to the Licensing Portal and allows customer maintenance of License and Licensing information. |
+
+If the customer has SILstat™ licenses, they require the following Applications to be registered: 
+| Application Name | Application Id | Purpose |
+|------------------|----------------|---------|
+| **exida SILstat API** | api://api.identity.silstat.innovation.exida.com | Supports direct API access and enables supporting API access to SILstat. |
+| **exida SILstat** | api://identity.silstat.innovation.exida.com | Supports sign into SILstat and all its supporting applications (Dashboard, Admin, Support and Docs). |
+
+If the customer has exSILentia® licenses and they wish to support in app SSO, they require the following Application to be registered: 
+| Application Name | Application Id | Purpose |
+|------------------|----------------|---------|
+| **exida exSILentia** | api://identity.exsilentia.innovation.exida.com | Supports SSO for exSILentia applications (SILAlarm, Cyber, Functional Safety, SERH) and all its supporting modules. |
+
+> 🔎 **Note:** Certain exSILentia® Licenses allow offline activation which only require the customer to access the exida Licensing Portal. 
+
+---
+
+## 🖥️ Script Template 
+
+---
+
+The script template for registering Entra Applications can be done with either Azure CLI or Azure PowerShell. 
+
+### 🧾 Script Prerequisites
+
+Before running the script in this section, please ensure your environment is set up correctly. These prerequisites ensure that the script runs smoothly and can authenticate with your Microsoft 365 (Microsoft Entra) tenant.
+
+---
+
+### ✅ Requirements
+
+- **Azure CLI Installed**
+
+  The script relies on the Azure CLI for interacting with Microsoft Entra ID.
+
+  - 📦 [Install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+  - 🔍 Verify installation:
+
+    ```bash
+    az --version
+    ```
+
+### 🚀 Running the Script
+
+**Sign into Azure (using az login)**
+
+You must be signed in to your Microsoft 365 tenant to perform authenticated operations.
+
+```bash
+az login
+```
+
+**Set the $appId = 'Id' variable**
+
+Set the Application Id, based on your use case, choose the appropriate `Application Id` from the table above. Refer to [Entra Enterprise Apps for registration](#entra-enterprise-apps-for-registration).
+
+```bash
+# The Application Id from the above table
+$appId = 'YOUR_SELECTED_APPLICATION_ID'
+```
+
+**Register the Enterprise Application**
+
+Once you’ve set the `appId`, you can run the command to register the application.
+
+```bash
+az ad sp create `
+ --id $appId
+ --query id `
+ --output tsv
+ ```
+
+ **Register multiple Enterprise Applications**
+
+ You can register multiple Enterprise Applications using a `for` loop in Bash by iterating through a list of `appId` values:
+
+ ```bash
+ # Sign into Azure and choose the correct tenant
+# az login
+
+# List of all exida's Entra Applications that need to be registered
+$appIds = @(
+    # Licensing Core
+    'api://api.identity.licensing.innovation.exida.com',
+    'api://identity.licensing.innovation.exida.com',
+    # SILstat (Optional)
+    'api://api.identity.silstat.innovation.exida.com',
+    'api://identity.silstat.innovation.exida.com'
+    # exSILentia (Optional)
+    'api://identity.exsilentia.innovation.exida.com'
+)
+
+foreach ($appId in $appIds) {
+    # Registering the Enterprise Application (Service Principal)
+    # See https://learn.microsoft.com/en-us/cli/azure/ad/sp
+    az ad sp create 
+    --id $appId `
+    --query id `
+    --output tsv`
+}
+```
+
+For more information about managing service principals with the Azure CLI, see the official Microsoft documentation:
+
+🔗 [Learn more about `az ad sp`](https://learn.microsoft.com/en-us/cli/azure/ad/sp)
