@@ -1,4 +1,5 @@
 ---
+title: Authorization
 sidebar_position: 12
 ---
 
@@ -18,6 +19,8 @@ Once a user is authenticated, their **permissions** determine what they are allo
 
 The table below outlines the available roles in the application and the permissions granted to each:
 
+> **Legend:** ✅ = Allowed ❌ = Not Allowed &nbsp;&nbsp;&nbsp; **Record** = Create a new event  **Edit** = Modify an existing event
+
 | Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
 |-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |**Administrative**       |                      |       |           |         |         |        |
@@ -36,18 +39,18 @@ The table below outlines the available roles in the application and the permissi
 | Custom Data | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 |**Collection**        |     |    |          |          |         |
 | User can perform the following actions: | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| ***Record a Area Event*** |  |  |  |  |  |  |
-| Install | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| ***Record an Area Event*** |  |  |  |  |  |  |
+| Install | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Move | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | ***Record a Unit Event*** |  |  |  |  |  |  |
-| Install | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Install | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Move | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-|***Record a Equipment Event*** |  |  |  |  |  |  |
-| Install | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+|***Record an Equipment Event*** |  |  |  |  |  |  |
+| Install | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Move | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
@@ -62,7 +65,7 @@ The table below outlines the available roles in the application and the permissi
 | Bypass | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Failure | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Repair | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| Move | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Move | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Replace | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 |***Record a Hazardous Event*** |  |  |  |  |  |  |
@@ -79,7 +82,7 @@ The table below outlines the available roles in the application and the permissi
 | Replace | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Procedures | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Hazards | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
-|***Edit a Area Event*** |  |  |  |  |  |  |
+|***Edit an Area Event*** |  |  |  |  |  |  |
 | Install | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
@@ -89,7 +92,7 @@ The table below outlines the available roles in the application and the permissi
 | Bypass | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Move | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
-|***Edit a Equipment Event*** |  |  |  |  |  |  |
+|***Edit an Equipment Event*** |  |  |  |  |  |  |
 | Install | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
@@ -111,14 +114,12 @@ The table below outlines the available roles in the application and the permissi
 | User has access to view recorded data and generate reports | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
 |***Dashboard*** |  |  |  |  |  |  |
 | System Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Personal Dashboards (Phase 2) | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Modify Shared Dashboards (Phase 2) | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Import and Export Dashboards (Phase 2) | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Personal Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Modify Shared Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Import and Export Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 |***API*** |  |  |  |  |  |  |
 | Read | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Create and Modify | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Delete | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Manage Access Tokens | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-|***Approve (TBD this Role will be defined further at a later Phase.)*** |  |  |  |  |  |  |
-| User can edit the following events: | | | | | | |
 
