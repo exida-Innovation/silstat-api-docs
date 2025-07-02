@@ -1,6 +1,10 @@
 ---
+title: Authentication
 sidebar_position: 8
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # 🔐 Authentication Guide
 
@@ -141,9 +145,9 @@ Once you’ve set the `appId`, you can run the command to register the applicati
 
 ```powershell
 az ad sp create
- --id $appId
+ --id $appId `
  --query id `
- --output tsv
+ --output tsv `
  ```
 
  **Register multiple Enterprise Applications**
@@ -169,7 +173,7 @@ $appIds = @(
 foreach ($appId in $appIds) {
     # Registering the Enterprise Application (Service Principal)
     # See https://learn.microsoft.com/en-us/cli/azure/ad/sp
-    az ad sp create --id $appId --query id --output tsv
+    az ad sp create --id $appId ` --query id ` --output tsv `
 }
 ```
 
@@ -215,15 +219,16 @@ Once you've retrieved the access token, you can use it to authenticate your API 
 
 Include the token in the `Authorization` header using the **Bearer** scheme, like so:
 
-#### Using Curl
+<Tabs>
+<TabItem value="bash" label="CURL">
 
 ```bash
 curl -H "Authorization: Bearer <YOUR_ACCESS_TOKEN>" -H "SelectedOrganizationId: <YOUR_SELECTED_ORGANIZATION>" \
   https://api.silstat.exsilentia.com/api
 ```
 
-#### Using PowerShell
-
+</TabItem>
+<TabItem value="powershell" label="Powershell">
 
 ```powershell
 $headers = @{
@@ -233,5 +238,8 @@ $headers = @{
 
 Invoke-RestMethod -Uri "https://api.silstat.exsilentia.com/api" -Headers $headers
 ```
+
+</TabItem>
+</Tabs>
 
 > 💡 **Note:** The SelectedOrganizationId is necessary in multi-organization scenarios. If your tenant only has one organization, this header is not required. If the `SelectedOrganizationId` header is not provided, the API defaults to the last used Organization. 
