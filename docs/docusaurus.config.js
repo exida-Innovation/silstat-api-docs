@@ -77,11 +77,11 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'doc',
+            docId: 'tutorial-basics/getting-started',
             position: 'left',
             label: 'Getting Started',
-          },
+          },    
           {
             href: 'https://www.exida.com/SILStat',
             label: 'Get SILstat',
@@ -107,7 +107,7 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/docs/intro',
+                to: '/docs/tutorial-basics/getting-started',
               },
             ],
           },
