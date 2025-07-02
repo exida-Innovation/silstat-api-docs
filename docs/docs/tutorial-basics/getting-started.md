@@ -46,11 +46,11 @@ You’ll use this token to authenticate all API requests.
 
 > 💡 **Note:** You can find your `client_id` and `tenant_id` in the **Microsoft Entra admin center** (formerly Azure AD), under **App registrations**. If you're using the Azure portal, go to **Azure Active Directory > App registrations** to locate these values.
 
-If you’re unsure how to register an app or acquire a token, see the [Authentication Guide](./authentication.md).
+If you’re unsure how to register an app or acquire a token, see the [Authentication Guide](./authentication.mdx).
 
 --- 
 
-👉 See the full [Authentication Guide](./authentication.md) for how to:
+👉 See the full [Authentication Guide](./authentication.mdx) for how to:
 - Register an app
 - Acquire an Access token
 
@@ -138,7 +138,7 @@ var result = await client.Areas.GetAsync();
 
 ## 📚 Helpful Links
 
-- 🔐 [Authentication Guide](./authentication.md)
+- 🔐 [Authentication Guide](./authentication.mdx)
 - 🔄 [Eventing Overview](./eventing.md)
 - 🗂️ [Blob Resources](./blob-resources.md)
 - 📘 [API Reference](./api.md)
