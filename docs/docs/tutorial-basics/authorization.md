@@ -152,9 +152,6 @@ These functions allow users to view key metrics and summaries for at-a-glance mo
 | Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
 |-------------------------|----------------------|-------|-----------|---------|---------|--------|
 | System Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Personal Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Modify Shared Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Import and Export Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 ---
 
