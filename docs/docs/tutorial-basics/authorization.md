@@ -25,10 +25,13 @@ The table below outlines the available roles in the application and the permissi
 |-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |**Administrative**       |                      |       |           |         |         |        |
 | User has the ability to Create New Users and Set User Permissions | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |**Configuration**       |                      |       |           |         |         |        |
 | User has the ability to Import Data into SILstat Database | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| User can add, edit or delete nodes from the Plant Hierarchies: | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| User can add, edit or delete entries from the SILstat Libraries: | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| User can add, edit or delete nodes from the Plant Hierarchies | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| User can add, edit or delete entries from the SILstat Libraries | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
 | User can configure Database Settings | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 | Plant Types | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 | Process Types | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
@@ -37,14 +40,17 @@ The table below outlines the available roles in the application and the permissi
 | Device Types and Failure Classifications | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 | Reference Types | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 | Custom Data | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |**Collection**        |     |    |          |          |         |
-| User can perform the following actions: | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| ***Record an Area Event*** |  |  |  |  |  |  |
+| User can perform the following actions | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+|***Record an Area Event*** |  |  |  |  |  |  |
 | Install | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Move | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| ***Record a Unit Event*** |  |  |  |  |  |  |
+|***Record a Unit Event*** |  |  |  |  |  |  |
 | Install | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
@@ -54,9 +60,6 @@ The table below outlines the available roles in the application and the permissi
 | Bypass | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Move | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-|***Record a Procedure*** |  |  |  |  |  |  |
-| Proof Test | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| Procedure | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 |***Record a Procedure*** |  |  |  |  |  |  |
 | Proof Test | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | Procedure | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
@@ -70,8 +73,14 @@ The table below outlines the available roles in the application and the permissi
 | Remove | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 |***Record a Hazardous Event*** |  |  |  |  |  |  |
 | Hazardous Event | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |***Analysis*** |  |  |  |  |  |  |
-| User can edit the following events: | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| User can edit the following events | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |***Event Approval*** |  |  |  |  |  |  |
 | Install | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
@@ -82,24 +91,39 @@ The table below outlines the available roles in the application and the permissi
 | Replace | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Procedures | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Hazards | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |***Edit an Area Event*** |  |  |  |  |  |  |
 | Install | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Move | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |***Edit a Unit Event*** |  |  |  |  |  |  |
 | Install | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Move | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |***Edit an Equipment Event*** |  |  |  |  |  |  |
 | Install | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Move | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |***Edit a Procedure*** |  |  |  |  |  |  |
 | Proof Test | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Maintenance | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |***Edit a Device Event*** |  |  |  |  |  |  |
 | Install | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
@@ -108,18 +132,30 @@ The table below outlines the available roles in the application and the permissi
 | Move | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Replace | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |***Edit a Hazardous Event*** |  |  |  |  |  |  |
 | Hazardous Event | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |***Reporting*** |  |  |  |  |  |  |
 | User has access to view recorded data and generate reports | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |***Dashboard*** |  |  |  |  |  |  |
 | System Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
 | Personal Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
 | Modify Shared Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
 | Import and Export Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+
+| Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
+|-------------------------|----------------------|-------|-----------|---------|---------|--------|
 |***API*** |  |  |  |  |  |  |
 | Read | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Create and Modify | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Delete | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Manage Access Tokens | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
+> **Legend:** ✅ = Allowed ❌ = Not Allowed &nbsp;&nbsp;&nbsp; **Record** = Create a new event  **Edit** = Modify an existing event

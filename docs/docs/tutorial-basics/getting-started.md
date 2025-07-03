@@ -1,10 +1,5 @@
 ---
-<<<<<<< HEAD
-title: Getting Started
-sidebar_position: 7
-=======
 sidebar_position: 1
->>>>>>> 822bd6a (Fixed issue with links on home page)
 ---
 
 # Getting Started!
