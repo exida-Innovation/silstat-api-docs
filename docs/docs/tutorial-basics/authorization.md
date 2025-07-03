@@ -57,7 +57,6 @@ These are the functions related to capturing and recording events within the sys
 
 | Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
 |-------------------------|----------------------|-------|-----------|---------|---------|--------|
-| User can perform the following actions | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 |***Record an Area Event*** |  |  |  |  |  |  |
 | Install | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
