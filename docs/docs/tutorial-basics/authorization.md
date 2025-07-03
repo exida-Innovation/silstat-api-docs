@@ -149,6 +149,10 @@ These functions allow users to view recorded data and generate reports for monit
 
 These functions allow users to view key metrics and summaries for at-a-glance monitoring of system activity.
 
+:::info
+These endpoints do not return any data but are used to inspect the dashboard options.
+:::
+
 | Function                | Global Administrator | Admin | Configure | Collect | Analyze | Report |
 |-------------------------|----------------------|-------|-----------|---------|---------|--------|
 | System Dashboards | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
