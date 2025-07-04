@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 Eventing allows your system to track key asset lifecycle changes. This provides a clear audit trail, supports compliance, and helps with analytics.
 
 SILstat™ supports the capture, documentation, and classification of the following life events:
-- Hazardous Events
+- Hazard Events
 - Device Failures
 - Proof Tests
 - Scheduled and Ad Hoc Maintenance Activities
@@ -27,10 +27,9 @@ Each event type represents a specific action or state change for a device.
 | Event Type      | Description                                                           |
 |------------------|----------------------------------------------------------------------|
 | **Bypass**       | Indicates that the entity was bypassed and is not in active use.     |
-| **Decommission** | The entity has been permanently removed from operation.              |
-| **Failure**      | A malfunction or failure was recorded.                               |
+| **Decommission** | The entity has been removed from operation.              |
+| **Failure**      | Indicates a device failed.                               |
 | **Install**      | A new device or entity was installed.                                |
-| **Move**         | The entity was physically or logically relocated.                    |
 | **Repair**       | Corrective maintenance was performed.                                |
 | **Replace**      | The entity was swapped for another.                                  |
 | **Procedure**    | Procedure events can be initiated for Nodes with a Procedure Linked. |
@@ -40,16 +39,83 @@ Each event type represents a specific action or state change for a device.
 
 ## 🛠️ Creating an Install Event
 
-This is how to create a special Install event and pass it as part of the payload.
+This is how to create a special Install event for an Area and pass it as part of the payload.
+The diagram below shows the overall flow of how the entities relate to each other.
+
+### 🔄 Entity Relationship Flow
+
+![Install Flow Diagram](/img/installFlow.png)
 
 ---
 
 ## ✅ Step-by-Step
 
-1. **Authenticate** and obtain a valid access token.
-2. **Prepare your payload** setup the required metadata.
-3. **Submit the event** using a `POST` request to the `/api/eventmetadatas` endpoint.
-4. Request Approval for the event.
+1. **[Authenticate](./authentication.mdx)** and obtain a valid access token.
+2. **Create Area** that is to be installed.
+3. **Prepare your payload** setup the required metadata.
+4. **Submit the event** using a `POST` request to the `/api/eventmetadatas` endpoint.
+5. **Request Approval** for the event.
+
+---
+
+## ✅ Create the Area
+
+This request demonstrates how to create a new Area using a minimal example.
+
+<Tabs> 
+<TabItem value="powershell" label="PowerShell">
+
+```powershell
+$headers = @{
+  Authorization = "Bearer <YOUR_ACCESS_TOKEN>"
+  "Content-Type" = "application/json"
+  # SelectedOrganizationId = "YOUR_SELECTED_ORGANIZATION" # Optional
+}
+
+$body = @{
+  id = "123e4567-e89b-12d3-a456-426614174000"
+  names = @(
+    @{ language = "en"; text = "Example Name" },
+  )
+  descriptions = @(
+    @{ language = "en"; text = "This is an example entity." },
+  )
+} | ConvertTo-Json -Depth 3
+
+Invoke-RestMethod -Uri "https://api.silstat.exsilentia.com/api/areas" `
+  -Method Post -Headers $headers -Body $body
+```
+
+</TabItem> 
+
+<TabItem value="curl" label="CURL">
+
+```bash
+curl -X POST https://api.silstat.exsilentia.com/api/areas \
+  -H "Authorization: Bearer <YOUR_ACCESS_TOKEN>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "id": "123e4567-e89b-12d3-a456-426614174000",
+    "names": [
+      {
+        "language": "en",
+        "text": "Example Area Name"
+      }
+    ],
+    "descriptions": [
+      {
+        "language": "en",
+        "text": "This is an example entity."
+      }
+    ]
+  }'
+```
+
+</TabItem> 
+</Tabs>
+
+> 📝 **Note:**  
+> After creating the Area, you should use its `id` to set the CheckedIds as part of the Install event.
 
 ---
 
@@ -96,6 +162,11 @@ This is how to create a special Install event and pass it as part of the payload
             "AdditionalOptions": {
               "StartDate": "2025-06-23T15:30:31.6778606+00:00"
             }
+          }
+        },
+        "CheckedIds": {
+          "exida.Enterprise.Core.Models.SILstat.AreaEntity": {
+            "123e4567-e89b-12d3-a456-426614174000": true
           }
         }
 }
