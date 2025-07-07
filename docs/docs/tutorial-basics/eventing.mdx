@@ -208,26 +208,11 @@ curl -X POST https://api.silstat.exsilentia.com/api/eventmetadatas \
 
 The final step in the workflow is to perform request approval of the event. A separate endpoint is used to approve the event by its unique identifier (`GUID`). Approving an event allows the modifications made by the event to be submitted for processing. The approval will return a status URI that can be used to review the progress.
 
-:::info
+:::info[Note on approvals]
 
 By default, any user that can create an event, can also approve it. This also means requesting an approval will result in the event being auto approved.
 
 :::
-
-
----
-
-### 🔧 Endpoint
-
-- Replace `{eventId}` with the actual GUID of the event you want to approve or verify approval for.
-
----
-
-> ⚠️ **Important:** Although this is a `GET` request, calling this endpoint will **trigger the approval process** for the event. It is **not** just a status check - accessing this URL initiates the approval logic on the backend.  
->
-> Only call this endpoint when you intend to approve the event.
-
----
 
 ## 📥 Required Headers
 
@@ -238,7 +223,7 @@ By default, any user that can create an event, can also approve it. This also me
 
 ### 💻 Examples
 
-<Tabs> 
+<Tabs>
 <TabItem value="powershell" label="PowerShell">
 
 ```powershell
@@ -269,12 +254,23 @@ curl -X PUT https://api.silstat.exsilentia.com/api/eventmetadatas/01234567-89ab-
 
 ---
 
-## 🎉 What Happens If Approval Is Successful?
-
+## 🎉 Approval Response
 
 The approval endpoint asynchronously processes the event when approving returning JSON with a `statusQueryGetUri`. 
 
-Until the `statusQueryGetUri` request returns a success status (e.g., `200 OK`), the event is being processed. Once the event has been successfully processed, the system has been fully updated with the changes from the event. In this case, the Area would be considered installed.
+Example response:
+
+```http
+{
+    "id": "abc123",
+    "purgeHistoryDeleteUri": "https://api.silstat.exsilentia.com/runtime/webhooks/durabletask/instances/abc123?code=XXX",
+    "sendEventPostUri": "https://api.silstat.exsilentia.com/runtime/webhooks/durabletask/instances/abc123/raiseEvent/{eventName}?code=XXX",
+    "statusQueryGetUri": "https://api.silstat.exsilentia.com/runtime/webhooks/durabletask/instances/abc123?code=XXX",
+    "terminatePostUri": "https://api.silstat.exsilentia.com/runtime/webhooks/durabletask/instances/abc123/terminate?reason={text}&code=XXX"
+}
+```
+
+Until the `statusQueryGetUri` request returns a success status (e.g., `200 OK`), the event is being processed.
 
 :::info[Event validation and invalid state of the system]
 
@@ -284,12 +280,4 @@ If you have questions about the error messages or require further assistance, pl
 
 :::
 
-Example response:
-
-{
-    "id": "abc123",
-    "purgeHistoryDeleteUri": "https://api.silstat.exsilentia.com/runtime/webhooks/durabletask/instances/abc123?code=XXX",
-    "sendEventPostUri": "https://api.silstat.exsilentia.com/runtime/webhooks/durabletask/instances/abc123/raiseEvent/{eventName}?code=XXX",
-    "statusQueryGetUri": "https://api.silstat.exsilentia.com/runtime/webhooks/durabletask/instances/abc123?code=XXX",
-    "terminatePostUri": "https://api.silstat.exsilentia.com/runtime/webhooks/durabletask/instances/abc123/terminate?reason={text}&code=XXX"
-}
+Once the event has been successfully processed, the system has been fully updated with the changes from the event. In this case, the Area would be considered installed.
