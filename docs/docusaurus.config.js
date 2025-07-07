@@ -55,7 +55,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/exida-Innovation/silstat-api-docs',
+            'https://github.com/exida-Innovation/silstat-api-docs/edit/main/docs/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -123,6 +123,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ['powershell', 'bash', 'csharp'],
       },
     }),
     plugins: [

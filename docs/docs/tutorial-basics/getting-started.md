@@ -138,7 +138,8 @@ var result = await client.Areas.GetAsync();
 ## 📚 Helpful Links
 
 - 🔐 [Authentication Guide](./authentication.mdx)
+- 🛡️ [Authorization Guide](./authorization.md)
 - 🔄 [Eventing Overview](./eventing.mdx)
-- 🗂️ [Blob Resources](./blob-resources.md)
+- 🗂️ [Blob Resources](./blob-resources.mdx)
 - 📘 [API Reference](./api.md)
 - 📄 [Download OpenAPI Spec](./open-api.md)
