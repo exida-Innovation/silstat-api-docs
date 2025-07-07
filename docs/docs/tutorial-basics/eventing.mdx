@@ -115,7 +115,7 @@ curl -X POST https://api.silstat.exsilentia.com/api/areas \
 </Tabs>
 
 > 📝 **Note:**  
-> After creating the Area, you should use its `id` to set the CheckedIds as part of the Install event.
+> After creating the Area, you should use its `id` to set the `CheckedIds` as part of the Install event.
 
 ---
 
@@ -149,7 +149,7 @@ curl -X POST https://api.silstat.exsilentia.com/api/areas \
         "WorkflowState": 1,   
         "Options":
         {
-          AdditionalData:
+          "AdditionalData":
           {
             "ShowTime": false,
             "DatePresentationPreference": 0,
@@ -184,7 +184,7 @@ $headers = @{
 
 $body = @Payload.json
 
-    Invoke-RestMethod -Uri "https://api.silstat.exsilentia.com/api/eventmetadatas" `
+Invoke-RestMethod -Uri "https://api.silstat.exsilentia.com/api/eventmetadatas" `
   -Method Post -Headers $headers -Body $body
 ```
 
@@ -206,7 +206,14 @@ curl -X POST https://api.silstat.exsilentia.com/api/eventmetadatas \
 
 ## ✅ Request Approval for the Event
 
-The final step in the workflow is to perform a **GET request** to check or retrieve approval status for an event by its unique identifier (`GUID`).
+The final step in the workflow is to perform request approval of the event. A separate endpoint is used to approve the event by its unique identifier (`GUID`). Approving an event allows the modifications made by the event to be submitted for processing. The approval will return a status URI that can be used to review the progress.
+
+:::info
+
+By default, any user that can create an event, can also approve it. This also means requesting an approval will result in the event being auto approved.
+
+:::
+
 
 ---
 
@@ -241,9 +248,9 @@ $headers = @{
 }
 
 $eventId = "01234567-89ab-cdef-0123-456789abcdef"
-$uri = "https://api.silstat.exsilentia.com/api/eventmetadatas/$eventId/approval"
+$uri = "https://api.silstat.exsilentia.com/api/eventmetadatas/$eventId/approval?approved=true" # `/$eventId/request` can also be used to request an approval
 
-$response = Invoke-RestMethod -Uri $uri -Method Get -Headers $headers
+$response = Invoke-RestMethod -Uri $uri -Method PUT -Headers $headers # GET can be used to auto approve
 $response
 ```
 
@@ -252,7 +259,8 @@ $response
 <TabItem value="curl" label="CURL">
 
 ```bash
-curl -X GET https://api.silstat.exsilentia.com/api/eventmetadatas/01234567-89ab-cdef-0123-456789abcdef/approval \
+# GET {eventId}/request can be used to auto approve
+curl -X PUT https://api.silstat.exsilentia.com/api/eventmetadatas/01234567-89ab-cdef-0123-456789abcdef/approval?approved=true \
   -H "Authorization: Bearer <YOUR_ACCESS_TOKEN>" \
 ```
 
@@ -263,4 +271,25 @@ curl -X GET https://api.silstat.exsilentia.com/api/eventmetadatas/01234567-89ab-
 
 ## 🎉 What Happens If Approval Is Successful?
 
-If the approval request returns a success status (e.g., `200 OK`), it confirms that the event has been successfully approved and the device has been Installed.
+
+The approval endpoint asynchronously processes the event when approving returning JSON with a `statusQueryGetUri`. 
+
+Until the `statusQueryGetUri` request returns a success status (e.g., `200 OK`), the event is being processed. Once the event has been successfully processed, the system has been fully updated with the changes from the event. In this case, the Area would be considered installed.
+
+:::info[Event validation and invalid state of the system]
+
+Events can fail if the state of the entities in the system are not in valid state for modification (e.g., another event modified them). Or if the Event itself failed validation. In both cases, seeing the result of the `statusQueryGetUri` will change.
+
+If you have questions about the error messages or require further assistance, please contact our [support team](https://support.exida.com/).
+
+:::
+
+Example response:
+
+{
+    "id": "abc123",
+    "purgeHistoryDeleteUri": "https://api.silstat.exsilentia.com/runtime/webhooks/durabletask/instances/abc123?code=XXX",
+    "sendEventPostUri": "https://api.silstat.exsilentia.com/runtime/webhooks/durabletask/instances/abc123/raiseEvent/{eventName}?code=XXX",
+    "statusQueryGetUri": "https://api.silstat.exsilentia.com/runtime/webhooks/durabletask/instances/abc123?code=XXX",
+    "terminatePostUri": "https://api.silstat.exsilentia.com/runtime/webhooks/durabletask/instances/abc123/terminate?reason={text}&code=XXX"
+}
