@@ -17,6 +17,7 @@ Thank you for your interest in contributing to the SILstat API documentation! We
 4. Review Process
     - The maintainers will review your PR. You may be asked to make revisions.
     - Once approved, your changes will be merged.
+    - Issues and pull requests are automatically locked once they are closed to keep discussions focused.
 
 ## Code of Conduct
 Please be respectful and considerate in your communications. We follow the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).

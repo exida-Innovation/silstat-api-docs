@@ -1,0 +1,25 @@
+name: Lock Closed Issues
+
+on:
+  schedule:
+    # Run daily at 1:00 AM UTC
+    - cron: '0 1 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  lock:
+    name: Lock closed issues and pull requests
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Lock closed issues and pull requests
+        uses: dessant/lock-threads@v5
+        with:
+          github-token: ${{ github.token }}
+          issue-inactive-days: 0
+          pr-inactive-days: 0
+          issue-lock-reason: 'resolved'
+          pr-lock-reason: 'resolved'
+          log-output: true
