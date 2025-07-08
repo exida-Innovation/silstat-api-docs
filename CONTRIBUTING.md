@@ -3,7 +3,7 @@ Thank you for your interest in contributing to the SILstat API documentation! We
 
 ## How to Contribute
 1. Reporting Issues
-    - If you find errors, outdated information, or unclear sections, please open an issue.
+    - If you find errors, outdated information, or unclear sections, please [open an issue](https://github.com/exida-Innovation/silstat-api-docs/issues).
     - When reporting an issue, please be as specific as possible and, if relevant, include links or code snippets. Where possible use the provided templates.
 2. Making Changes
     - Fork the repository and create a new branch for your changes.
