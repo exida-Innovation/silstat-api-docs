@@ -19,10 +19,10 @@ Thank you for your interest in contributing to the SILstat API documentation! We
     - Once approved, your changes will be merged.
 
 ## Code of Conduct
-Please be respectful and considerate in your communications. We follow the Contributor Covenant Code of Conduct.
+Please be respectful and considerate in your communications. We follow the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 
 ## License
-By contributing, you agree that your contributions will be licensed under the MIT License.
+By contributing, you agree that your contributions will be licensed under the [MIT License](https://github.com/exida-Innovation/silstat-api-docs/edit/main/LICENSE).
 
 ## Questions?
 If you have any questions, please open an issue or contact the maintainers.
