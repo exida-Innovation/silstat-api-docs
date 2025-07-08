@@ -3,7 +3,7 @@ Our docs are designed to assist technical users—developers and IT professional
 
 ## ✍️ Writing Guidelines
 
-- **Language:** Write all content in clear, technical English.
+- **Language:** Write all content in clear, technical English (specifically the US variant).
 - **Audience:** Assume your reader is a developer or IT specialist.
 - **Style:**
   - Be concise, precise, and pragmatic.
