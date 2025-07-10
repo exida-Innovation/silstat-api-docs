@@ -15,6 +15,37 @@ Once a user is authenticated, their **permissions** determine what they are allo
 
 ---
 
+## 🔧 Technical Implementation
+
+### How Role-Based Authorization Works
+
+User roles are assigned via the **Admin Center** in the UI or through the **API endpoints** for roles. Roles cannot be set on a per-query basis and are based on previously assigned roles.
+
+Each role is a combination of unique **permissions** defined in the `Permissions` property in `RolesEntity`. The `Permissions` property contains a dictionary of key-value pairs, where each key represents a specific permission, such as:
+
+- `https://silstat.exsilentia.innovation.exida.com/LibraryHierarchy.Read`
+- `https://silstat.exsilentia.innovation.exida.com/LibraryHierarchy.ReadWrite`
+
+### Permission System
+
+- **ReadWrite permissions** also allow deletion if the entity is in a valid state for deletion (i.e., not a parent or child of another non-deleted entity)
+- **Permissions with `.All` suffix** (e.g., `Read.All` or `ReadWrite.All`) mean the user has access to all entities for that specific permission
+- **Role enforcement** happens when the API validates the user's assigned permissions against the required permissions for each endpoint
+
+:::info
+
+**For Administrators:** User roles are managed through the Admin Center in the UI or via API endpoints. Each role contains specific permissions that determine what actions the user can perform.
+
+:::
+
+:::warning
+
+**Important:** The API will return a `401 Unauthorized` response if the user doesn't have permission for the requested operation. Always ensure users have the appropriate roles assigned before making API calls.
+
+:::
+
+---
+
 ## 👥 Roles and Permissions
 
 The table below outlines the available roles in the application and the permissions granted to each:
@@ -168,3 +199,115 @@ These functions allow users to import data and interact programmatically with th
 | Read | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Create and Modify | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Delete | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+
+---
+
+## 🧪 Testing Role-Based Access
+
+### Area Entity API Examples
+
+The following examples demonstrate how different roles behave when accessing Area Entity endpoints. These examples use minimal schema to focus on the authorization behavior.
+
+#### Example 1: POST `/api/areas` - Create Area
+
+```bash
+# Request
+curl -X POST \
+  -H "Authorization: Bearer <YOUR_JWT_TOKEN>" \
+  -H "Content-Type: application/json" \
+  -H "SelectedOrganizationId: <YOUR_SELECTED_ORGANIZATION>" \
+  -d '{
+    "Names": [
+      {
+        "LanguageISO639_2": "eng",
+        "Text": "Production Area A"
+      }
+    ],
+    "Descriptions": [
+      {
+        "LanguageISO639_2": "eng", 
+        "Text": "Main production area"
+      }
+    ]
+  }' \
+  https://api.silstat.exsilentia.com/api/areas
+```
+
+```http
+# Response for user with Configure role (has permission)
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "Id": "123e4567-e89b-12d3-a456-426614174000",
+  "Names": [
+    {
+      "LanguageISO639_2": "eng",
+      "Text": "Production Area A"
+    }
+  ],
+  "CreatedAt": "2024-01-01T10:00:00Z",
+  "CreatedBy": "456e7890-e89b-12d3-a456-426614174001",
+  "LockStatus": 0,
+  "EntityStatus": 0
+}
+```
+
+```http
+# Response for user with Report role (insufficient permissions)
+HTTP/1.1 401 Unauthorized
+```
+
+#### Example 2: GET `/api/areas/{id}` - Get Area by ID
+
+```bash
+# Request
+curl -H "Authorization: Bearer <YOUR_JWT_TOKEN>" \
+  -H "SelectedOrganizationId: <YOUR_SELECTED_ORGANIZATION>" \
+  https://api.silstat.exsilentia.com/api/areas/123e4567-e89b-12d3-a456-426614174000
+```
+
+```http
+# Response for user with appropriate read permissions
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "Id": "123e4567-e89b-12d3-a456-426614174000",
+  "Names": [
+    {
+      "LanguageISO639_2": "eng",
+      "Text": "Production Area A"
+    }
+  ],
+  "Descriptions": [
+    {
+      "LanguageISO639_2": "eng",
+      "Text": "Main production area"
+    }
+  ],
+  "CreatedAt": "2024-01-01T10:00:00Z",
+  "CreatedBy": "456e7890-e89b-12d3-a456-426614174001",
+  "LockStatus": 0,
+  "EntityStatus": 0
+}
+```
+
+```http
+# Response for user without read permissions
+HTTP/1.1 401 Unauthorized
+```
+
+:::note
+
+**Permission Requirements:**
+- **Creating Areas (POST)**: Requires Configure role or higher
+- **Reading Areas (GET)**: Requires appropriate read permissions based on role
+- **Unauthorized Access**: Returns `401 Unauthorized` without a response body
+- **Optional Header**: The `SelectedOrganizationId` header can be used to specify which organization to operate within
+
+**Response Properties**: The examples above show minimal schema for clarity. Additional properties have been omitted for brevity.
+
+:::
+
+---
