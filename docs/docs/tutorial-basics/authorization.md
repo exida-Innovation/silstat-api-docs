@@ -215,17 +215,18 @@ The following examples demonstrate how different roles behave when accessing Are
 curl -X POST \
   -H "Authorization: Bearer <YOUR_JWT_TOKEN>" \
   -H "Content-Type: application/json" \
+  -H "SelectedOrganizationId: <YOUR_SELECTED_ORGANIZATION>" \
   -d '{
     "Names": [
       {
-        "languageCode": "en",
-        "text": "Production Area A"
+        "LanguageISO639_2": "eng",
+        "Text": "Production Area A"
       }
     ],
     "Descriptions": [
       {
-        "languageCode": "en", 
-        "text": "Main production area"
+        "LanguageISO639_2": "eng", 
+        "Text": "Main production area"
       }
     ]
   }' \
@@ -241,11 +242,14 @@ Content-Type: application/json
   "Id": "123e4567-e89b-12d3-a456-426614174000",
   "Names": [
     {
-      "languageCode": "en",
-      "text": "Production Area A"
+      "LanguageISO639_2": "eng",
+      "Text": "Production Area A"
     }
   ],
-  "CreatedAt": "2024-01-01T10:00:00Z"
+  "CreatedAt": "2024-01-01T10:00:00Z",
+  "CreatedBy": "456e7890-e89b-12d3-a456-426614174001",
+  "LockStatus": 0,
+  "EntityStatus": 0
 }
 ```
 
@@ -259,6 +263,7 @@ HTTP/1.1 401 Unauthorized
 ```bash
 # Request
 curl -H "Authorization: Bearer <YOUR_JWT_TOKEN>" \
+  -H "SelectedOrganizationId: <YOUR_SELECTED_ORGANIZATION>" \
   https://api.silstat.exsilentia.com/api/areas/123e4567-e89b-12d3-a456-426614174000
 ```
 
@@ -271,17 +276,19 @@ Content-Type: application/json
   "Id": "123e4567-e89b-12d3-a456-426614174000",
   "Names": [
     {
-      "languageCode": "en",
-      "text": "Production Area A"
+      "LanguageISO639_2": "eng",
+      "Text": "Production Area A"
     }
   ],
   "Descriptions": [
     {
-      "languageCode": "en",
-      "text": "Main production area"
+      "LanguageISO639_2": "eng",
+      "Text": "Main production area"
     }
   ],
   "CreatedAt": "2024-01-01T10:00:00Z",
+  "CreatedBy": "456e7890-e89b-12d3-a456-426614174001",
+  "LockStatus": 0,
   "EntityStatus": 0
 }
 ```
@@ -297,6 +304,9 @@ HTTP/1.1 401 Unauthorized
 - **Creating Areas (POST)**: Requires Configure role or higher
 - **Reading Areas (GET)**: Requires appropriate read permissions based on role
 - **Unauthorized Access**: Returns `401 Unauthorized` without a response body
+- **Optional Header**: The `SelectedOrganizationId` header can be used to specify which organization to operate within
+
+**Response Properties**: The examples above show minimal schema for clarity. Additional properties have been omitted for brevity.
 
 :::
 
