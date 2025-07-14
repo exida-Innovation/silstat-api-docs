@@ -16,6 +16,42 @@ This guide will help you access the API using your preferred tools and get up an
 
 ---
 
+## 📄 Request/Response Format
+
+---
+
+The SILstat™ API follows standard REST conventions for request and response formatting:
+
+### 🔄 Content Types
+
+- **Standard Endpoints:** The API accepts and responds with `application/json` Content Type for all standard API operations
+- **Blob Resources:** For better handling of Blob Resources use a known Content Type specific to the resource. If it is not provided, the API will fall back to `application/octet-stream`.
+
+### 📋 Request Format
+
+When making API requests:
+- Set the `Content-Type` header to `application/json` for request bodies
+- Include your authentication token in the `Authorization` header
+- Optionally set the `Accept` header to `application/json` (most tools do this this automatically)
+- Optionally include the `SelectedOrganizationId` header for multi-organization scenarios
+
+### 📤 Response Format
+
+API responses will:
+- Return JSON-formatted data with appropriate HTTP status codes
+- Include standard REST response patterns for success, error, and validation scenarios
+- Use `application/json` content type for structured data responses
+
+:::info
+
+For file downloads and blob resources, the response content type will match the actual file type (e.g., `application/pdf`, `image/png`) or default to `application/octet-stream` for unknown types.
+
+See [MDN Common Types](https://developer.mozilla.org/docs/Web/HTTP/Guides/MIME_types/Common_types) (previously known as MIME Types, currently known as Media Types or Content Types).
+
+:::
+
+---
+
 ## 🔐 Step 1: Authentication
 
 ---
