@@ -40,7 +40,13 @@ To fully support Microsoft Entra Identity Provider the customer registers the ex
 
 ![exida Tenant Diagram](/img/exida-tenant-diagram.png)
 
-Registering allows the customer to manage which identities have access to exida software and enable existing investments in identity management to be respected. Using this approach no secrets need to be exchanged, and no access is needed by the exida team to the customer’s Identity Provider.
+Registering exida’s enterprise applications within a customer’s Microsoft Entra ID tenant enables the customer to centrally manage which users or identities can access exida software, leveraging their existing identity governance policies such as role-based access control and multi-factor authentication. This integration respects the customer’s current identity infrastructure without requiring the exchange of secrets or credentials, and without granting exida any direct access to the customer’s Identity Provider. Authentication is handled securely through standard OpenID Connect and OAuth 2.0 protocols supported by [Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/), allowing seamless and secure single sign-on (SSO) experiences. 
+
+::: info
+
+For more on configuring enterprise applications and federated identity, see [Microsoft’s guide to enterprise app integration](https://learn.microsoft.com/en-us/azure/active-directory/manage-apps/what-is-application-management).
+
+:::
 
 ![exida Verification Diagram](/img/exida-verification-diagram.png)
 
