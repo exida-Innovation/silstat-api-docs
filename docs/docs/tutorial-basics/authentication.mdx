@@ -108,22 +108,32 @@ Before running the script in this section, please ensure your environment is set
 
 ### ✅ Requirements
 
-- **Azure CLI Installed**
+The script relies on the [Azure CLI](https://learn.microsoft.com/en-us/azure/cloud-shell/overview) for interacting with Microsoft Entra ID. You can use it in PowerShell or your favorite terminal.
 
-  The script relies on the Azure CLI for interacting with Microsoft Entra ID. You can use it in PowerShell or your favorite terminal.
+[Install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 
-  - [Install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-  
-    ```powershell
-    # On Windows you can use
-    winget install --exact --id Microsoft.AzureCLI
-    ```
+<Tab>
+<TabItem value="Windows" label="windows">
 
-  - Verify installation:
+```powershell
+winget install --exact --id Microsoft.AzureCLI
+```
 
-    ```powershell
-    az --version
-    ```
+</TabItem>
+<TabItem value="apt (Ubuntu, Debian)" label="linxdeb">
+
+```bash
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+```
+
+</TabItem>
+</Tab>
+
+Verify installation:
+
+```powershell
+az --version
+```
 
 ### 🚀 Running the Script
 
