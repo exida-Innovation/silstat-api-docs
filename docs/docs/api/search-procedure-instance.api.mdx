@@ -1,0 +1,71 @@
+---
+id: search-procedure-instance
+title: "Search for Procedure Instance Entity"
+description: "This searches the Procedure Instance Entity"
+sidebar_label: "Search for Procedure Instance Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJyll1Fv2zYQx78KQexhA5TYS/MyvaVNF3jI2q52tofAGM7i2WZDkQpJeTYMfffhKMmWI1mN0ieL5vH/O5JH8m7PBbrEysxLo3nMZ2vpmEOwyRod82tkX6xJUOQW2UQ7DzpB9lF76Xc84iZDCzRyInjMp2HYwb425xHPwEKKHq3j8eP+JdJkPOKSPp9ztKSrIUUe85986HLJGlPg8Z4vjU3B85hL7d9d8Yj7XYZlE1doeRHx7UXqLlyepmB3POakUEQvkdMneZbpyr4fgQaJNvWzFWjZ+905sqH+xe4EXrGct1KvOlD1mDbtL1JnM9z6M7znQaDnDoSSzjOzZIlJU2AOaZs9CqZggYpJ4c6Q1SCy6iDP1sgU6FUOKwxRWoYs87j1TDomdY3OwK8b5GrMByMoLi0+59Ki4LG3OQ5x6sSBhNSKOem5zGiHjiSuxmP6SYz2qD19QpYpmYQDM/rmaCL7BlJ6TMPA06niFtJMIa1z62gdDmJm6Sh6WZJvLMItbmSCn4zAO2vyTOoVndGX4mARRLDURuCqspSCR8ewz/PQ1rlSsFBYr5WXnhrnYVF7EU9tv+/QDzhy3oFz2MGwbsQHi3QIbnybkpRd4JsgAR57QEe586z3u7OscJ28dlJHuQ5WGWtTDz6vonQJufI8HkcvIzZYutIy4qjzlMeP4+jX6Cp6F13Po/aVes6jE2jXzVsazGDVcXBCl4fVd/VnwaY1465AuWEPD5NbZiy7o1+LmUVHJL1int7OUvFywKp3h9FEe7QbUG0XZN3TI3k0aQnfm+TpNbuoTPLUsYdDdq+B6to76u4OXhV6BsXuQaxjyn8aIZey+0ymVd+gQ9kQ7MF1zazGDZpbQ/A8znaFa4Wzg+62hmAH7vgIdfCyunMQsCnZS6yevc8btBuJ/1FsufLA9TtTjTPVOAprV14Pb/Sz15HWFIoeicMTXo0xi2+YeJp29QdYCztekMjp9L6iz63uz9GZQA9SObYAh4IZzepU7EU+8zcoKYh6Pb5ur+Qnw8JySXRsaXIt2gJtE/LYYZJbmh+l/QsEi/ZfyP2ax49zSpg8rKgkaC8Ln0c8Rb82VFis0IcigsbxUWtb3ajM/kb7ZnpXUJKJdlMXHblVPOZr7zMXj0aQyUsnFUXCJW6dVOQ8XCYmpa6QzNW+TylDKxOrkxnUzd/r6Pnjn1md2NLGlb3HnSV0WBSplybkmFVM4FYKYNPJPXnDbr5MeOtF3U4n98FD2le0mZUOyZJl1mykQEcfKwtpCl4mDJIEnWPehOjItUCrdvRECfDAUiNQsaWxrKFb40ELdgtuvTBgBT1jtIClF1fjq+uL8W8XV9cUKJlxPoWQw1bJdVn/BeG+ovFkao38eGDtWa0qZfyjTIHU5FTY5H0VKo/tG8CFoCACj3h8Ug3MI742ztOw/Z6Oy4NVRUF/l0cmFK7S0b0geLwE5bBvLqFy7fTxCXfH2nYDKieTssZ5tXxVwPbpV3XsGwGNWrUPcixZ38g5qVJ7SM9vR7ymSu0hqxPynBpWlq/DoIj4+WtVbP7CXlW9drpUvwn6ZMkPrjbjuZgXEV9TNWWDp6XJTZJg5huDWzVp0bx57z7SlVbfdxX9cLFVH6Te6dh+X1rMzBPqojj46alNDhbF/wvHXWg=
+sidebar_class_name: "get api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search for Procedure Instance Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/procedureinstances/search/{languageCode}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This searches the Procedure Instance Entity
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Top","in":"query","name":"$top","schema":{"format":"int32","type":"integer"},"x-ms-summary":"top"},{"description":"Skip","in":"query","name":"$skip","schema":{"format":"int32","type":"integer"},"x-ms-summary":"skip"},{"description":"Order By","in":"query","name":"$orderby","schema":{"type":"string"},"x-ms-summary":"orderby"},{"description":"Query Text","in":"query","name":"q","schema":{"type":"string"},"x-ms-summary":"q"},{"description":"list of comma separated label ids","in":"query","name":"l","schema":{"type":"string"},"x-ms-summary":"l"},{"description":"The language the search text is in","in":"path","name":"languageCode","required":true,"schema":{"type":"string"},"x-ms-summary":"The language code"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"items":{"description":"example of ProcedureInstanceEntity","properties":{"AreaDeviceNodeGroupingId":{"description":"areadevicenodegroupingid","format":"uuid","nullable":true,"title":"AreaDeviceNodeGroupingId","type":"string"},"AreaDeviceNodeId":{"description":"areadevicenodeid","format":"uuid","nullable":true,"title":"AreaDeviceNodeId","type":"string"},"AreaId":{"description":"areaid","format":"uuid","nullable":true,"title":"AreaId","type":"string"},"CreatedAt":{"description":"createdat","format":"date","nullable":true,"title":"CreatedAt","type":"string"},"CreatedBy":{"description":"createdby","format":"uuid","nullable":true,"title":"CreatedBy","type":"string"},"EntityStatus":{"default":0,"description":"entitystatus","enum":[0,1,2,3,4],"format":"int32","nullable":true,"title":"EntityStatus","type":"integer"},"EntityTag":{"description":"entitytag","nullable":true,"title":"EntityTag","type":"string"},"Id":{"description":"A UUID or GUID representing this Entity.","format":"uuid","nullable":true,"title":"Id","type":"string"},"Interval":{"description":"interval","nullable":true,"title":"Interval","type":"string"},"LockStatus":{"default":0,"description":"lockstatus","enum":[0,1],"format":"int32","nullable":true,"title":"LockStatus","type":"integer"},"LockedBy":{"description":"lockedby","format":"uuid","nullable":true,"title":"LockedBy","type":"string"},"ModifiedAt":{"description":"modifiedat","format":"date","nullable":true,"title":"ModifiedAt","type":"string"},"ModifiedBy":{"description":"modifiedby","format":"uuid","nullable":true,"title":"ModifiedBy","type":"string"},"ModifierId":{"description":"modifierid","format":"uuid","nullable":true,"title":"ModifierId","type":"string"},"ProcedureId":{"description":"procedureid","format":"uuid","nullable":true,"title":"ProcedureId","type":"string"},"ProcedureInstanceOverviewStatsEntityId":{"description":"procedureinstanceoverviewstatsentityid","format":"uuid","nullable":true,"title":"ProcedureInstanceOverviewStatsEntityId","type":"string"}},"title":"ProcedureInstanceEntity","type":"object"},"type":"array"}}},"description":"Return the Procedure Instance Entity details based on query","x-ms-summary":"Valid"},"404":{"description":"No entities found","x-ms-summary":"No entities found"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: create-area-history
+title: "Creates a new AreaHistory"
+description: "This creates a new AreaHistory"
+sidebar_label: "Creates a new AreaHistory"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWFFz4jYQ/iuefRYJECAXv+WStE0n194UMp0pw3QWew262JJPkhMYxv+9s7ZJ7OAQ6DNPWGj1fbta7X6yNxCSDYxMndQKfJgspfUCQ+jIeugpevGuDeFv0jpt1iBAp2SQje9D8OGmsGxaGPqZkXVfdbgGfwOBVo6U40dM01gGxerzH5b5NmCDJSXIT01HaIVJGpOno7oDd8pJxySpYUecJMtL2YL9eQ+ChlCGICDSJkEHPmRZMVZZHOM8JvCdyUiAk44HWyABbp3y2Doj1QJyUUUaXrtdlnK7QnR1ohAd7SF6g/uY6+v6Q675+oig3uBauG7R0Z1q2TsOgFT4PqaOk8m+wLZ4H1CNHZqWLWRkW0z9D7pxtXCHsDwtY4cusyVnhFnswO+K96etsLSlpQBSWQL+tCt6oi8uxGBW80oqd9Hf41GD9NUpqRwtyLx5NcFFy6EvphwuPsWfFDa7ET+Tct/IYYiutSKIDZLK4KjSeA/dwt5GeO09Pt7fetp4v/KvodSQ5TjVwnPcbMp4zo7wpJ38QQdPh6Q61sFTS6KPSXGNqi3BPN1evXExc1TxvoK1hPxNhzKS7U0pqeaO6ko1wD10bZFt6Y6KrQbYQndIMj+sWDEUI3Epvogr0euK3lHp/TC1eVMo3mtSZa7nPyhwkLN509ubPbrKqikNhaUzOf9hU61sKXD9bvekpSctPWnpSUtPWnrS0pOWwh9NBfVCcihj62EYEu/TqpPYjs2SBM36U/NcwKBU2CbJvXrGWIbeLTrcxWzMFhCDlpqtkSrtvEhnqsW/djMO21KQGd4Uf7qBOaEh8y9mbgn+dJbPBDhcWPCndQSYCUjILTW/oqfa8glMkZfAOcv4sjBjvWd480zGFuiZicGHpXOp9c/PMZVnVsZ8LM5oZWXMnQbPAp3wFDD31rcxXzzK60PDw+3wl+1x+f3vCXMW5uBXs2/pZuoiaL7R/PX2HeGuvMDUrydwEeGXYTQadIaXvcvOYDjqd+YXUdDpB1eji2g0wghH0LhrQL/bH3S6l53+FTQuBodivep7DWnSG/rDnt//cta97P0DDWXeZ9bU025DyraF26JBh7p6jG2923frLfdQgHrvbG5yvc0divbqSi5Aqkhz1retglYyRG98/8Cn0rv+fg87t4/V+P6hOKmshmRSIy2xpZca/SxDsvywMJgk6GTgYRCQtZ7TnluSl6mQTLxmQeUd9xIdUuxF2ng13C09Kq59u5xrNCGLLhdS6UW5CVed/oAbA5dggsUVXWFCn7wJNOKp3fk//zZXVZGjlTtPY5SKyYui3lT1P4Vm/c8ELLk/+FPYbOZo6dHEec5//8yIG9N0JuAZjSx7+3SWC1gShmSKhvFEnNeb0sPOhOnZPM7YjZ03lFxsV1wHAaVur229hX3/c8xtY159UeSkgA8GX/i9CV/Ah+LDJK8uelDx3wZiVIsMF2xbYnJn2Tamaq9eO1D1wFFVU6jWNQ83m9Jiop9I5TmIKhTHY8hneZ7/B0UQIK4=
+sidebar_class_name: "post api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Creates a new AreaHistory"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/areahistories"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This creates a new AreaHistory
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"description":"example of AreaHistoryEntity","properties":{"AreaId":{"description":"areaid","format":"uuid","nullable":true,"title":"AreaId","type":"string"},"CreatedAt":{"description":"createdat","format":"date","nullable":true,"title":"CreatedAt","type":"string"},"CreatedBy":{"description":"createdby","format":"uuid","nullable":true,"title":"CreatedBy","type":"string"},"DateEnd":{"description":"dateend","format":"date-time","nullable":true,"title":"DateEnd","type":"string"},"DateStart":{"description":"datestart","format":"date-time","nullable":true,"title":"DateStart","type":"string"},"EntityStatus":{"default":0,"description":"entitystatus","enum":[0,1,2,3,4],"format":"int32","nullable":true,"title":"EntityStatus","type":"integer"},"EntityTag":{"description":"entitytag","nullable":true,"title":"EntityTag","type":"string"},"EventMetadataId":{"description":"eventmetadataid","format":"uuid","nullable":true,"title":"EventMetadataId","type":"string"},"Id":{"description":"A UUID or GUID representing this Entity.","format":"uuid","nullable":true,"title":"Id","type":"string"},"LockStatus":{"default":0,"description":"lockstatus","enum":[0,1],"format":"int32","nullable":true,"title":"LockStatus","type":"integer"},"LockedBy":{"description":"lockedby","format":"uuid","nullable":true,"title":"LockedBy","type":"string"},"ModifiedAt":{"description":"modifiedat","format":"date","nullable":true,"title":"ModifiedAt","type":"string"},"ModifiedBy":{"description":"modifiedby","format":"uuid","nullable":true,"title":"ModifiedBy","type":"string"},"Status":{"default":0,"description":"status","enum":[0,1,2,3,4,5,6,7,8,9,10,11],"format":"int32","nullable":true,"title":"Status","type":"integer"}},"title":"AreaHistoryEntity","type":"object"}}},"description":"Creates a new AreaHistory","required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"description":"example of AreaHistoryEntity","properties":{"AreaId":{"description":"areaid","format":"uuid","nullable":true,"title":"AreaId","type":"string"},"CreatedAt":{"description":"createdat","format":"date","nullable":true,"title":"CreatedAt","type":"string"},"CreatedBy":{"description":"createdby","format":"uuid","nullable":true,"title":"CreatedBy","type":"string"},"DateEnd":{"description":"dateend","format":"date-time","nullable":true,"title":"DateEnd","type":"string"},"DateStart":{"description":"datestart","format":"date-time","nullable":true,"title":"DateStart","type":"string"},"EntityStatus":{"default":0,"description":"entitystatus","enum":[0,1,2,3,4],"format":"int32","nullable":true,"title":"EntityStatus","type":"integer"},"EntityTag":{"description":"entitytag","nullable":true,"title":"EntityTag","type":"string"},"EventMetadataId":{"description":"eventmetadataid","format":"uuid","nullable":true,"title":"EventMetadataId","type":"string"},"Id":{"description":"A UUID or GUID representing this Entity.","format":"uuid","nullable":true,"title":"Id","type":"string"},"LockStatus":{"default":0,"description":"lockstatus","enum":[0,1],"format":"int32","nullable":true,"title":"LockStatus","type":"integer"},"LockedBy":{"description":"lockedby","format":"uuid","nullable":true,"title":"LockedBy","type":"string"},"ModifiedAt":{"description":"modifiedat","format":"date","nullable":true,"title":"ModifiedAt","type":"string"},"ModifiedBy":{"description":"modifiedby","format":"uuid","nullable":true,"title":"ModifiedBy","type":"string"},"Status":{"default":0,"description":"status","enum":[0,1,2,3,4,5,6,7,8,9,10,11],"format":"int32","nullable":true,"title":"Status","type":"integer"}},"title":"AreaHistoryEntity","type":"object"}}},"description":"New AreaHistory details added","x-ms-summary":"New AreaHistory details added"},"400":{"description":"Invalid Data","x-ms-summary":"Invalid Data"},"404":{"description":"AreaHistory not found","x-ms-summary":"AreaHistory not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

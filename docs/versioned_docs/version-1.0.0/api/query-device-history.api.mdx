@@ -1,0 +1,71 @@
+---
+id: query-device-history
+title: "Query Paginated results for Device History Entity"
+description: "This returns the paginated results for Device History Entity based on the OData Query Parameters."
+sidebar_label: "Query Paginated results for Device History Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9V21v20YM/isHYh8vieNmL9W3dMk6DynazUn7ITAGWqLtaySddkcZNgz994EnKX6RnMYdsE+WTB4fks8d79EGEvKxMwUbm0ME9wvjlSMuXe4VL0gVODc5MiXKkS9T9mpmnbqhpYlJ/W48W7dWtzkbXqspekqUzcPCjzfIqP4sya3VJ3SYEZPz56DBFuRQ8EYJRBA86nhNONBQPC+A6HFzmKMtQIORx39kMWjIMSOI4AcOJh8vKEOINjCzLkOGCEzOb4aggdcF1a80JweVhtVZ5s98mWXo1hCBRKj0IeT4yRzF9LXtv4CGEF3Ujy4hp96tjyFbsU/Xe+ANlmdn8nkPVLummmhw5Aube/KycDgYyE9sc6ac5RGLIjVxYOriq5eMNjtAhikLC/dzphVmRUrKztQeqfUWEWqd8M+mRv3VkWyua+5GimsTMuhtSxNkkg6UaYrTlCBiV5IGNiwvO+F0txON8d36KFbo5TNWWZrk21iBng7WDTLd5kkXSQqgPDms6YxN9lJhbbwjUGNG19NCieyD6Tvgxs3CLmDgddRXXLCY5IQuPgfrAar3zJiRy2anzbBMGaKBPtx1wdPXnhooLzOIHgf6Ug/1G3010d1DeSyhPdC+s1s73OO8Z/MHE+P8m/Hvg0+34iXl/IEYE2Ts6zCJQ9Y4nNTow9A96H2A1+rhYXSjrFPv5ddR4chLnflcsVwWdT3nJ2TSD35n46fXUJ3a+KmH6FMo3oHqI1jM/WMiDZaTpsRzsJ6SP9jEzEz/9Msa20njbyfgC3B9lbVwJ9W2E7AH7jVkHj2x+kf9k/5Z/6Lf6suBvjyJ3qPUVodj5/BuahbY6VeKWWpo/kDncA2VBNjP/6+glILe6ZdECTGa1G+lUXuHH1zLnzE1iSBeDa667IzypdiVHF1VOLs0CSXdII1bKNRTXDqpSvTTlNCR+xtLXkD0OJG7n3Eu2mq/ETDRkBEvrAizOXFQYrIGLurRvgh+cncLglu2Aq10KUSwYC58dHGBhTn3JhVyz2nlTSrzAs9jm4kpSI82vbHoiVoK7CXZvv7Wkv7Hl/tW5wgjtXVLmUCHuk0+s0EHNUTTyiSoxqM7yUZdfxpB5+5YjUd3IUMhjVzhjCfxbDvt5WHuMMuQTawwjsl7xTbQXuYJuXQt4zCwk9mE0qCRd+K28Jgn6gb9YmrRJTIypYF1FsPB8Ops8PZseCW7oLCeMwyKqxF7rZB+tRo/rHNH2v0vKr8hhmnFF0WKJpe6wj7ZNJvqEQ431UTDwnoW02YjOA8urSr5uz424VvAeDn0CUQzTD29VGX4GOjN44nW28+FJaaluNQK/NXhm2+Cl+I3nwbfCbAj/18C2X4FbHEm8uJMPR0fJ5WGBWFCLnSwXncdx1TwzqqO3K92p8H7Wzl/7eFs8nk+hc2DRG9HZr6b0WZTe9zbJ8qrCtrkWd6hmlRV9S/qjPcT
+sidebar_class_name: "get api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Query Paginated results for Device History Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/devicehistories"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This returns the paginated results for Device History Entity based on the OData Query Parameters.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Top","in":"query","name":"$top","schema":{"format":"int32","type":"integer"},"x-ms-summary":"top"},{"description":"Skip","in":"query","name":"$skip","schema":{"format":"int32","type":"integer"},"x-ms-summary":"skip"},{"description":"Order By","in":"query","name":"$orderby","schema":{"type":"string"},"x-ms-summary":"orderby"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"items":{"description":"example of DeviceHistoryEntity","properties":{"CreatedAt":{"description":"createdat","format":"date","nullable":true,"title":"CreatedAt","type":"string"},"CreatedBy":{"description":"createdby","format":"uuid","nullable":true,"title":"CreatedBy","type":"string"},"DateEnd":{"description":"dateend","format":"date-time","nullable":true,"title":"DateEnd","type":"string"},"DateStart":{"description":"datestart","format":"date-time","nullable":true,"title":"DateStart","type":"string"},"DeviceId":{"description":"deviceid","format":"uuid","nullable":true,"title":"DeviceId","type":"string"},"EntityStatus":{"default":0,"description":"entitystatus","enum":[0,1,2,3,4],"format":"int32","nullable":true,"title":"EntityStatus","type":"integer"},"EntityTag":{"description":"entitytag","nullable":true,"title":"EntityTag","type":"string"},"EventMetadataId":{"description":"eventmetadataid","format":"uuid","nullable":true,"title":"EventMetadataId","type":"string"},"Id":{"description":"A UUID or GUID representing this Entity.","format":"uuid","nullable":true,"title":"Id","type":"string"},"LockStatus":{"default":0,"description":"lockstatus","enum":[0,1],"format":"int32","nullable":true,"title":"LockStatus","type":"integer"},"LockedBy":{"description":"lockedby","format":"uuid","nullable":true,"title":"LockedBy","type":"string"},"ModifiedAt":{"description":"modifiedat","format":"date","nullable":true,"title":"ModifiedAt","type":"string"},"ModifiedBy":{"description":"modifiedby","format":"uuid","nullable":true,"title":"ModifiedBy","type":"string"},"Status":{"default":0,"description":"status","enum":[0,1,2,3,4,5,6,7,8,9,10,11],"format":"int32","nullable":true,"title":"Status","type":"integer"}},"title":"DeviceHistoryEntity","type":"object"},"type":"array"}}},"description":"Return the Device History Entity details based on query","x-ms-summary":"Valid"},"404":{"description":"Invalid data provided","x-ms-summary":"Invalid"}}}
+>
+  
+</StatusCodes>
+
+
+      

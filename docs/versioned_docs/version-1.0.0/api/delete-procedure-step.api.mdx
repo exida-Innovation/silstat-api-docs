@@ -1,0 +1,71 @@
+---
+id: delete-procedure-step
+title: "Deletes the Entity"
+description: "This deletes a(n) ProcedureStep by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE2P2jAQ/SvWXLqVsoAQl+ZWCVpR7WFVqHpAqBrigVib2F57jEBR/ns1IbALu9pKPcXOfLw382bcgKZYBOPZOAs5LEsTlaaKmKLCO/tZPQZXkE6BFkxebY7K8Keovv+aTweQgfMUUGLnGnKYdoFXEZCBx4A1MYUI+aq5AbxOb7Ri1+NDBkY8PHIJGVisCXIwGjII9JxMIA05h0QZxKKkGiFvYOtCjQw5pNR58tFLVORg7A7aDA73dbyPqa4xHD+Gb9cCFL2zkaLkHo9G8rnmH1NRUIzbVKlLL+AfMKc2afUSWx2F22Q0eQswt3usjFbzqYrJ+8qQfpv/Pae2zSBSkYLhY9f4DWGg8AcTl5Cv1lIf405EueYH6wxq4tKJpBctOhlyGPqza2TycdgY3YIAhf1Z4BQqyKFk9jEfDtGbQTRVZOQBHaKpyLLBQeFqMXVdPrNciIynXl9xPV+/ncX98XsJveqi7sn6orZAd+Ubu3USzoYrMdDBaFSL+YOwUV8f55DddJsOi/lDx1DNLFPwwUQST+WD2xtNUQ67gHWNbAqFnYIyNVySSlZTqI7G7pRGRlU7TZXauqBe5T3Do9VqirHcOAxadkkaeGIxHo0n96Mv9+OJjIV3kWu0Uki/BNN+QQVzZlkEvimkgcJZJsv/sdN9F5kOPPQVGiskOlGbfgpWcD0FkEFutMxN6SKLvWk2GOlXqNpWfj8nkjldrTPYYzC4ETnkLTBRzhryLVaRPiji7me/87fsb56Md8n3P9FKn/ZYJblBBk90PD0p7bp9NfPT2cNsOYMMzuPXx1/mrD9IBe+mbpqTx9I9kW3bCxLLXcDa9i8cSOHq
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/proceduresteps/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) ProcedureStep by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"ProcedureStep id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"ProcedureStep id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"ProcedureStep Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

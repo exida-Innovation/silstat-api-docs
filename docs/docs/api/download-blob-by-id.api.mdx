@@ -1,0 +1,71 @@
+---
+id: download-blob-by-id
+title: "Download blob by ID"
+description: "Downloads the blob"
+sidebar_label: "Download blob by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNU01v2zAM/SsCTxvgfCDoZb51aDd46GFYOuwQBANtMbFQWXIlOoth+L8PtJ0sS4NhJ31R5OPjex1oikUwNRvvIIUH/8tZjzoqLknl1ueQgK8poARk+iLko/X5xzbTkECNAStiChHSTXeVMtNq58M5n2KvclJ6ykLy30hcjVxCAg4rghSM3Ad6bUwgDSmHhhKIRUkVQtrBzocKGVJomiGS21p+RQ7G7aFP4Dir4iw2VYWhhRQErDIa+q1kjbV3kaIkWi2XshTeMTmWbdVYNjUGXkiRmUYeKt6onRsn2d9U7/vkioN1UxQU466x6kwmvAF5M0qSRSqaYLgd2M0JA4Wf2HAJ6WYrHTHuhfmhS9gmUBGXXma1Jx7GI6GwEPrjojO6B8kZDqeBNcFCCiVzHdPFAmszj8ZGRp7TMRpLjg3OC1/J00DhCdBaSBmJ/AvW6fjpRNWXH88wzU+YGl//MCelh06N23n5zoatPNDRaFTr7EnQqPuvGVxTS8d19jQgVI+OKdTBRJJIVQd/MJqibPYBqwrZFAoHjkWFosjGaQq2NW6vZNCq8prsoNeLvKfy6LR6wFjmHoOeQwJC4IhitVzdzZYfZqs7EV/tI1fopJFJzifTjBbIW5U9XHdyIcLbNpy4YjryorZonJQaRtdNI97AMGJIIDVahFD6yHLddTlG+h5s38v1a0MiuM02gQMGg7lwLcY1UfYa0h3aSP8A+O7bZM336j/8fRP5dIlOHHRA28gJEnihdvR/v+0TKAk1hQHd+HBfFFTzxZdbfu0vTfD5UbR3EuZU9qzAaSMFbiLqujHi2b+Q6/szQJazYOz73xfazSQ=
+sidebar_class_name: "get api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download blob by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/blobs/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Downloads the blob
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Id for the blob to be downloaded","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Blob id"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"multipart/form-data":{"schema":{"format":"binary","type":"string"}}},"description":"Successful operation","x-ms-summary":"Successful operation"}}}
+>
+  
+</StatusCodes>
+
+
+      

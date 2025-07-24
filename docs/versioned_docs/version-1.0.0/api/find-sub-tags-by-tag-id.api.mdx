@@ -1,0 +1,71 @@
+---
+id: find-sub-tags-by-tag-id
+title: "Finds Sub Tags for a Tag using the Tag Id"
+description: "Finds Sub Tags for a Tag using the Tag Id"
+sidebar_label: "Finds Sub Tags for a Tag using the Tag Id"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1v2zAM/SsCTxvgfCDIZb51aDtk6GFYMuwQBANjMbFWW3IlOkhg6L8PVOwuTYthPVkyv57eI9mBplB407BxFnK4N1YHtWy3aoX7oHbOK5SjaoOxe8UlpdtCQwauIY8St9B95LLdStjn0wr3yaVBjzUx+QD5uruqtbhVbjekhAyM/GyQS8jAYk2Qg5Eknp5a40lDzr6lDEJRUo2Qd7BzvkaGHNo2efKpkajA3tg9xAyOozqMQlvX6E+QQ4J+C3EjSUPjbKAgeWbTqXwKZ5ksyxGbpjJFet3kdxC43UVdw1SH/wLQ/0Dv8QQxxuyKg55ppYnRVAFeQb52iBnMp3OpfUWmPWBltNLI+DrLC6ugCFS03vApybIl9OR/Ycsl5OuN0MO4F8mEMdhkUBOXTlTeEydZxRMm4jXpjI6T0G5TiGT2h0Hv1leQQ8nchHwywcaMg6kCI4/pGExFlg2OC1eLKakywFoK1WdtXoAbrvcD719/rqDvCOH5bP0rhJRO7zV25yScDVdioKPRqJaLB0Gjbr4t4FoZOi4XDwmhurNMvvEmkHiqxruD0RTksPdY18imUFgUFIJilzq6tZp8dZKZEc5V7TRVaZwu8g7l0Wp1i6HcOvR6DBkIgWcUs+lsPpp+Gs3monzjAteYmrEfkPfM64v3XXT7u5L0xDIdedJUaKzgSjp3fVusoe+EPI3E0BmbDEoXWOxdt8VAP3wVo/x+akmadL3J4IDe4FYUkm1hgpw15DusAv3jAR++9yvio7peKm/iHabSnoRsrFq5QQaPdDovnbiJGZSEmnyCcjbcFAU1fBHyakvEy1n5cie9OTRuX/O5Q/uDZH8TTtedPVbukWyMz+hY7gIwxj/OEu+X
+sidebar_class_name: "get api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Finds Sub Tags for a Tag using the Tag Id"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/tags/{id}/subtags"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Finds Sub Tags for a Tag using the Tag Id
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"ID of the Tag","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Tag ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"items":{"format":"uuid","type":"string"},"type":"array"}}},"description":"Sub Tag details","x-ms-summary":"Sub Tag details"},"404":{"description":"Invalid data","x-ms-summary":"Invalid data"}}}
+>
+  
+</StatusCodes>
+
+
+      

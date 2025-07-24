@@ -1,0 +1,71 @@
+---
+id: create-area-or-device
+title: "Creates a new AreaOrDevice"
+description: "This creates a new AreaOrDevice"
+sidebar_label: "Creates a new AreaOrDevice"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWMFy4jgQ/RVVn03CACEb3zLJzBZb2ZmpDak9UNRWY7VBE1vySHICRfnft9qGYAcngdscOCFbT/26pe7XwmuQ5CKrMq+MhhDGC+VEZAk9OYFC07O4toTf7S09qYggAJORRUaPJIRwU0JfQSz9ysn5z0auIFxDZLQn7XmIWZaoqFx+/tMx4xpctKAUedR0hZaYZgkJEzdc+KK98isIILPsilfkeC1DKsA3I4l9e20PLaEsEdpIUhICiI1N0UMIeV4+6zxJcJYQhN7mFIBXnh/2jQfgVxnPOG+VnkMRlJi3aI8ma6eoNlte+32W6sgk+jqRRE/vEO3Mvc31efUm12x1RFA7cy1c1ZHee/S5q+hizBMPYTd4nRMl0lXIAEjnKYSTbvAp6AX9YDCtOaS07/fe8ahB+uKU0p7mZHdejXHekprllMf5h/bHJWYv4rZEuRYPD6NbYaz4k38tZZYcM+m58FyWlcWzI3a9PY3uTPR4yGYnJnps2epjNrlG1bbFPN2eY0k5c1SKvRhrCflvI1Ws2ksn3cwdVTs1g+/QtUW2pTsqtprBPbqiKR17OrmBm9lPijwUjG96dPOe3LOWK0uy8qjgFy4z2lWq2+t2Twp/UviTwp8U/qTwv6/Cf3ul60KSR5U4gVISe7XspK7j8jRFu/oYXwQwqIS/STPST5goKW7R477RxmxpYtBSInVWbbyITa5bPHwDx6E7inLLGxNO1jAjtGT/w9wvIJxMi2kAHucOwknDBEwDSMkvDP+nyYzjM8+Q18A5y7uxVV/hJHdkn8i60nxuEwhh4X3mwvNzzNSZUwlX1BktnUq4tvEsMilPAZNvnbvnllj1tYaL28ev27T5698xc5ZwCDezuzNn6jJq7rX/7P53falaa3vfhH6Mf1zEw0Hn4vLTZWdwMex1Zv046vSiq2E/Hg4xxiHsGt6h+Fr3gl63N+h0Lzu9K2i0mkNtNTtGtyHW28KoVPZQi3VR7NaV6VADdYlpxldXg8OsFQEoHRs+n21p01JJFPejO84fcf1jBHu9cXk/uitzijsF2cwqR4wUmTVPSpLjwdximqJXkcAoIueEN8IvSORakk1W3GwkehSpkZSI2FhRs7ulR82F6hYzg1ZyQ+KUr7yoIr/q9AYcBRdLiuU1T2NKH10nGwHVLo4HfHjYZLynpT/PElSa6csCXG9qdQLNWp0GsOBaDiewXs/Q0YNNioJf/8qJZWQyDeAJraoEeTItAljwFdKWxf1IfJw3lYudMdMzPMnZjb17bhFsV1xHEWX+XWxdbn58v+cSn22+lvCxQAgWn/n2jc8QQvnVhVeXelG+W0OCep7jnLGVTVaBrYhs9upFLTYDjmozhXpV83C9rhBj80i6KCDYhOL5GYppURT/A6dsHJg=
+sidebar_class_name: "post api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Creates a new AreaOrDevice"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/areaordevices"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This creates a new AreaOrDevice
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"description":"example of AreaOrDeviceEntity","properties":{"AreaDeviceNodeId":{"description":"areadevicenodeid","format":"uuid","nullable":true,"title":"AreaDeviceNodeId","type":"string"},"AreaId":{"description":"areaid","format":"uuid","nullable":true,"title":"AreaId","type":"string"},"CreatedAt":{"description":"createdat","format":"date","nullable":true,"title":"CreatedAt","type":"string"},"CreatedBy":{"description":"createdby","format":"uuid","nullable":true,"title":"CreatedBy","type":"string"},"EntityStatus":{"default":0,"description":"entitystatus","enum":[0,1,2,3,4],"format":"int32","nullable":true,"title":"EntityStatus","type":"integer"},"EntityTag":{"description":"entitytag","nullable":true,"title":"EntityTag","type":"string"},"Id":{"description":"A UUID or GUID representing this Entity.","format":"uuid","nullable":true,"title":"Id","type":"string"},"LockStatus":{"default":0,"description":"lockstatus","enum":[0,1],"format":"int32","nullable":true,"title":"LockStatus","type":"integer"},"LockedBy":{"description":"lockedby","format":"uuid","nullable":true,"title":"LockedBy","type":"string"},"ModifiedAt":{"description":"modifiedat","format":"date","nullable":true,"title":"ModifiedAt","type":"string"},"ModifiedBy":{"description":"modifiedby","format":"uuid","nullable":true,"title":"ModifiedBy","type":"string"}},"title":"AreaOrDeviceEntity","type":"object"}}},"description":"Creates a new AreaOrDevice","required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"description":"example of AreaOrDeviceEntity","properties":{"AreaDeviceNodeId":{"description":"areadevicenodeid","format":"uuid","nullable":true,"title":"AreaDeviceNodeId","type":"string"},"AreaId":{"description":"areaid","format":"uuid","nullable":true,"title":"AreaId","type":"string"},"CreatedAt":{"description":"createdat","format":"date","nullable":true,"title":"CreatedAt","type":"string"},"CreatedBy":{"description":"createdby","format":"uuid","nullable":true,"title":"CreatedBy","type":"string"},"EntityStatus":{"default":0,"description":"entitystatus","enum":[0,1,2,3,4],"format":"int32","nullable":true,"title":"EntityStatus","type":"integer"},"EntityTag":{"description":"entitytag","nullable":true,"title":"EntityTag","type":"string"},"Id":{"description":"A UUID or GUID representing this Entity.","format":"uuid","nullable":true,"title":"Id","type":"string"},"LockStatus":{"default":0,"description":"lockstatus","enum":[0,1],"format":"int32","nullable":true,"title":"LockStatus","type":"integer"},"LockedBy":{"description":"lockedby","format":"uuid","nullable":true,"title":"LockedBy","type":"string"},"ModifiedAt":{"description":"modifiedat","format":"date","nullable":true,"title":"ModifiedAt","type":"string"},"ModifiedBy":{"description":"modifiedby","format":"uuid","nullable":true,"title":"ModifiedBy","type":"string"}},"title":"AreaOrDeviceEntity","type":"object"}}},"description":"New AreaOrDevice details added","x-ms-summary":"New AreaOrDevice details added"},"400":{"description":"Invalid Data","x-ms-summary":"Invalid Data"},"404":{"description":"AreaOrDevice not found","x-ms-summary":"AreaOrDevice not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

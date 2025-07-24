@@ -1,0 +1,71 @@
+---
+id: query-area-or-device
+title: "Query Paginated results for Area Or Device Entity"
+description: "This returns the paginated results for Area Or Device Entity based on the OData Query Parameters."
+sidebar_label: "Query Paginated results for Area Or Device Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vktv4zYQ/ivEoEclcb25VLdss124SJttk7SHwCjG4tjmRiJVchTEMPTfF0NJsWzJadwCPVn0PL55z2xBU8i8Kdk4Cyncr01QnrjyNihekypxZSwyaeUpVDkHtXReXXlCdevVNT2bjNQny4Y3aoGBtHI2Ct5eI6P6rSK/UV/QY0FMPpxDAq4kj4I305BC5BB9t77RBgmUr/yQPm4PTXQlJGDk82+RhQQsFgQpfMeRFLI1FQjpFpbOF8iQgrH8YQoJ8Kak5kkr8lAn8HJWhLNQFQX6DaQgGurkEPLuyRzFDA3tv4BGFUPUW6/Jq4+bY8hO6IvNHniLFdgbuxqB6mTqeQKeQulsoCCC08lEfjJnmSzLJ5ZlbrKYqIuvQSza9oAMUxEF922mFyzKnJRbqn5OmwKRzHrJPpsGVFgahl+dJimHQ33oCXXksE6T0ZDs4ltV8W2rPMdFTpCyrygBNiyPofJkGB3hOQZ7Mtg4xI+epH2ueIiSNSTkPpBGpjeAduqOY33cHMWK5fJep3bqRrCalN4xctXWwRKrnCGdJIc1ETlDw5kA2aqA9HGSfJ9Mkw/J5TwZtswxi/ZAxzqrYbjH1UhpRhLj6h/130eegcdjhXKlHh5m18p59Vl+PZWegiDZlWKZpY3G8xOiPl5GNy57ek+wc5c9jYT6lCD3oMZCLOTxGssj5aQSe1U24vIvTpulGW+doqWd1Ds9hW/AjXnWwZ3kW0/hAK7eHx2DOdmyu8VXylisa/9A73EDtcjvW/h73Nlx844vZ02MJg+7Jd2tk4MN8QfmRgvi5eRyGIiZfRa60rLcS++ejSY9VNKyRT8DZZUXr2SVLwg9+b+w4jWkj3NZQ4wrWfN7cYB5AgXx2smFsCKON4GIwIWMZtliwiYFGsg/d4dC5XNIYc1chvTiAktzHkwu3XBOL8Hk0pd4nrlCSHEFdrbdyV5rdtKehd3zpy7lP/953+1bSUdD3eVLoKPTxi5d3MdtkunFaFR3sxuxRl19mcFgSr7czW6ihZIx8qU3gYSzC3OQj5XHokA2mcIsoxAUu5jzymry+UbGTkxN4TTl8VTr6e3g0Wp1jWG9cOi1jCYJYGPFdDK9PJv8cDa9lBIoXeAC4+Zvj47unnv3UXjoZ+/E+F+OzTYxTC98UeZorPgV62TbltQj7JfUPIG1CyyE7VZQHnxe1/J30zHxIjVBOl5DusQ80Fs+xpN01Ion2uyO1mfMK2Fp7sB3q28v07f0twfqvwToHaFvgexu0R3OXB7eNKPxcV4nsJZjzscINnJXWUYl96QGR2fdnwSfP0n3da3Z2vPag+2HaO+mpe1btN02HPfuiWxdQ2c8yxvqeV3X3wAa2HVX
+sidebar_class_name: "get api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Query Paginated results for Area Or Device Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/areaordevices"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This returns the paginated results for Area Or Device Entity based on the OData Query Parameters.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Top","in":"query","name":"$top","schema":{"format":"int32","type":"integer"},"x-ms-summary":"top"},{"description":"Skip","in":"query","name":"$skip","schema":{"format":"int32","type":"integer"},"x-ms-summary":"skip"},{"description":"Order By","in":"query","name":"$orderby","schema":{"type":"string"},"x-ms-summary":"orderby"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"items":{"description":"example of AreaOrDeviceEntity","properties":{"AreaDeviceNodeId":{"description":"areadevicenodeid","format":"uuid","nullable":true,"title":"AreaDeviceNodeId","type":"string"},"AreaId":{"description":"areaid","format":"uuid","nullable":true,"title":"AreaId","type":"string"},"CreatedAt":{"description":"createdat","format":"date","nullable":true,"title":"CreatedAt","type":"string"},"CreatedBy":{"description":"createdby","format":"uuid","nullable":true,"title":"CreatedBy","type":"string"},"EntityStatus":{"default":0,"description":"entitystatus","enum":[0,1,2,3,4],"format":"int32","nullable":true,"title":"EntityStatus","type":"integer"},"EntityTag":{"description":"entitytag","nullable":true,"title":"EntityTag","type":"string"},"Id":{"description":"A UUID or GUID representing this Entity.","format":"uuid","nullable":true,"title":"Id","type":"string"},"LockStatus":{"default":0,"description":"lockstatus","enum":[0,1],"format":"int32","nullable":true,"title":"LockStatus","type":"integer"},"LockedBy":{"description":"lockedby","format":"uuid","nullable":true,"title":"LockedBy","type":"string"},"ModifiedAt":{"description":"modifiedat","format":"date","nullable":true,"title":"ModifiedAt","type":"string"},"ModifiedBy":{"description":"modifiedby","format":"uuid","nullable":true,"title":"ModifiedBy","type":"string"}},"title":"AreaOrDeviceEntity","type":"object"},"type":"array"}}},"description":"Return the Area Or Device Entity details based on query","x-ms-summary":"Valid"},"404":{"description":"Invalid data provided","x-ms-summary":"Invalid"}}}
+>
+  
+</StatusCodes>
+
+
+      

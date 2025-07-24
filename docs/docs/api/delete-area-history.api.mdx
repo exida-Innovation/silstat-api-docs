@@ -1,0 +1,71 @@
+---
+id: delete-area-history
+title: "Deletes the Entity"
+description: "This deletes a(n) AreaHistory by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1r20AQ/SvLXJqC/IHxpboV7LYuOZTGoYdgylg7tpZIu8rOyNgI/fcysuzYTgj0pF3Nx3szb2YbsMRZdJW44CGFZe7YWCpIiA3e+c/mayT84VhCPJj1wTj5xOb742I2hARCRRE1cmEhhVkXduEPCVQYsSShyJA+NTdgl6mdNRJ6ZEjAqb1CySEBjyVBCs5CApFeahfJQiqxpgQ4y6lESBvYhFiiQAp13XnKodIoluj8FtoE9oOSB1yXJcbDR+DtSmG4Cp6JNfNkPNbPNXeus4yYN3Vhzl2AD0GO7bHmNbI4KK/pePo2/cLvsHDWLGaG66oqHNm32d9zatsEmLI6Ojl0LV8TRop/sZYc0qeVVie4VTku2cEqgZIkDyrkWYVOgBRGGAnzztERjxpnW1CUuDvpWscCUshFKk5HI6zckF3BgjKkPbuCvDgcZqFUU9fgE8UH1e/Y5iuip+u3k6o//yyhl1tlPVpfZVbornbnN0HDxUmhBto7i+Zhca9szNdfC0huWk37h8V9x9DMvVCsomNST1PFsHOWWA/biGWJ4jKDnXw6MJKTqb2lWByc3xqLgqYMlgqzCdFc5D3Bo7dmhpyvA0arC6QNPLKYjCfTwfjLYDLVmagCS4leC+mnf9bvpGLOvai6N4U0kAUv5OW/17jvodBeRlWBziuFTtKmH4EnuBoBSCB1VmcmDyxqbpo1Mj3Gom3190tNOqFPqwR2GB2uVQvdf8d6tpBusGD6oIK73/2mX1O/eSbeZd7/RK8t2mFR6w0SeKbD8RlpV+3FtM/m9/PlHBI4TV4ffx6x/qD8303dNEePZXgm37ZnJNG7grXtP7h22hA=
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/areahistories/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) AreaHistory by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"AreaHistory id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"AreaHistory id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"AreaHistory Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

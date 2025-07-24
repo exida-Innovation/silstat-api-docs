@@ -1,0 +1,71 @@
+---
+id: create-area-device-node-grouping-entity-link
+title: "Creates a new AreaDeviceNodeGroupingEntity link to a Modifier"
+description: "This creates a new AreaDeviceNodeGroupingEntity link to a Modifier"
+sidebar_label: "Creates a new AreaDeviceNodeGroupingEntity link to a Modifier"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsCTxugfCDIDvOtaLohQ7cVS4cdgmBgbCYWYkuuRGcJDP/3gY6dNk02YGtPlkT58VF8fBUkFGJvCjbOQgT3qQkq9oRMQaGy9EtdecIJbU1MX1xCH70rC2PXN5YN71Vm7EaxU6g+u8SsDHnQ4AryKIDTBCK4btD+hnJr7AY0FOgxJyYfIJpXz4hNJ8qtFKf0NJGRSIGcggaLOUEEeRudJqDB00NpPCUQsS9JQ4hTyhGiClbO58gQQVkaucn7Qv4O7I1dQ61h18tDL5R5jn4PEXRJ1XQCtf4zuaawy8zWEnplWk26htNCYEPhbKAgSKPhUD6nPC834dDEQ9MTFco4phBWZZbt4SzhPyPUGsaXqEztFjOTqAkynqc5iTYQ43OIVoLWsVq50ibnMGc3ag3vLrNh8hYzdeO985f4nMTrWkOguPSG941Wl4Se/E8sOYVovpBuMK5Fx0flwEJDTpw6mYnCBW4UL/dh0Ik2DKpH/daDRjFhULXKqUGy+m03IKXPIIKUuQjRYICF6QeTBUbu0y6YjCwb7Mcul1AjkI7yTPR2kMkJ8W77oVPhpx/30MpTZHiIPspSUjdvYezKye9sOJMA7UyCaja9FTbq6m4K+tmD0242vW0Yqht528KbQHJTFd5tTUJBFmuPeY5sYoWNpMRpZMpKm5DP9qK8BBlV7hLK1Mp59QS3S49WdBTSpUOf9EGDPOCBxWg4GveG73ujsShDmpKjlULakb1+oRGe1FxB7CyT5dey2bYLTDseFBkaK0U0oqhaZc2PdhhAQ3TijQdxyXFnTAsNqegymkNVLTHQd5/VtRw/lCRjMF9o2KI3uJQui0WbIOsEohVmgf5S8Jtvree9VRed/GIt7SFaMaItZqXsQMOG9qdO3zjyy7h0xv0fRLr3qxf1kxG/+zqT4ekmq4U4jlC7kFe8iF5Vhxv3bkO2ro/JWPaSqq5/A+ePqm8=
+sidebar_class_name: "post api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Creates a new AreaDeviceNodeGroupingEntity link to a Modifier"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/modifiers/{modifierId}/groups/{groupId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This creates a new AreaDeviceNodeGroupingEntity link to a Modifier
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"ID of the Modifier","in":"path","name":"modifierId","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Modifier ID"},{"description":"ID of the Group","in":"path","name":"groupId","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Group ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"AreaDeviceNodeGrouping link created successfully","x-ms-summary":"AreaDeviceNodeGrouping link created successfully"},"400":{"description":"Invalid Data","x-ms-summary":"Invalid Data"},"404":{"description":"Entity not found","x-ms-summary":"Entity not found"},"500":{"description":"Internal Error","x-ms-summary":"Internal Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

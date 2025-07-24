@@ -1,0 +1,71 @@
+---
+id: delete-reference-type
+title: "Deletes the Entity"
+description: "This deletes a(n) ReferenceType by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsCL+sA5wNBLvNtQLIhQw9Dm2GHIBgYi4mF2pIr0kECw/99oOOkTVp0wE6WLJLv8T1KDVjiLLpKXPCQwjJ3bCwVJMQG7/xn80BbiuQzWh4rMpujcfKJzfdfi9kQEggVRdTchYUUZl3iVQYkUGHEkoQiQ7pqbgCvyztrJPT4kIDTiAolhwQ8lgQpOAsJRHquXSQLqcSaEuAspxIhbWAbYokCKdR1FylKIQWW6PwO2gQOg5IHXJclxuPH8O1agbgKnom19mQ81s81f66zjJi3dWEuWsA/YE4yWfOSWxyV23Q8fQuw8HssnDWLmeG6qgpH9m3994LaNgGmrI5Ojp3wG8JI8Q/WkkO6Wmt/gjs15ZofrBMoSfKgll686GxIYRTPoSotjxpnW1CguD8bXMcCUshFKk5HI6zckF3BgjKkA7uCvDgcZqHUo07lM8tHtfGk9RXX8/bb2dwfv5fQu67unk5f3Fborn3nt0HTxUmhB3RwFs3j4l7ZmK8/F5DcqE2Hx8V9x9DMvVCsomPSSFPFsHeWWBe7iGWJ4jKDnYM6NZKTqb2lWByd3xmLgqYMlgqzDdG8qnuGR2/NDDnfBIxW75IKeGIxGU+mg/GXwWSqY1EFlhK9NtJfgll/QRVz7kUNvmmkgSx4IS//cad7FYUOMqoKdF5JdKY2/RSs4HoKIIHUWZ2bPLDoedNskOlXLNpWfz/XpHO6Wiewx+hwo3boW+BY1xbSLRZMHzRx99Df+Vv2N0/Gu+T7n+hVpz0Wte4ggSc6np6Udt2+mvnZ/H6+nEMC5/Hr8y9z1i+0g3dLN80pYhmeyLftBUl0r2Bt+xdxpeEi
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/referencetypes/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) ReferenceType by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"ReferenceType id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"ReferenceType id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"ReferenceType Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

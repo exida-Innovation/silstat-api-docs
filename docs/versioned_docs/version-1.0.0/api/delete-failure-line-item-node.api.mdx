@@ -1,0 +1,71 @@
+---
+id: delete-failure-line-item-node
+title: "Deletes the Entity"
+description: "This deletes a(n) FailureLineItemNode by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE2L2zAQ/StiLt2C80HIpb4Vki0uoZRulh5CKJNoEouVJa80DgnG/72M42R3s6YsPVmyZvTezHujGjTFbTAlG+8ghWVuotJkiSkqvHOf1T0aWwVaGEcZU/HDa1KbkzL8Kapvj9lsCAn4kgLKDZmGFGZtek8eJFBiwIKYQoR0Vd+A90EZrdh3jCABI3Elcg4JOCwIUjAaEgj0XJlAGlIOFSUQtzkVCGkNOx8KZEihqtpIPpWSFTkYt4cmgeOgiINYFQWG00dINGuBi6V3kaIgTMZj+bytJVbbLcW4q6y6dgc+BHZun1YvN9iT8JyOp+9hMndAa7TKZipWZWkN6fcofUFNk0CkbRUMn1opNoSBwh+sOId0tZYqGfciUx9LWCdQEOdeBL+q0wqTwmh3TrDGkWEqnNcUR7XRDQhoOFzkr4KFFHLmMqajEZZmGI2NjDykYzSWHBscbn0hR23fL4wfRN5z99/wvmzvL6J//72Ezg2i+vn0xQUC3bbCuJ2XdDZs5YCORqN6yBbCRn39mUFy03k6PmSLlqGaO6ZQBhNJIlUZ/MFoirLYBywKZLNV2KopPuKcVOU0BXsybq80MqrCa7Jq54N6de8FHp1WM4z5xmPQMm/SwDOLyXgyHYy/DCZTsUjpIxfopJBuOGbdKAvm3LGIfVNIDVvvmBz/9/R3vWQ68qi0aJxQaaWtO0esoM8RkEBqtDgp95Elqq43GOkx2KaR388ViX9X6wQOGAxuRBp5NUyUtYZ0hzbSPwq6+9W9C/2V3DwuvYV0P9FJ5w5oK9lBAk90Oj8+zbp5NQuz+WK+nEMCF0N2+VfndQupo/fquj5HLP0Tuaa5IrHsBaxp/gIyzfeq
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/failurelineitemnodes/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) FailureLineItemNode by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"FailureLineItemNode id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"FailureLineItemNode id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"FailureLineItemNode Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

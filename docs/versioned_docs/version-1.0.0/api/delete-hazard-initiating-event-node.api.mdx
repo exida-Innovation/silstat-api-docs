@@ -1,0 +1,71 @@
+---
+id: delete-hazard-initiating-event-node
+title: "Deletes the Entity"
+description: "This deletes a(n) HazardInitiatingEventNode by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v2zAM/SsCL+sA5wNBLvNtQLItQzEMa4odimBgIiYmakuuRAfJDP/3gY6TtmlTbNjJkkXyPfI9qQZLcRW4FPYOUphnHI2lnISiwSv33nzB3xjszLEwCrvNdEtOvnlLZrk3LO+i+Xw7m/QhAV9SQK0zs5DCpC1yMRsSKDFgQUIhQnpXnxG5DMvWiO84QgKs0SVKBgk4LAhSYAsJBHqoOJCFVEJFCcRVRgVCWsPahwIFUqiqNlL2pWZFCew20CSw6xWxF6uiwLD/eyrNQkFj6V2kqDij4VA/z/uK1WpFMa6r3JzmBf8AeRirNY918r1yHg/HL8Fmbos5WzObmFiVZc5kX2K9FtQ0CURaVYFl34qzJAwUfmElGaR3C+1VcKPCXeYKiwQKksyrHU56tVKlMMjaND6lkaY5bykOarYNKIGwPZqjCjmkkImUMR0MsOR+5DwKSp92kXNywthf+UKPWiWO7G9U9oMez3o4bj8dzfD15xw6l6gbDqeP7lDodizs1l7ThSXXA9qxRXMzu1Y25uP3GSRnKtDuZnbdMjRTJxTKwJE00pTBb9lS1MUmYFGg8Mpgq6w6SzIylbMU8j27jbEoaApvKTdrH8yTukd4dNZMMGZLj8HqndQBHliMhqNxb/ihNxqrXUofpUCnjXSXZtJdesWcOlHhzxqpYeWdkJP/fCe6iQrtZFDmyE4JtQLXnTvu4LI7IIGUrXor81E0tq6XGOk25E2jvx8qUl/fLRLYYmBcqkz6vnDUtYV0jXmkN5q7+tG9HW91dfYMvdpU9xOdznKLeaU7SOCe9odnqlk0T+7IZHo9nU8hgaNFu/yTF7uFdvNq6bo+RMz9PbmmOSGJ7hWsaf4AnZwROw==
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/hazardinitiatingeventnodes/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) HazardInitiatingEventNode by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"HazardInitiatingEventNode id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"HazardInitiatingEventNode id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"HazardInitiatingEventNode Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

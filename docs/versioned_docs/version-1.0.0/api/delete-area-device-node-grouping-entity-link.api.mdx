@@ -1,0 +1,71 @@
+---
+id: delete-area-device-node-grouping-entity-link
+title: "Deletes AreaDeviceNodeGroupingEntity"
+description: "This deletes a new AreaDeviceNodeGroupingEntity"
+sidebar_label: "Deletes AreaDeviceNodeGroupingEntity"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlMFu2zAMhl9F4GkDlCYIssN8K5BsyJANw9phhyIYGIuJhdqSK9FZAsPvPtCx06bJOqDbybIokr+oj6zBUEyDLdl6BwncZjYqQzkxRYXK0S91HQintLUpffGGPgZfldZtZo4t70GDLymgeM8NJDBtXV9yWVh3DxpKDFgQU4iQ3NXPVMynyq8VZ6Q+e2PXlgJosGIpkTPQ4LAgSKDorHMDGgI9VDaQgYRDRRpimlGBkNSw9qFAhgSqyspJ3pfiHTlYt4FGw25QxEGsigLDHhLok6r5FBr9Z3HtxS4r24jpP8tq07WalhI2lt5FihJpPBrJ51RnrNKUYlxXuTq+EZwFvfxU6vCORj0GyfciaXIp09xtMbdGTZHxPMOJtQ0xOQ9xYEM5z2rtK2fOw5ydaDS8u6yGKTjM1SwEHy7pObE3jYZIaRUEZ0FxRRgo/MSKM0jullJsxo1gegQDlhoK4swL8oduaZEWDxj2VMZh/QhoM2yRiMO6Q6MByRu2fQdUIYcEMuYyJsMhlvYq2jwy8hXtos3JscWr1BdiagnoRd8IUAcOTqT3vx96zD79uIWOP+HsYH3kTlK31bBu7cWdLedioJ01qG7mC1Gjrr/OQT8rOe1u5otWoZpJdctgI8lJVQa/tYaiLDYBiwLZpgpbqBT7to0qZyjke8HOIKMqvKFcrX1QT+L26dEJSTFbeQzmCjRIAQ8qxqPxZDB6PxhPhI3SRy7QyUW6npx2Y+0vA+3kajWk3jE5ftVs7CrLtONhmaN1Iqx96Lqj5e44wyJoSE4G2gEY2e6nyVJD5iOLW12vMNL3kDeNbD9UJHDfLTVsMVhcycvJXLVR1gaSNeaRXrjdm2/doHqrLo7fi3fpNtHJbbeYV/IHGu5pfzqe2zH6b1r6afsKIX39mmXzpHGns8XsdgYa+n7pghwbo1tIHS/Gr+vDiVt/T65pjulY/iVZ0/wGIISJVA==
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes AreaDeviceNodeGroupingEntity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/modifiers/{modifierId}/groups/{groupId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a new AreaDeviceNodeGroupingEntity
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"ID of the Modifier","in":"path","name":"modifierId","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Modifier ID"},{"description":"ID of the Group","in":"path","name":"groupId","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Group ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"AreaDeviceNodeGrouping Deleted successfully"},"400":{"description":"Invalid Data","x-ms-summary":"Invalid Data"},"404":{"description":"Entity not found","x-ms-summary":"Entity not found"},"500":{"description":"Internal Error","x-ms-summary":"Internal Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

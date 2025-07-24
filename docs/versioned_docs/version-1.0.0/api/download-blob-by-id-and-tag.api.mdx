@@ -1,0 +1,71 @@
+---
+id: download-blob-by-id-and-tag
+title: "Download blob by ID and Entity Tag"
+description: "Downloads the blob"
+sidebar_label: "Download blob by ID and Entity Tag"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsCTxvgfCDoZb61aDdk6GFYMuwQBANtMbFQW3IlOktg+L8PlJ00S9Nh6MmyTJOPj++xBU0h96Zm4yykcO9+29KhDooLUlnpMkjA1eRRAub6LOSudNndYa5vrV7iFhKo0WNFTD5AumovEs+12jh/yqrYqYyUHnKRhgSMxNXIBSRgsSJIwci9p+fGeNKQsm8ogZAXVCGkLWycr5AhhaaJkXyo5a/A3tgtdAnsR1UYhaaq0B8gBYGsjIYuuYT3YNnwQS1xe4J51zd/BdWOfDDO9l2/je6/0PSFJVW3lmShdjZQkP9n06k8cmeZLMuxako2NXqeSOcjjRwLXSEkM1aKvKKk65KLzhdNnlMIm6ZUpznDK6xXoyRZoLzxhg9x5BmhJ/8LGy4gXa2lI8atyCE2C+sEKuLCiYy2xFEzEgoT0USYtEZ3k/aF3g6kgN8dJdX4ElIomOuQTiZYm3EwZWDkMe2DKcmywXHuKvkU+TyiWwhDPat/YTy+fj7y9vXnEoYZCm391xcapXRs29iNizM2XMoH2huNajF/FDTq9tscLnmm/WL+GBHKzMnX3gSSSFV7tzOaghy2HqsK2eQKI+HiExFjYzX58mDsVsnUVeU0lVGqZ3mP5dFqdY+hyBx6PYbkKFhIYTad3Yymn0azGxFk7QJXaKWRQdpHc/cmzQ5qfh/TvfjjsrEzgV7fHgN1THue1CUaK5XjJNth/CuI44cE0mjj9Mxg6wQKF1iC2jbDQD982XVy/dyQSHO1TmCH3mAmg5C9Y4KcNaQbLAP9A+6H74N3P6r/WE9X+xgu0YrXdlg28gYJPNGhX19x1bwH0dsb6R1Azgjt1l0CBaEmH+nqA27znGo++/XaqunO/fvlQZxytNFQ/uSX4SAFriJr2z5i6Z7Idt0JKMu7YOy6P8h4Qh0=
+sidebar_class_name: "get api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download blob by ID and Entity Tag"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/blobs/{id}/{versionTag}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Downloads the blob
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Id for the blob to be downloaded","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Blob id"},{"description":"Entity Tag for the Blob","in":"path","name":"versionTag","required":true,"schema":{"type":"string"},"x-ms-summary":"Blob EntityTag"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"multipart/form-data":{"schema":{"format":"binary","type":"string"}}},"description":"Successful operation","x-ms-summary":"Successful operation"}}}
+>
+  
+</StatusCodes>
+
+
+      

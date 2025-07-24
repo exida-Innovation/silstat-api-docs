@@ -1,0 +1,71 @@
+---
+id: delete-area-area-entity
+title: "Deletes the Parent Entity"
+description: "This deletes a Parent Area by it's GUID."
+sidebar_label: "Deletes the Parent Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE2L2zAQ/StiLm1B+SDkUt9KkxaXPSzdLD0soUysSSxWlr3SOCQY//cyjp39XtqlhxDJGs17mvdmGjAUs2ArtqWHBFa5jcqQI6aoUF1iIM/qSyBUm6Oy/CGq79fpYgwayooCyrXUQAKL7o4Eym/p2fIRNFQYsCCmECG5aZ6APcyeLhSXPTJosHJeIeegwWNBkIA1oCHQXW0DGUg41KQhZjkVCEkD2zIUyJBAXXeRfKzkVuRg/Q5aDYdREUexLgoMx7fAW/2U59fcOvO3NDMJTv8v19cItGtBiVXpI0VJPJtO5e8x/VhnGcW4rZ06awbPMLrsJxWNur/ijsJnPp0/z5v6PTprhFKsq8pZMs/TvhTUthoiZXUQj4gtNoSBwm+sOYfkZi3PYtyJZXqZhBysNRTEeSl2OyvQFT+BCQbCSWNNO+kEmDS9Di0IVtgPDqyDgwRy5iomkwlWdhyti4w8pkO0jjxbHGdlIUddfQeiV6LeqcqP6A7bb4OmP36toBdbRD2d3oss0F0FrN+Wcp0tOzmggzWortILYaO+XKagnxScDlfpRcdQLT1TqIKNJJGqCuXeGoqy2AUsCmSbKexEFL9wTqr2hoI7Wr9TBhlVURpyalsG9SDvAI/eqAXGfFNiMNLtUsATi9l0Nh9NP49mc3FGVUYu0MtD+gZY9NNDMPsmO4+DR+9pICs9k+d/mzt9HZkOPKkcWi80Olmb3g03IG4ADUnXXZ0TZDe05lpDXkaWwKbZYKTr4NpWPt/VJK69WWvYY7C4EWVkbtkoawPJFl2kNx7y8Wff9Z/UG+PtxTf0H9FLpfboatmBhls6nsZfN5new+T1AfYOIkMV23X7oCEXy4vlagkahq7ok5zt3y+kmi/mb5pTxKq8Jd+2ZziWvYC17R/F/UGh
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Parent Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/area/{id}/child/{childId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a Parent Area by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Parent Area ID to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Parent Area ID to delete"},{"description":"Child Area ID to delete","in":"path","name":"childId","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Child Area ID to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"Area Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

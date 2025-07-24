@@ -1,0 +1,71 @@
+---
+id: delete-initiating-event
+title: "Deletes the Entity"
+description: "This deletes a(n) InitiatingEvent by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu2zAM/RWBl3WAmwRBLvNtQLLBQw/DmmKHIBiYiImJ2pIr0UECw/8+0HHS1i1WYCdLFqn3+B6pBizFbeBK2DtIYZlzNJYKEooGb9xnkzkWRmG3XxzIidmcDMunaL4/ZPMRJOArCqjZmYUU5l3qIAcSqDBgSUIhQrpqBqBDCLZGfM8CEmCNqVBySMBhSZACW0gg0FPNgSykEmpKIG5zKhHSBnY+lCiQQl13kXKqNCtKYLeHNoHjbRlvY12WGE4fEWjXChUr7yJFvX06mejndQ2x3m4pxl1dmKsi8CHQWS5rnrOLk/KbTWZvITJ3wIKtyeYm1lVVMNn3EN4GtW0CkbZ1YDl18m8IA4U/WEsO6WqtFQru1ZohQ1gnUJLkXs29OtKZkcKYr8GkwXHcsG1BwcLhYnUdCkghF6liOh5jxaPIRRSUER0jF+SEcbT1pR51Wl+Y3qudZ8Vf8b1sv11M/vF7Cb376vL59Nl1he4kYLfzmi4shR7QkS2a++xO2ZivPzNIBorT8T676xiahRMKVeBIGmmq4A9sKepiH7AsUXhrsHNRe0dyMrWzFIoTu72xKGhKb6kwOx/Mi3sv8OismWPMNx6D1blSAc8sppPp7Hby5XY609aofJQSnRbSD8O8H1fFXDhRkweFNLD1TtTO/5nwXkeho4yrAtkpjc7Wpu+EFQw7ARJI2Wr35D6KRjTNBiM9hKJt9fdTTdqvq3UCBwyMG7VEXwaOuraQ7rCI9I9Cbn718/+2gsED8m4B/U90qtYBi1p3kMAjnc4PTLtuX/T+fHG3WC4ggUsT9vnXbusXWsO7VzfNOWLpH8m17RVJdK9gbfsXCm3p7A==
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/initiatingevents/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) InitiatingEvent by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"InitiatingEvent id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"InitiatingEvent id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"InitiatingEvent Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

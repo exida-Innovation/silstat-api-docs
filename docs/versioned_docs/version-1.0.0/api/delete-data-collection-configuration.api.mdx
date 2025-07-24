@@ -1,0 +1,71 @@
+---
+id: delete-data-collection-configuration
+title: "Deletes the Entity"
+description: "This deletes a(n) DataCollectionConfiguration by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMFu2zAM/RWBl3WAmwRBLvNtaLIhQw/DmmGHIBgYi4mFypIrUUECw/8+0HHSNi0CFDtZski9R74nNqApFsHUbLyDHBaliUqTJaao8MZ9VlNkvPPWUiEhd95tzDYFlI1aH5ThT1F9/z2fDiADX9PxZK4hh2l3zZV8yKDGgBUxhQj5srkgcw3aaMW+ZwoZGImvkUvIwGFFkIPRkEGgp2QCacg5JMogFiVVCHkDGx8qZMghpS6SD7VkRQ7GbaHNYH9bxduYqgrD4SNk2pXAxtq7SFGQxqORfF7XFlNRUIybZNW5a/Ah0GN7tXq+yR6E92Q0eQs3dzu0Rqv5VMVU19aQfov2XlDbZhCpSMHwoZNoTRgo/MXEJeTLlVTLuBX5rrGFVQYVcenFGGfVOsFyGGpkLM6JxcvEOGyMbkFIhN3JJilYyKFkrmM+HGJtBtHYyMgD2kdjybHBQeErOer0OFXwIPIfVXlVx2n77WSKH38W0LtFXHE8fXaJQHetMW7jJZ0NWzmgvdGoHub3wkZ9/TmH7EIJ2j/M7zuGauaYQh1MJIlUdfA7oynKYhuwqpBNobBTV/zFJankNAV7MG6rpGmq8pqs2vigXtx7gken1RRjufYYtLxPaeCRxXg0ntyOvtyOJ2KZ2keu0Ekh/eOZ9iNAMGeORfyLQhoovGNy/N9To+8p056HtUXjhFIncdM7ZAnXHAIZ5EaLw0ofWaKbZo2RfgfbtvL7KZH4e7nKYIfB4Fqkkmljoqw15Bu0ka4UePOrnyPXK7sYSu8W1v9EJx3doU2ygwwe6XAcWu2qffFWprP72WIGGZyM2uefHdkvpJ53r26aY8TCP5Jr2zMSy17A2vYfAtIaMw==
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/datacollectionconfigurations/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) DataCollectionConfiguration by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"DataCollectionConfiguration id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"DataCollectionConfiguration id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"DataCollectionConfiguration Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

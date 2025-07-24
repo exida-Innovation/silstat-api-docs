@@ -45,12 +45,24 @@ const config = {
     mermaid: true
   },
 
+  themes: ['docusaurus-theme-openapi-docs'],
+
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          lastVersion: '1.0.0',
+          versions: {
+            current: {
+              label: 'Next',
+              path: 'next',
+            },
+            '1.0.0': {
+              label: 'v1',
+            },
+          },
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -96,7 +108,17 @@ const config = {
             href: 'https://silstat.exsilentia.com',
             label: 'Go to SILstat',
             position: 'right',
-          },          
+          }, 
+          {
+            to: '/docs/api/by-pass',
+            label: 'API Reference',
+            position: 'left',
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownActiveClassDisabled: true,
+          },         
         ],
       },
       footer: {
@@ -131,8 +153,25 @@ const config = {
         languages: ['en'], // language codes
         excludeRoutes : ['pages', 'blogs'],
         highlightResult: true
-      }]
-    ]
+      }],
+        [
+      require.resolve('docusaurus-plugin-openapi-docs',),
+      {
+        id: 'openapi',
+        docsPluginId: 'classic',
+        config: {
+          silstat: {
+            specPath: 'static/openapi/silstat-api-current.json',
+            outputDir: 'versioned_docs/version-1.0.0/api',
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+              categoryLinkSource: 'info',
+            },
+          },
+        },
+      },
+    ],
+  ],
 };
 
 export default config;

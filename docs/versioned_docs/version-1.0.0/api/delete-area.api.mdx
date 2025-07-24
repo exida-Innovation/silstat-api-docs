@@ -1,0 +1,71 @@
+---
+id: delete-area
+title: "Deletes the Entity"
+description: "This deletes a(n) Area by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1r20AQ/SvLXJqC/IHxpboF7BaXHErj0IMxZawdW0ukXWVnZGyE/nsZWXYSx4SetB+zb968N6MGLHEWXSUueEhhmTs2lgoSYoN3/qu5j4RmczROvrD58bSYDSGBUFFEfbKwkMKsi9dASKDCiCUJRYZ01VzBd2DOGgl9EkjA6UWFkkMCHkuCFJyFBCK91C6ShVRiTQlwllOJkDawDbFEgRTquouUY6WvWKLzO2gTOAxKHnBdlhiPN7O2a8XnKngmVsjJeKyf92y5zjJi3taFuRQMt9FPEljz+qQ4KpPpePoRd+H3WDhrFjPDdVUVjuxH2FtBbZsAU1ZHJ8dO3Q1hpPgXa8khXa21LMGdKt/RgnUCJUke1KWL4J3WKYwwEvKocbYFhY37s2d1LCCFXKTidDTCyg3ZFSwoQzqwK8iLw2EWSr3qpDxzelSLToK+Y3befj8b9/PPEnpH1bnT7auTmror1vlt0OfipNALOjiL5nHxoGzM/a8FJFfa0uFx8dAxNHMvFKvomDTSVDHsnSXWxS5iWaK4zGDnl7aG5GRqbykWR+d3xqKgKYOlwmxDNG9wz+nRWzNDzjcBo9WpUAFPLCbjyXQw/jaYTLUJqsBSotdC+gaf9ROmOede1M6rQhrIghfy8v9D2YsndJBRVaDzmrvzsuk9X0HnOSSQOqvNkQcWPW6aDTI9xaJt9filJu3B1TqBPUaHGxVfh9mxri2kWyyYPqF897uf3p7r1czfpNofolcx9ljUuoMEnul4+ie06/ZNP8/mD/PlHBI491j//tJM/UKJ34RumlPEMjyTb9tLJtG9Jmvbf1pUu7I=
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/areas/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) Area by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Area id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Area id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"Area Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

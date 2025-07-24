@@ -1,0 +1,71 @@
+---
+id: delete-modifier-model
+title: "Deletes the Entity"
+description: "This deletes a(n) ModifierModel by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFq20AQ/ZVlLk1BsY3xpboV7BaXBErj0IMxZawdW0OkXWV3ZGyE/r2MLDuxE1LoSbvamXlv3pvdBizFLHAl7B2ksMg5GksFCUWDN+6zufeWN0zh3lsqzPpgWD5F8/1xPh1AAr6igJo7t5DCtEu8yIAEKgxYklCIkC6bK8DL8myN+B4fEmCNqFBySMBhSZACW0gg0HPNgSykEmpKIGY5lQhpAxsfShRIoa67SDlUmhUlsNtCm8D+toy3sS5LDIeP4duVAsXKu0hRa49HI/1c8o91llGMm7owZy3gHzBHmax5yS0Oym0ymrwFmLsdFmzNfGpiXVUFk31b/72gtk0gUlYHlkMn/JowUPiDteSQLlfan+BWTbnkB6sESpLcq6VnLzobUhiWfWipoXHYsG1BgcLuZHAdCkghF6liOhxixYPIRRSUAe0jF+SEcZD5Uo86lU8sH9TGo9YXXE/bbydzf/xeQO+6uns8fXFbobv22W28pgtLoQe0Z4vmYX6nbMzXn3NIrtSm/cP8rmNoZk4oVIEjaaSpgt+xpaiLbcCyROHMYOegTo3kZGpnKRQHdltjUdB0GpmND+ZV3RM8OmumGPO1x2D1LqmARxbj0XhyO/pyO57oWFQ+SolOG+kvwbS/oIo5c6IGXzXSQOadkJP/uNO9ikJ7GVYFslMSnalNPwVLuJwCSCBlq3OT+yh63jRrjPQYirbV38816ZwuVwnsMDCu1Q59Czjq2kK6wSLSB03c/Orv/DX7qyfjXfL9T3Sq0w6LWneQwBMdjk9Ku2pfzfx0djdbzCCB0/j1+ec56xfawbulm+YYsfBP5Nr2jCS6V7C2/QsxhOB4
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/modifiermodels/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) ModifierModel by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"ModifierModel id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"ModifierModel id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"ModifierModel Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

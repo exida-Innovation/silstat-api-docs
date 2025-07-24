@@ -1,0 +1,71 @@
+---
+id: delete-deviation
+title: "Deletes the Entity"
+description: "This deletes a(n) Deviation by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1r20AQ/SvLXJqC/IHxpboV7BaXHErj0IMxZawdW0ukXWVnZGyE/nsZWbYTJw30pF3Nx3szb2YbsMRZdJW44CGFZe7YWCpIiA3e+c9mRnuHajWbo3Hyic33x8VsCAmEimJnWVhIYdYFXbwhgQojliQUGdJVcwN0TeuskdBjQgJOrRVKDgl4LAlScBYSiPRcu0gWUok1JcBZTiVC2sA2xBIFUqjrzlOOlUaxROd30CZwGJQ84LosMR7/Dd2uFYSr4JlY807GY/285s11lhHzti7MpX74AOLUFmuuccVROU3H07fJF36PhbNmMTNcV1XhyL7N/Z5T2ybAlNXRybFr9oYwUvyDteSQrtZam+BOhbhyg3UCJUkeVL5L/7vWpzCyZzceNc62oABxfxazjgWkkItUnI5GWLkhu4IFZUgHdgV5cTjMQqmmrrNndg8q26m/rzier9/OYv74vYReZVXzZL2qq9Bd2c5vg4aLk0INdHAWzcPiXtmYrz8XkNx0mQ4Pi/uOoZl7oVhFx6Sepoph7yyxHnYRyxLFZQY75XRSJCdTe0uxODq/MxYFTRksFWYbonmR9wyP3poZcr4JGK3ujDbwxGIynkwH4y+DyVTHoQosJXotpB/6Wb+Eijn3osLeFNJAFryQl//c276DQgcZVQU6rwQ6QZte/RVc1YcEUmd1VvLAoram2SDTYyzaVn8/16RzuVonsMfocKMy6L471rOFdIsF0wfk7371u/2S9c2z8C7p/id67c0ei1pvkMATHU/PRrtuX8z4bH4/X84hgfPI9fGX2eoPyv7d1E1z8liGJ/Jte0ESvStY2/4FgcrRVg==
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/deviations/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) Deviation by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Deviation id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Deviation id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"Deviation Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: delete-report
+title: "Deletes the Entity"
+description: "This deletes a(n) Report by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVEuL2zAQ/itiLt2C8yDkUt8KSUvKHspulh5CKBNrEouVJa00DgnG/72M42R3sw/oyZLn9c33zagBTamIJrDxDnJYliYpTZaYksIb91XdUfCR1eaoDH9J6ufDYjaEDHygiBK00JDDrIs4uUIGASNWxBQT5KvmqkSf0GjFvi8FGRgxBeQSMnBYEeRgNGQQ6ak2kTTkHGvKIBUlVQh5A1sfK2TIoa47Tz4GiUocjdtBm8FhUKVBqqsK4/GDuu1aKqTgXaIkSSfjsXxeI051UVBK29qqS9vwUf4TFVo9B9mjoJmOp28zL9werdFqMVOpDsEa0m8Tv+fUthkkKupo+NhxvCGMFP9izSXkq7U0xrgT/ntgsM6gIi696HWhvWM8h1HsfNKoMboFSR33Z/XqaCGHkjmkfDTCYIbJ2MTIQzokY8mxwWHhKzF1hJ5x3YtUJ1pfoTtff5wF/PVnCb2youDJ+qyolO4aNm7rJZwNWzHQwWhU94tbQaO+/15AdsUvHe4Xtx1CNXdMMUSTSDxViH5vNCU57CJWFbIpFHaayYBwSap2mqI9GrdTGhlV5TVZtfVRvch7Lo9OqxmmcuMxatkQIfCEYjKeTAfjb4PJVAYh+MQVOmmkH/RZv29Sc+5YJL1qpIHCOybH/7OiPX1MBx4Fi8ZJ9U7Nptd9Bb3ukEFutIxI6ROLoWk2mOgh2raV3081ySyu1hnsMRrciACy2ibJWUO+RZvoE9g3d/0mX/BevQDvwu1/ohNK9mhruUEGj3Q8vRDtun0x17P57Xw5hwzOk9bHX0aqPwj0d1M3zclj6R/Jte2lEstdirXtP0cYxdA=
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/reports/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) Report by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Report id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Report id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"Report Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

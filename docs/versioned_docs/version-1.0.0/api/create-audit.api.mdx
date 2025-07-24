@@ -1,0 +1,71 @@
+---
+id: create-audit
+title: "Creates a new Audit"
+description: "This creates a new Audit"
+sidebar_label: "Creates a new Audit"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWF1v6kYQ/SureTYJlxDS+C3Jva2o0tuokPYBoWqwB9gbe9d3d52AkP97Nf4IdjAEpD7yhNmZPWfGnjmz9gZCsoGRiZNagQ/jpbQiMISOrECh6E3cpaF04IFOyCC7DUPw4SH3qWyGfqZk3b0O1+BvINDKkXJ8iUkSySDfd/nDMscGbLCkGPmqSU4rjJOIhJ4XpN+Uk24NHiSGyZ0ky5sK6vDO7SIUkYfIMc21idGBDyE6Ag9UGkU4iwh8Z1LywEnHf2pwHrh1wkvWGakWkHmV8X69l2u2rnOlqQw/57pft3EV6fLd3bkxuSVHPpbpHWwv0cihS21BNsc0cuB3vVZiW3h6QCqNwZ90vS9ez7vy+tNaPFK5q96nAY0qqDIoqRwtyGyjGuNiX/4OF5/ij3OfPRmP8+U94Gz7FL1w2gP/NxkrtTqQwWvhcUwiNbAWwrYiuRPPz8OvQhvxG/8aSgxZ5lUL4bitC+CLE4qovXwedfByTPFEOnhpKZ1TiqZG1VYybG5vzii3nNSb72AtKf+hQzmX7ZoTl7aTRKcGeICuLbOK7qTcaoAtdNu+2Pco2YNluVZHLXLgXZ/ybJvNVHuqz5ZMW4GnlsxJGlgCtWTMlicjVSATjL5j3CILzJZULopdDhM14XY4s613c7aVfnr2gwIHGTs2A3loncY8caWhsAgl4wWbaGWLEdnrds9z+DyHz3P4PIfPc/g8h89z+H+Yw9+r6StCcigjKzAMidNadWLbsWkco1kfcMw86BdzuQk8VK8YyVB8RYe7aA1rDtFv0ZycTmkn5jpVLTF9dOD0LAWp4eT9yQZmhIbMv5i6JfiTaTb1wOHCgj8p9sLUg5jcUvPLf6It90uC7AyXyA6sDJYMS2sOmJoIfFg6l1j/8hITeWFlxDJ0QSsrIxZEvAh0zCZguiqcEZ9KihNGI6jq769V1f3+z5g5c3fwS+v2STJ1nicfd/7afqD4VpxuPpxgoNft9Tvdm07vFhrHDbia4y/X80G/c33z5abTvx70OrOredDpBbeDq/lggHMcQP3UcNqOSsG7jclb1WtzZH5crU+6re2UGOozpFsX8mMB6orcvId18TwWrUizu9WeYze2CElNZqSaa37eVefTSoYoRsNHrkdx9zSEnQPXajR8zGuUZTZXIEvsKRKjX2VIli8WBuMYnQwEBgFZK5wWbkkiVSGZaM0TP0SHItYhRWKujajhVvSouLntcqbRhHwqKE8n7/fzttPrcxbcdTHmJ3dVZNj+atDIpPYScOjjXtkzjlbuMolQKibMW3hTtvkEyjaferDk/vcnsNnM0NKzibKMl3+mxGIzmXrwikYWCj2ZZh4sCUMyuS68ENfDQxFUpxw+rxilzL/zlpJ51Y67IKDEHfStS9TTnyNWh1n5RZKfAPhg8I3fnfANfMg/afLuXGrytQ1EqBYpLti3wGQBqfSnvEnvQlNecFalCdW6FuFmU3iM9QupLAOvTMXxf8imWZb9B/8QQow=
+sidebar_class_name: "post api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Creates a new Audit"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/audits"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This creates a new Audit
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"description":"example of AuditEntity","properties":{"CreatedAt":{"description":"createdat","format":"date","nullable":true,"title":"CreatedAt","type":"string"},"CreatedBy":{"description":"createdby","format":"uuid","nullable":true,"title":"CreatedBy","type":"string"},"EntityId":{"description":"entityid","format":"uuid","nullable":true,"title":"EntityId","type":"string"},"EntityStatus":{"default":0,"description":"entitystatus","enum":[0,1,2,3,4],"format":"int32","nullable":true,"title":"EntityStatus","type":"integer"},"EntityTag":{"description":"entitytag","nullable":true,"title":"EntityTag","type":"string"},"EntityType":{"description":"entitytype","nullable":true,"title":"EntityType","type":"string"},"EntityVersionTag":{"description":"entityversiontag","nullable":true,"title":"EntityVersionTag","type":"string"},"Id":{"description":"A UUID or GUID representing this Entity.","format":"uuid","nullable":true,"title":"Id","type":"string"},"LockStatus":{"default":0,"description":"lockstatus","enum":[0,1],"format":"int32","nullable":true,"title":"LockStatus","type":"integer"},"LockedBy":{"description":"lockedby","format":"uuid","nullable":true,"title":"LockedBy","type":"string"},"ModifiedAt":{"description":"modifiedat","format":"date","nullable":true,"title":"ModifiedAt","type":"string"},"ModifiedBy":{"description":"modifiedby","format":"uuid","nullable":true,"title":"ModifiedBy","type":"string"},"Type":{"default":0,"description":"Type of this Entity","enum":[0,1,2,3,4,5],"format":"int32","nullable":true,"title":"Type","type":"integer"},"UserId":{"description":"userid","format":"uuid","nullable":true,"title":"UserId","type":"string"},"UserPrincipalName":{"description":"userprincipalname","nullable":true,"title":"UserPrincipalName","type":"string"}},"title":"AuditEntity","type":"object"}}},"description":"Creates a new Audit","required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"description":"example of AuditEntity","properties":{"CreatedAt":{"description":"createdat","format":"date","nullable":true,"title":"CreatedAt","type":"string"},"CreatedBy":{"description":"createdby","format":"uuid","nullable":true,"title":"CreatedBy","type":"string"},"EntityId":{"description":"entityid","format":"uuid","nullable":true,"title":"EntityId","type":"string"},"EntityStatus":{"default":0,"description":"entitystatus","enum":[0,1,2,3,4],"format":"int32","nullable":true,"title":"EntityStatus","type":"integer"},"EntityTag":{"description":"entitytag","nullable":true,"title":"EntityTag","type":"string"},"EntityType":{"description":"entitytype","nullable":true,"title":"EntityType","type":"string"},"EntityVersionTag":{"description":"entityversiontag","nullable":true,"title":"EntityVersionTag","type":"string"},"Id":{"description":"A UUID or GUID representing this Entity.","format":"uuid","nullable":true,"title":"Id","type":"string"},"LockStatus":{"default":0,"description":"lockstatus","enum":[0,1],"format":"int32","nullable":true,"title":"LockStatus","type":"integer"},"LockedBy":{"description":"lockedby","format":"uuid","nullable":true,"title":"LockedBy","type":"string"},"ModifiedAt":{"description":"modifiedat","format":"date","nullable":true,"title":"ModifiedAt","type":"string"},"ModifiedBy":{"description":"modifiedby","format":"uuid","nullable":true,"title":"ModifiedBy","type":"string"},"Type":{"default":0,"description":"Type of this Entity","enum":[0,1,2,3,4,5],"format":"int32","nullable":true,"title":"Type","type":"integer"},"UserId":{"description":"userid","format":"uuid","nullable":true,"title":"UserId","type":"string"},"UserPrincipalName":{"description":"userprincipalname","nullable":true,"title":"UserPrincipalName","type":"string"}},"title":"AuditEntity","type":"object"}}},"description":"New Audit details added","x-ms-summary":"New Audit details added"},"400":{"description":"Invalid Data","x-ms-summary":"Invalid Data"},"404":{"description":"Audit not found","x-ms-summary":"Audit not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

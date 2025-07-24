@@ -1,0 +1,71 @@
+---
+id: find-area-child-by-id
+title: "Find Parent Area Entity by id"
+description: "Finds the Area Parent Entity by it's GUID"
+sidebar_label: "Find Parent Area Entity by id"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVN9v1DAM/lcivwBSt5umvdC3wTZUhBBim3iYTsjX+K6BNimJO66q8r8jp+12u41J/HhqUsf+PtufPYCmUHrTsnEWcrgwVgfFFalTT6g+oSfL6tyy4V6temX4RVDvroszyMC15FH8Cj15is/bytT6TV9oyKBFjw0x+QD5zbAHVZwpt76DggyM/G2RK8jAYkOQg5Eonn50xpOGnH1HGYSyogYhH2DtfIMMOXRdesl9K16BvbEbiBlsD5pwELqmQd9DDimn4gxi9nsyif8zlEqxF/+X1z1mYreU2KF1NlCQcMdHR/IpnWWyLEds29qUqfiLb0EyGHbgJzi3+kYlQ4wx28v2I/2cW5tANTGaOijUmoTvHr3nn8cMTkaCeyW1t1gbrc6Q8XHMB9YU4uRxiIRmHau16+wTxPbskmigsvOG+yS4FaEn/xU7riC/WUphGTciRhjzSW1eZtAQV05UvCFOuhUHWKAnXAxGx0Xq+mKYmh9BgPztLOzO15BDxdyGfLHA1hwGUwdGPqRtMDVZNnhYukZMqb0zy0vp2djkB1zn68UspPdfrmBSmLR2tN4rS6BT+sauXZKA4VoMtDUa1WXxQdio008F7GuBtpfFh8RQxpx8600geala726NpiCHjcemQTalwrKkEBS7NC2d1eTr3tiN0sioGqepVmvn1U7cGR6t9DtUK4deH0IGUsCRxfHR8cnB0euD4xMRQ+sCN5hUPU2dbJcHGtxZSXo/p51R+aOFNhWTacuLtkZjhUvq7TBJ4gZwXAx5Qk1ykNu8FJYZVC6wPByGFQa69nWM8vtHRyLZm2UGt+gNrqQ9shNNkLOGfI11oGcyefl52jev1KPV+STz6SfaXkqNdSc3yOA79eNqTWvw3/AfbMu/YDEXLi5jBhWhJp/KMlpPy5Ja3vF7tPfi7vC+O5chmSdoAr4blekg0Z/kNAzjiyv3nWyMdxRZ7kIwxl/hGWn6
+sidebar_class_name: "get api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Find Parent Area Entity by id"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/area/{id}/child/{childId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Finds the Area Parent Entity by it's GUID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"ID of the Area","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Area ID"},{"description":"ID of the Child Area","in":"path","name":"childId","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Child Area ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"type":"object"}}},"description":"New Parent Area details added","x-ms-summary":"New Parent Area details added"},"400":{"description":"Invalid Data","x-ms-summary":"Invalid Data"},"404":{"description":"Area not found","x-ms-summary":"Area not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

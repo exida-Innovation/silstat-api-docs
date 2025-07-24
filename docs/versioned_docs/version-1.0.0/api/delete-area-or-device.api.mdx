@@ -1,0 +1,71 @@
+---
+id: delete-area-or-device
+title: "Deletes the Entity"
+description: "This deletes a(n) AreaOrDevice by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1r20AQ/SvLXJqC/IHxpboV7BaXQEvj0IMxZawdW0ukXWVnZGyE/nsZWXZiJwR60q7m472ZN7MNWOIsukpc8JDCMndsLBUkxAbv/GfzNRL+jDPau4zM5micfGLz/XExG0ICoaKIGrqwkMKsi3sdAAlUGLEkociQrpobuKvkzhoJPTgk4NShQskhAY8lQQrOQgKRnmsXyUIqsaYEOMupREgb2IZYokAKdd15yrHSKJbo/A7aBA6DkgdclyXG44fo7VpxuAqeiTX1ZDzWzzV7rrOMmLd1YS6NgI9RTi2y5iW0OCqz6Xj6Nv/C77Fw1ixmhuuqKhzZt+nfc2rbBJiyOjo5dl3fEEaKf7GWHNLVWssT3KkiV/RgnUBJkgdV8yJEp0EKI4yEIdrOk0eNsy0oTNyfta1jASnkIhWnoxFWbsiuYEEZ0oFdQV4cDrNQqqlr8Znjg0p4avQV0/P121nYH3+W0Cuuyp6sL0ordFe889ug4eKkUAMdnEXzsLhXNubrrwUkN72mw8PivmNo5l4oVtExqaepYtg7S6yHXcSyRHGZwU4/HRnJydTeUiyOzu+MRUFTBkuF2YZoXuU9w6O3ZoacbwJGq1ukDTyxmIwn08H4y2Ay1aGoAkuJXgvpF2DWb6Zizr2ovDeFNJAFL+Tl/5e5b6LQQUZVgc4rh07Tpp+BFVzNACSQOqtDkwcWNTfNBpkeY9G2+vu5Jp3R1TqBPUaHGxVDHwHHeraQbrFg+qCEu9/9tt9wv3kr3qXe/0SvTdpjUesNEnii4+ktadftq3mfze/nyzkkcJ69Pv4yZP1BC3g3ddOcPJbhiXzbXpBE7wrWtv8AwTza3A==
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/areaordevices/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) AreaOrDevice by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"AreaOrDevice id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"AreaOrDevice id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"AreaOrDevice Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

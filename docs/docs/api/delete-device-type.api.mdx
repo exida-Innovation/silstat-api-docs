@@ -1,0 +1,71 @@
+---
+id: delete-device-type
+title: "Deletes the Entity"
+description: "This deletes a(n) DeviceType by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1r20AQ/SvLXJqC/IHxpboV7BaXHErj0IMxZawdW0ukXWVnZGyE/nsZWXYcJwRy0q7m4719b3YbsMRZdJW44CGFZe7YWCpIiA3e+a9mRnuX0fJYkdkcjZMvbH4+LmZDSCBUFFELFxZSmHVVL+mQQIURSxKKDOmquYG6auyskdDDQgJOwxVKDgl4LAlScBYSiPRcu0gWUok1JcBZTiVC2sA2xBIFUqjrLlMUPwWW6PwO2gQOg5IHXJclxuMH2O1aUbgKnom18WQ81s9r5lxnGTFv68JcJICPME7SWPNSWByV1XQ8fdt94fdYOGsWM8N1VRWO7Nvm7yW1bQJMWR2dHDu9N4SR4j+sJYd0tdbDCe7UiytysE6gJMmDenixoFM/hZHt8lROHjXOtqAQcX92tI4FpJCLVJyORli5IbuCBWVIB3YFeXE4zEKpoU7cM78Hte4k8SuW5+2Ps6G//i6hd1odPUVfHFbo7uDOb4OWi5NCA3RwFs3D4l7ZmO+/F5Dc6EyHh8V9x9DMvVCsomPSTFPFsHeWWBe7iGWJ4jKDnXc6LJKTqb2lWByd3xmLgqYMlgqzDdFc9T3Do7dmhpxvAkarN0cFPLGYjCfTwfjbYDLVgagCS4leD9IP/qy/i4o596LW3hykgSx4IS+fvb69hEIHGVUFOq8MOkeb3v8VXPkPCaTO6rjkgUWDTbNBpsdYtK3+fq5JZ3O1TmCP0eFGjdBr71jXFtItFkwf0L/709/wV7xvXod3afc/0as8eyxq3UECT3Q8vR7tur2a89n8fr6cQwLnqevrL+PVL5T+u62b5pSxDE/k2/aCJLpXsLb9D0AS1Kw=
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/devicetypes/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) DeviceType by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"DeviceType id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"DeviceType id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"DeviceType Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

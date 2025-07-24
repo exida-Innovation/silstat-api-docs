@@ -1,0 +1,71 @@
+---
+id: delete-label
+title: "Deletes the Entity"
+description: "This deletes a(n) Label by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE2L2zAQ/StiLt2C80HIpb4VkhaXHEo3pYcQysSaxGJlySuNQ4Lxfy9jO9ndbFroyfqYmff03owb0BTzYCo23kEK68JEpckSU1T44D6qFe7Iqt1ZGf4Q1def2WIMCfiKAkpOpiGFRZfQRUICFQYsiSlESDfNDUBfzmjFfsCBBIzcVMgFJOCwJEjBaEgg0HNtAmlIOdSUQMwLKhHSBvY+lMiQQl13kXyuJCtyMO4AbQKnURlHsS5LDOf7sO1WAGLlXaQoNWfTqXze8o11nlOM+9qq65vhL+V7GbR6ybFn4TKfzt8XztwRrdEqW6hYV5U1pN/XvRfUtglEyutg+NwJvCMMFH5jzQWkm628i/Eg4ve8YJtASVx4seqqeSd3ChMrIXHSGN2CFA7Hi3F1sJBCwVzFdDLByoyjsZGRx3SKxpJjg+Pcl3LVqXlh9Sg29Zq+4XbZfrmY9+3XGgZXxb3+9sVNge6ea9zeSzobtnJBJ6NRPWYrYaM+f88guVGXTo/ZqmOolo4pVMFEkkhVBX80mqIsDgHLEtnkCjvHpDu4IFU7TcGejTsojYyq9Jqs2vugXtW9wKPTaoGx2HkMWmZDBOxZzKaz+Wj6aTSbSxtUPnKJTh4yNPliGDTBXDoWQ28e0kDuHZPj/5jNQT2mE08qi8YJeGdmM7i+gd51SCA1Wvqj8JHlvGl2GOlnsG0rx881SR9utgkcMRjcifwy0ybKWkO6RxvpH6QffgwzfGF7M/p3yQ6H6ESPI9padpDAE537X0O7bV/19GK5Wq6XkMClzYb8az8NC2F+t3TT9BFr/0Suba9ILHsBa9s/20K/uA==
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/labels/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) Label by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Label id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Label id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"Label Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

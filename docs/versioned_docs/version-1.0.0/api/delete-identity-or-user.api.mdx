@@ -1,0 +1,71 @@
+---
+id: delete-identity-or-user
+title: "Deletes the Entity"
+description: "This deletes a(n) IdentityOrUser by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE2L2zAQ/StiLt2C80HIpb4VkhaXhZZulh5CKJNoEou1Ja9mHBKM/3sZx8nuZkMLPVmyZvTevDejBizxJrpKXPCQwiJ3bCwVJMQG7/xHk1ny4uT4PT4yRbM+Gicf2Hx9zGZDSCBUFFGTMwspzLrMtymQQIURSxKKDOmyuYK8AnDWSOgpQAJOQyqUHBLwWBKk4CwkEOm5dpEspBJrSoA3OZUIaQPbEEsUSKGuu0g5VprFEp3fQZvAYVDygOuyxHj8B367UiSugmdivXwyHuvnbQVcbzbEvK0Lc5ED/oVzksqal+TiqOym4+l7hMzvsXDWZDPDdVUVjuwNgBtBbZsA06aOTo6d9mvCSPE31pJDulxpgYI79eWKIKwSKEnyoL5e7OicSGHk+tgQa6bIo8bZFhQq7s8u17GAFHKRitPRCCs3ZFewoAzpwK7QfBxuQqlHndBnng9q5UnuN2zP2y9ng7/9WkDvvDp8On1xXKE7AZzfBk0XJ4Ue0MFZNA/ZvbIxn39kkFzpTYeH7L5jaOZeKFbRMWmkqWLYO0usi13EskRxG4Odh9o4kpOpvaVYHJ3fGYuCpgyWCrMN0by69wyP3poZcr4OGK1OlAp4YjEZT6aD8afBZKqNUQWWEr0W0g/CrJ9TxZx3dlwX0sAmeCEv/zPavYxCBxlVBTqvLDpXm74PlnDVB5BA6qy2Th5YNKBp1sj0GIu21d/PNWmvLlcJ7DE6XKsh+iQ41rWFdIsF01/KuPvZT/47/lcvx036/U/0KtUei1p3kMATHU8vS7tqX/X9bH4/X8whgXMH9vmXVusXWsLNq5vmFLEIT+Tb9oIkulewtv0DWXPmHA==
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/identityorusers/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) IdentityOrUser by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"IdentityOrUser id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"IdentityOrUser id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"IdentityOrUser Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

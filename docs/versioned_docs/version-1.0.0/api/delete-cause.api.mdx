@@ -1,0 +1,71 @@
+---
+id: delete-cause
+title: "Deletes the Entity"
+description: "This deletes a(n) Cause by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE2P2kAM/SsjX7qVwoIQl+ZWFVpR7aHqsuoBocpkDBltMpMdOwgU5b9XTsJ+sLRST5kP2+/Ne3YasMRZdJW44CGFVe7YWCpIiA3e+I/mC9ZMZnsyTj6w+fawnN9CAqGiiJqztJDCvEvoIiGBCiOWJBQZ0nVzAdCXc9ZIGHAgAac3FUoOCXgsCVJwFhKI9FS7SBZSiTUlwFlOJULawC7EEgVSqOsuUk6VZrFE5/fQJnAclTziuiwxnq7DthsF4Cp4Jtaa08lEP2/5cp1lxLyrC/P8ZvhL+V4Ga15yipNymU1m7wsv/QELZ81ybriuqsKRfV/3WlDbJsCU1dHJqRN4Sxgp/sZackjXG32X4F7F73nBJoGSJA9q1bPmndwpjDMN4XHjbAtaOB7OxtWxgBRykYrT8Rgrd8uuYEG5pSO7grw4vM1CqVedmmdW92pTr+kbbuft17N533+tYHBV3etvX9xU6O65zu+CpouTQi/o6Cya++WdsjGffywhuVCXjvfLu46hWXihWEXHpJGmiuHgLLEu9hHLEsVlBjvHtDskJ1N7S7E4Ob83FgVNGSwVZheieVX3DI/emjlyvg0Yrc6GCtizmE6ms9Hk02g60zaoAkuJXh8yNPl8GDTFXHhRQy8e0kAWvJCX/5jNQT2ho4yrAp1X8M7MZnB9Db3rkEDqrPZHHlj0vGm2yPQQi7bV46eatA/XmwQOGB1uVX6dace6tpDusGD6B+mbn8MMn9lejP5VssMhetXjgEWtO0jgkU79r6HdtK96er64W6wWkMC5zYb8534aFsr8aumm6SNW4ZF82z4jie4VrG3/AAKAwGI=
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/causes/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) Cause by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Cause id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Cause id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"Cause Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

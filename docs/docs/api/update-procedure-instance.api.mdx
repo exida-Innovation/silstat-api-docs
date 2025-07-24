@@ -1,0 +1,71 @@
+---
+id: update-procedure-instance
+title: "Update Entity"
+description: "This updates the ProcedureInstance entity"
+sidebar_label: "Update Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWd9v20YM/lcEPm2AnLiOk656S3+s8NCtRZNsD0Ew0Dravka6U+9Ojg1D//tAnWTLkexG3aufLOtIfiTF432iNiDIxkZmTmoFEdwupA3yTKAjG7gFBV+MjknkhibKOlQxBaScdGsIQWdkkPUmAiK4K5Va4hBChgZTcmQsRPebZ4ATEejZASSngylV3ggIQbJChm4BIShMCSKQfN/Q91waEhA5k1MINl5QihBtYKZNig4iyPNS0q0z1rLOSDWHIoTVILUDm6cpmjVE0PZBCnbD+wDFgwcj695qsWaEWCtHyvElZlki4zIj598sR7dpuLIfNq0wzRLi2FuYH+oEZ4ZT7CRZNnBtCN/TUsb0lxb00eg8k2rOuX9uHA2hKCWVFjSvJMsEPE+IypMEpwnVqXPS8Z/DYB053Jf9sUP/w5HDDhyC7Q3WDfHOEBfhtWujxH4JXROoLJfDQDtzh7Herg9iTdc9gtqZ68DytXbj0OXWw80wTxxEw/B5xZaS1kuGQCpPIbofhq/CUXgRjh8aDknlLkZHPNoD3TollaM5mZ1Xtzjv2DjlksP5D+3fljKtiLsK5Tq4u5u8D7QJPvKvocyQZSQ1Dxx3RG/xrEfWu8toohyZJSZtF2S9csTkTqRl+JOOH1/yFBMdP3Y8wz5PrwHV9ex4ubt4k3KlV+1ujXWE/KcWcia792RarfXalA2DR+C6IqvhesXWMHgYznSVawVnevW2hsEOuN0h1IGX1Yu9AJsmjyJWx97nJZmlpCeuLes33HFnKj1d6XFZW98eftLPo460QiiOmNge4ZWOnn6j2EHBSvvhdLCeBbpAEQnbIkD7RKfgGzbTynqCMBoOT4zkxEhOjOTESE6M5MRITozkxEh+hpH4Qc6OBARbZuJtBIIcyoT32rPpyXPNrWKtUYQwHo7bGWxrKO2Cmc6VaKMcEy4BLtsAf2MiRcmDAlrF5G+3LHdKcYIsxbnh9PH8akpoyPyLuVtAdP/AMyGHc55ttV2DhxBScgvNE7Isd+U0jPXgvFU19nwjRQGMZpb1sCw3CUSwcC6z0fk5ZvLMyoTr6oxWViZcXHgW65SXyvFU7eoN0zxP0/Ycrv/+XtfiH//cQjUy47rwq7s6YegyB8wfv+5mXx88XTxOA+Fihr9dzq7Gg8vXr14PxpdXo8H0YhYPRvGbq4vZ1RXO8Aq6+FofzT7yDdYEo+FoPBi+HozewB7FeamtfaYy3CMJ9Z70p/tLLe4O451+8xwdNg+zlxptnkr7MTcPkJ7WTJ+w9lp5f6Xj3fhl9gqeHs80l2vdImklBQY3k0+8nYLrLxNoEczVzeRTucW49ZHJjLTEkkFm9FIKsnwxN5im6GQcYByTLd/aeJ6dK0EmWTNjE+gwSLWgJJhpEzTs1vCoRPAe7WKq0QhmddwBvBf+kb0ZjMYcRaatS7F8k6tG4FXX3Tb4vRgar4O9ZvvV7ne0cudZglIxdtmMNlUHu2+fe3wkRFJw01to61hms5mipTuTFAXf/p4Td9r7hxCWaKQ//PibgLR8LSCaYWLpSBC/fK3egX8N+nw66IynuomKI15ikvM/COGR1v7TQvFQhLDgN0VTuukX3nlnBresvlNsvWwXYa1xHfNpclS2eVB8ueOWPK2+MHDdQAQGn3gCgE/eR13mpuzv5b0NJKjmOc5Z1pvkrl03/SrUbXevLjiozixsNl7iVj+SKoptUhz/57wUxX+2ZvPp
+sidebar_class_name: "put api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/procedureinstances/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This updates the ProcedureInstance entity
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Id of the ProcedureInstance to be updated","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"ProcedureInstance id to update"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"description":"example of ProcedureInstanceEntity","properties":{"AreaDeviceNodeGroupingId":{"description":"areadevicenodegroupingid","format":"uuid","nullable":true,"title":"AreaDeviceNodeGroupingId","type":"string"},"AreaDeviceNodeId":{"description":"areadevicenodeid","format":"uuid","nullable":true,"title":"AreaDeviceNodeId","type":"string"},"AreaId":{"description":"areaid","format":"uuid","nullable":true,"title":"AreaId","type":"string"},"CreatedAt":{"description":"createdat","format":"date","nullable":true,"title":"CreatedAt","type":"string"},"CreatedBy":{"description":"createdby","format":"uuid","nullable":true,"title":"CreatedBy","type":"string"},"EntityStatus":{"default":0,"description":"entitystatus","enum":[0,1,2,3,4],"format":"int32","nullable":true,"title":"EntityStatus","type":"integer"},"EntityTag":{"description":"entitytag","nullable":true,"title":"EntityTag","type":"string"},"Id":{"description":"A UUID or GUID representing this Entity.","format":"uuid","nullable":true,"title":"Id","type":"string"},"Interval":{"description":"interval","nullable":true,"title":"Interval","type":"string"},"LockStatus":{"default":0,"description":"lockstatus","enum":[0,1],"format":"int32","nullable":true,"title":"LockStatus","type":"integer"},"LockedBy":{"description":"lockedby","format":"uuid","nullable":true,"title":"LockedBy","type":"string"},"ModifiedAt":{"description":"modifiedat","format":"date","nullable":true,"title":"ModifiedAt","type":"string"},"ModifiedBy":{"description":"modifiedby","format":"uuid","nullable":true,"title":"ModifiedBy","type":"string"},"ModifierId":{"description":"modifierid","format":"uuid","nullable":true,"title":"ModifierId","type":"string"},"ProcedureId":{"description":"procedureid","format":"uuid","nullable":true,"title":"ProcedureId","type":"string"},"ProcedureInstanceOverviewStatsEntityId":{"description":"procedureinstanceoverviewstatsentityid","format":"uuid","nullable":true,"title":"ProcedureInstanceOverviewStatsEntityId","type":"string"}},"title":"ProcedureInstanceEntity","type":"object"}}},"description":"ProcedureInstance that needs to be updated","required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"description":"example of ProcedureInstanceEntity","properties":{"AreaDeviceNodeGroupingId":{"description":"areadevicenodegroupingid","format":"uuid","nullable":true,"title":"AreaDeviceNodeGroupingId","type":"string"},"AreaDeviceNodeId":{"description":"areadevicenodeid","format":"uuid","nullable":true,"title":"AreaDeviceNodeId","type":"string"},"AreaId":{"description":"areaid","format":"uuid","nullable":true,"title":"AreaId","type":"string"},"CreatedAt":{"description":"createdat","format":"date","nullable":true,"title":"CreatedAt","type":"string"},"CreatedBy":{"description":"createdby","format":"uuid","nullable":true,"title":"CreatedBy","type":"string"},"EntityStatus":{"default":0,"description":"entitystatus","enum":[0,1,2,3,4],"format":"int32","nullable":true,"title":"EntityStatus","type":"integer"},"EntityTag":{"description":"entitytag","nullable":true,"title":"EntityTag","type":"string"},"Id":{"description":"A UUID or GUID representing this Entity.","format":"uuid","nullable":true,"title":"Id","type":"string"},"Interval":{"description":"interval","nullable":true,"title":"Interval","type":"string"},"LockStatus":{"default":0,"description":"lockstatus","enum":[0,1],"format":"int32","nullable":true,"title":"LockStatus","type":"integer"},"LockedBy":{"description":"lockedby","format":"uuid","nullable":true,"title":"LockedBy","type":"string"},"ModifiedAt":{"description":"modifiedat","format":"date","nullable":true,"title":"ModifiedAt","type":"string"},"ModifiedBy":{"description":"modifiedby","format":"uuid","nullable":true,"title":"ModifiedBy","type":"string"},"ModifierId":{"description":"modifierid","format":"uuid","nullable":true,"title":"ModifierId","type":"string"},"ProcedureId":{"description":"procedureid","format":"uuid","nullable":true,"title":"ProcedureId","type":"string"},"ProcedureInstanceOverviewStatsEntityId":{"description":"procedureinstanceoverviewstatsentityid","format":"uuid","nullable":true,"title":"ProcedureInstanceOverviewStatsEntityId","type":"string"}},"title":"ProcedureInstanceEntity","type":"object"}}},"description":"Update Procedure Instance Entity details","x-ms-summary":"Update ProcedureInstance details"},"404":{"description":"ProcedureInstance not found","x-ms-summary":"ProcedureInstance not found"},"405":{"description":"Validation exception","x-ms-summary":"Validation exception"}}}
+>
+  
+</StatusCodes>
+
+
+      

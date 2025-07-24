@@ -1,0 +1,71 @@
+---
+id: collection-event-approval
+title: "Event Approval"
+description: "This either approves or rejects the event."
+sidebar_label: "Event Approval"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RWBpw1wk67oDvOt2DogQzcUS4cdimBgbCZWK1uqRAcJDP37QMVukibY2pNl6VF8Ih9fByWFwmvH2jaQw12lgyLNFXmFznm7oqCsV54eqOCguCJFK2p4BBlYRx4lcFJCDp+tMVTI77UArlI0GsjAoceamHyA/L47ykgqBahJqdgqidIl9dnRqIX1kkwL2CFXkEGDNUEOuoQMPD212lMJOfuWMghFRTVC3sHC+hoZcmjbhOSNk6jAXjdLiBmsz+pwFtq6Rr+BHCYlxOyInm9JKAzVKAcqTy35zY7L3vGOQZ9xbq0hbE6kfI6KM3lJcLYJFCT04vxcPoVtmBqWJTpndJHqPX4IQq47TmXn0ieIMWYvHjJti4JCWLRGPfcNjgidRMUMLrd0Dq/8YdX+RoJ9eB3s8nWwj/+HxQwCFa3XvEnqmhN68n+w5Qry+5kUlnEpyoMks+/EWCIjzDKoiSsr2nUtJ51KDIyTwOseF8adLuMYd3IO5FeDlltvIIeK2YV8PEanR0GbwMgjWgdtqGGNo8LWcpSaPHCdSue2rT5gPPx+HcT77ffdoKmkpXS6U7OkTkXQzcImIWg2ckBrXaKaTm6Ejbq6ncBLRdB6OrlJDNV1w+Sd14EEOcxgkMXSY10j60JhkobMqLhA25TkzUY3SyVlUrUtKQ2r2rt3SI9Nqb5gqOYWfSnTLAXcsrg4v7g8O/90dnEpLXc2cI1J2/1gbb1hz00OHrE3IW/zrr58TGseO4M6CS51s+t1cA+HOoAM8uQjz1KYZVDZwALtujkG+uVNjLK9NYdkdjrg3Ig9LdAE+hf9E05zkuUjbQ4NZ4WmFVgS2Aq9loxvzP7uZ++j79VrHfkkuX4Tm80+sYG0FqeLGVSEJflEcXtwVRTkeC/kyO3i/rze/pKhGCZmsNlhNPqF3H6STtdtEXf2kZoYn9mx/AvBGP8CvBlyKw==
+sidebar_class_name: "put api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Event Approval"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/eventmetadatas/{id}/approval"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This either approves or rejects the event.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"The Event Id to provide approval for.","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Id"},{"description":"True for approved","in":"query","name":"approved","schema":{"type":"boolean"},"x-ms-summary":"approved"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"type":"object"}}},"description":"Successful operation","x-ms-summary":"Successful operation"},"400":{"description":"No description"},"401":{"description":"No description"},"404":{"description":"No description"},"405":{"description":"No description"}}}
+>
+  
+</StatusCodes>
+
+
+      

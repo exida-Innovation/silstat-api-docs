@@ -1,0 +1,71 @@
+---
+id: update-area-area-entity
+title: "Update Parent Aera Entity"
+description: "This updates the Parent Area entity"
+sidebar_label: "Update Parent Aera Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVVFv2zgM/isCnzbAaYqiezi/dWs3ZNhDsbZ3D0VwYCwm1mZLmkRnCQz99wNlZ02TXLENezBgSRT5kfo+sgdNsQrGs3EWSrivTVSd18gUFdekbjGQZXUVCBVZNryFApyngHJjpqGEh2wuFvLd7Iw8BmyJKUQoH/uDOLNr5ZZ7AaAAI/seuYYCLLYEJRgNBQT61plAGkoOHRUQq5pahLKHpQstMpTQddmSt15uRQ7GriAVsJm0cRK7tsWwhRLGXGbXkIpDQO9q02j1SjJ4rQ7RKXZqQWNdTkOt5P7sz+L9BUxpPgSmyG+d3kq0ylmWypY9oPeNqfKLTb9EybffgzXCcIsvVDGklIqD2uTH5xpZWSIdn0U+zjjJRvTORori/uL8/M/CGfj2jJmaGE0T4aiEL9imAi4HaAfUtGtsjFYfHmbXKnaCNWd54Pm0WXZ6eex0H4B1rJausyecnjbLTt8cO/1bAOQyqiWa5hTKYxOpZ6SqC6JSEeaCMFD4FzuuoXycC5MYVyLaEY6ggXkBLXHtRPC+46xvuQBTDITT3ug0zRqY9qMUEkigsN41gC40UELN7GM5naI3Z9E0kZHPaBNNI80FzyrXylHm8w7lnVBj4NIzrLvl+52sPv5zD6PehEHD6ZPOJHROXzj3+UksNxtsfUNQ9kmkvXSZhYZlC2hjNKq72SdBqq5uZ3BIR9rczT5l9OrGMgUfTCSxVD64tdEU5WcVsG2RTaWwqihmEYmYO6spNFtjV0ojo2qdpkYtXVB7fnfh0Wp1jbFeOAz6DAqQ4g4oLs4vLifnf00uLoUu3kVuMQtr7E8HQqCQ0Q6d+lk+e0r9yWkwlpdpw1PfoLGCIL92P5LkEYQkUECZ+14miKx2TXNeQO0ii2HfLzDSQ2hSku1vHQmPH+cFrDEYXMijyDQxUf41lEtsIr2Qw6vPY3c6bqH/h33cRCvZrbHpZAUFfKXtMJTy+PgdBL80ZX4D266gaZ4KqAk1hVyu4fTdAGlyLz6ebh+1Y0lvuHFVVeT5Rdv9xnD7IAJcjANIqAwlBPwuMwK/D0BdrlBWc97roUG76nAltoNL0ehO4mO+P7Q8/khSJ0vR94PFvftKNqUflWFZS11S+g8HRgwI
+sidebar_class_name: "put api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Parent Aera Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/area/{id}/child/{childId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This updates the Parent Area entity
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"ID of the Parent","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Parent ID"},{"description":"Child (Area) ID of the Parent to be update","in":"path","name":"childId","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Child (Area) ID of the Parent to be update"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object"}}},"description":"Area that needs to be updated","required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"type":"object"}}},"description":"Update Parent Area details","x-ms-summary":"Update Parent Area details"},"400":{"description":"Invalid GUID supplied","x-ms-summary":"Invalid GUID supplied"},"404":{"description":"Parent Area not found","x-ms-summary":"Parent Area not found"},"405":{"description":"Validation failed","x-ms-summary":"Validation failed"}}}
+>
+  
+</StatusCodes>
+
+
+      

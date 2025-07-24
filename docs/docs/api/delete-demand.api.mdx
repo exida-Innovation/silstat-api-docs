@@ -1,0 +1,71 @@
+---
+id: delete-demand
+title: "Deletes the Entity"
+description: "This deletes a(n) Demand by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1r20AQ/SvLXJqC/IHxpboV7BaXHErj0IMxZawdW0ukXWVnZGyE/nsZWXYSxyn0pF3N15v3ZrYBS5xFV4kLHlJY5o6NpYKE2OCd/2xmVKK3ZnM0Tj6x+f64mA0hgVBRRA1aWEhh1kWcXCGBCiOWJBQZ0lVzVaJP6KyR0JeCBJyaKpQcEvBYEqTgNFWk59pFspBKrCkBznIqEdIGtiGWKJBCXXeecqw0iiU6v4M2gcOg5AHXZYnx+EHddq0VuAqeiTXpZDzWz1vEXGcZMW/rwlzaho/yn6iw5iWoOCqa6Xj6PvPC77Fw1ixmhuuqKhzZ94lvObVtAkxZHZ0cO443hJHiH6wlh3S11sYEd8p/DwzWCZQkeVC9LrR3jKcwsp0PjxpnW9DUcX9Wr44FpJCLVJyORli5IbuCBWVIB3YFeXE4zEKppo7QM64HlepE6xt05+u3s4A/fi+hV1YVPFlfFNXSXcPOb4OGi5NCDXRwFs3D4l7RmK8/F5Bc8UuHh8V9h9DMvVCsomNST1PFsHeWWA+7iGWJ4jKDnWY6IJKTqb2lWByd3xmLgqYMlgqzDdG8ynsu32mPnG8CRqsbogSeUEzGk+lg/GUwmeogVIGlRK+N9IM+6/dNa869qKRXjTSQBS/k5X9WtKdP6CCjqkDntXqnZtPrvoJed0ggdd2I5IFFDU2zQabHWLSt/n6uSWdxtU5gj9HhRgXQ1XasZwvpFgumf8C++9Vv8gXv1QtwE27/E71Sssei1hsk8ETH0wvRrttXcz2b38+Xc0jgPGl9/GWk+oNCv5m6aU4ey/BEvm0vlUTvWqxt/wLGD8PS
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/demands/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) Demand by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Demand id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"Demand id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"Demand Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

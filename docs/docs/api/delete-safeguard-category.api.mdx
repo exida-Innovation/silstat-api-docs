@@ -1,0 +1,71 @@
+---
+id: delete-safeguard-category
+title: "Deletes the Entity"
+description: "This deletes a(n) SafeguardCategory by it's GUID."
+sidebar_label: "Deletes the Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE2P2jAQ/SvWXLqVwocQl+ZWFVpR7aEqVD0gVA3xQKx17Kw9QURR/ns1IbC7gNqqp9jxjN+beW/cgKaYBVOy8Q5SWOUmKk2WmKLCB/deLXFH+wqD/oRMex9qta2V4XdRffmxmA0hAV9SQMlfaEhh1iXfZEECJQYsiClESNfNFfAtjNGKfc8FEjASVSLnkIDDgiAFoyGBQM+VCaQh5VBRAjHLqUBIG9j5UCBDClXVRXJdSlbkYNwe2gSOgyIOYlUUGOq/U2g3AhZL7yJFuX8yHsvnbR2xyjKKcVdZdekL/APUqW1aveTbWjhOx9NbkIU7oDVaLWYqVmVpDelbjHtBbZtApKwKhutOhC1hoPALK84hXW+kRsa9CHTLETYJFMS5F5kvunSSpDCK5/DsFG4ojhqjWxDEcDirXgULKeTMZUxHIyzNMBobGXlIx2gsOTY4zHwhR13Lz3SXouup8W9In7efz2p//bmC3gYi9+n0RX6B7vpg3M5LOhu2ckBHo1EtF4/CRn38toDkqu10XC4eO4Zq7phCGUwkiVRl8AejKcpiH7AokE2msJNSLMQ5qcppCrY2bq80MqrCa7Jq54N6de8ZHp1WM4z51mPQMmTSwBOLyXgyHYw/DCZT8UfpIxfopJB+Kmb99Arm3LEofVVIA5l3TI7/c+D7TjIdeVRaNE6IdMI2vR3WcMcOkEBqtLgo95ElqGm2GOlHsG0rv58rEueuNwkcMBjcii7yUpgoaw3pDm2kP1Tz8L1/De6VcfWg3K2i/4lOmnZAW8kOEnii+vTgtJv21RTM5o/z1RwSOHuxz7+Yrl9IFXevbppTxMo/kWvbCxLLXsDa9jdjB/IC
+sidebar_class_name: "delete api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes the Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/safeguardcategories/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This deletes a(n) SafeguardCategory by it's GUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"SafeguardCategory id to delete","in":"path","name":"id","required":true,"schema":{"format":"uuid","type":"string"},"x-ms-summary":"SafeguardCategory id to delete"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"successful operation","x-ms-summary":"SafeguardCategory Deleted successfully"},"404":{"description":"Invalid ID supplied","x-ms-summary":"Invalid ID supplied"}}}
+>
+  
+</StatusCodes>
+
+
+      

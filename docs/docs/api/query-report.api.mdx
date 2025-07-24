@@ -1,0 +1,71 @@
+---
+id: query-report
+title: "Query Paginated results for Report Entity"
+description: "This returns the paginated results for Report Entity based on the OData Query Parameters."
+sidebar_label: "Query Paginated results for Report Entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v20gM/SsDokclNry5VLcWbRdeFOhHsruHwChoDWNNIs2oHCqwIOi/LziSasdp0qLFnjQjcvj48fh6sBQLdo244CGHq9JFwyQt+2ikJNPgznkUsoYptpVEcxPYfKYmsJi3Xpx0ZouRrAk+PfjwBgXNp5a4Mx+RsSYhjueQQWiIUXHWFnJIHmMcyKD55gn5dX+aVGggA6fHr/oKMvBYE+TwQpIpFiXVCHkPN4FrFMjBefljBRlI19B4pR0xDBnsz+p4Ftu6Ru4gB40wZKeQl3fuScw42n4HNIV4jPqBLbF53T2FHNS+7R6AT1hR2Pndd6DmN8MmA6bYBB8p6sPVcqmfInghL3rEpqlckUa0uI2aUX8E5ITqeIQYtrdUiCJOP5AZOxiGITsp63PiU2LHQ+JYEnRVPBBoLvikhn+wclaRLpYXmsHD8Gt/r3ZjlXgNh3tnyT4OMrmB5hepaNlJl8i2JWTiL9hKCfn1RhsluFMiwsTPTQY1SRmUtzsa+arOsODkEHUixPczfVuuIIdSpIn5YoGNO4+uioJyTvvoKvLi8LwItZrSYOZ8LrXb43geZDVf381M++vfq5kF2vrRemCeQqdCnb8JaWZOKjXQ3lk0l+v3mo159XENp8Oi/eX6fcpQp0TcsIuknnNrox52jHWN4gqDRUExGglpvq23xFXn/G4cRx0sVUkyjuLO8OiteYOx3AZkqwqhDRyzWC1XF2fLl2erCx17E6LUmPg4rcKsLz8Up9P6jgj/v4rdNAihvSyaCp3XOhIv+ok81zCTZ5NBGaLor77X+H9zNQz6e9yHpIgu4rYiC/kNVpGeqypJ4nfx76g7iOY9Vq26jDr00+EnZXwu/iSQvwhwJILPgRy08ICz0Qs7BUqbnEFJaIlTB8d3r4qCGjl69Uj0huNt//Ot7tm8hFM+37ZtOmj0WQP9cUZ9P3pchTvywwBz8qJ3GDbDMPwHNbqRow==
+sidebar_class_name: "get api-method"
+info_path: docs/api/exida-silstat-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Query Paginated results for Report Entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/reports"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This returns the paginated results for Report Entity based on the OData Query Parameters.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"description":"Top","in":"query","name":"$top","schema":{"format":"int32","type":"integer"},"x-ms-summary":"top"},{"description":"Skip","in":"query","name":"$skip","schema":{"format":"int32","type":"integer"},"x-ms-summary":"skip"},{"description":"Order By","in":"query","name":"$orderby","schema":{"type":"string"},"x-ms-summary":"orderby"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"items":{"type":"object"},"type":"array"}}},"description":"Return the Report Entity details based on query","x-ms-summary":"Valid"},"404":{"description":"Invalid data provided","x-ms-summary":"Invalid"}}}
+>
+  
+</StatusCodes>
+
+
+      
