@@ -2,10 +2,10 @@
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-import apiVersions from "./docs/api_versioned/versions.json";
+// import apiVersions from "./docs/api_versioned/versions.json";
 import { versionCrumb, versionSelector } from "docusaurus-plugin-openapi-docs/lib/sidebars/utils";
 import api_versionedSidebar from "./docs/api_versioned/sidebar.ts";
-import api_versionedSidebar20240924 from "./docs/api_versioned/2024-09-24-preview/sidebar.ts";
+// import api_versionedSidebar20240924 from "./docs/api_versioned/2024-09-24-preview/sidebar.ts";
 
 /**
  * Creating a sidebar enables you to:
@@ -29,12 +29,12 @@ const sidebars = {
     }
   ],
   "api-versioned": [
-    {
-      type: "html",
-      defaultStyle: true,
-      value: versionSelector(apiVersions),
-      className: "version-button"
-    },
+    // {
+    //   type: "html",
+    //   defaultStyle: true,
+    //   value: versionSelector(apiVersions),
+    //   className: "version-button"
+    // },
     {
       type: "html",
       defaultStyle: true,
@@ -52,30 +52,30 @@ const sidebars = {
       items: api_versionedSidebar
     }
   ],
-  "api-versioned-2024-09-24-preview": [
-    {
-      type: "html",
-      defaultStyle: true,
-      value: versionSelector(apiVersions),
-      className: "version-button"
-    },
-    {
-      type: "html",
-      defaultStyle: true,
-      value: versionCrumb(`2024-09-24-preview`),
-    },
-    {
-      type: "category",
-      label: "SILstat API",
-      link: {
-        type: "generated-index",
-        title: "SILstat API (2024-09-24-preview)",
-        description: "Open API Documentation for the SILstat API for the 2024-09-24-preview version.",
-        slug: "/api-versioned-2024-09-24-preview",
-      },
-      items: api_versionedSidebar20240924
-    }
-  ]
+  // "api-versioned-2024-09-24-preview": [
+  //   {
+  //     type: "html",
+  //     defaultStyle: true,
+  //     value: versionSelector(apiVersions),
+  //     className: "version-button"
+  //   },
+  //   {
+  //     type: "html",
+  //     defaultStyle: true,
+  //     value: versionCrumb(`2024-09-24-preview`),
+  //   },
+  //   {
+  //     type: "category",
+  //     label: "SILstat API",
+  //     link: {
+  //       type: "generated-index",
+  //       title: "SILstat API (2024-09-24-preview)",
+  //       description: "Open API Documentation for the SILstat API for the 2024-09-24-preview version.",
+  //       slug: "/api-versioned-2024-09-24-preview",
+  //     },
+  //     items: api_versionedSidebar20240924
+  //   }
+  // ]
 };
 
 export default sidebars;

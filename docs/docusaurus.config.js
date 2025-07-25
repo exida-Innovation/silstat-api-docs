@@ -5,8 +5,6 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from 'prism-react-renderer';
-/* @type { import type * as Plugin from "@docusaurus/types/src/plugin" } */
-/* @type { import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs" } */
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -96,10 +94,10 @@ const config = {
                 label: 'Current',
                 to: '/docs/api-versioned',
               },
-              {
-                label: '2024-09-24-preview',
-                to: '/docs/api-versioned-2024-09-24-preview',
-              }
+              // {
+              //   label: '2024-09-24-preview',
+              //   to: '/docs/api-versioned-2024-09-24-preview',
+              // }
             ],
           },
           {
@@ -187,15 +185,17 @@ const config = {
               groupPathsBy: 'tag',
               categoryLinkSource: "tag",
             },
-            versions: {
-              // Older versions can be added here
-              "2024-09-24-preview": {
-                specPath: '../openapi/2024-09-24-preview/silstat-api.json',
-                outputDir: 'docs/api_versioned/2024-09-24-preview', // No trailing slash
-                label: '2024-09-24-preview',
-                baseUrl: '/api-versioned/2024-09-24-preview/silstat-api-json', // Leading slash is important
-              },
-            }
+            hideSendButton: true,
+            downloadUrl: 'https://raw.githubusercontent.com/exida-Innovation/silstat-api-docs/refs/heads/main/openapi/current/silstat-api.json',
+            // versions: {
+            //   // Older versions can be added here
+            //   "2024-09-24-preview": {
+            //     specPath: '../openapi/2024-09-24-preview/silstat-api.json',
+            //     outputDir: 'docs/api_versioned/2024-09-24-preview', // No trailing slash
+            //     label: '2024-09-24-preview',
+            //     baseUrl: '/api-versioned/2024-09-24-preview/silstat-api-json', // Leading slash is important
+            //   },
+            // }
           },
         },
       },
