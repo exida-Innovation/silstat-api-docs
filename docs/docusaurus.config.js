@@ -114,7 +114,7 @@ const config = {
             href: 'https://silstat.exsilentia.com',
             label: 'Go to SILstat',
             position: 'right',
-          }
+          },
         ],
       },
       footer: {
