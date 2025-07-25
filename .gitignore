@@ -134,3 +134,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Ignore generated API docs
+
+docs/docs/api_versioned/*
+!docs/docs/api_versioned/readme.md

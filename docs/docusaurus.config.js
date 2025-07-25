@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -45,6 +45,8 @@ const config = {
     mermaid: true
   },
 
+  themes: ['docusaurus-theme-openapi-docs'],
+
   presets: [
     [
       'classic',
@@ -56,6 +58,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/exida-Innovation/silstat-api-docs/edit/main/docs/',
+           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -72,7 +75,7 @@ const config = {
       navbar: {
         title: 'SILstat API Docs',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'SILstat Logo',
           src: 'img/logo-silstat.svg',
         },
         items: [
@@ -81,7 +84,22 @@ const config = {
             docId: 'tutorial-basics/getting-started',
             position: 'left',
             label: 'Getting Started',
-          },    
+          },
+          {
+            type: "dropdown",
+            label: 'API Reference',
+            position: 'left',
+            items: [
+              {
+                label: 'Current',
+                to: '/docs/api-versioned',
+              },
+              // {
+              //   label: '2024-09-24-preview',
+              //   to: '/docs/api-versioned-2024-09-24-preview',
+              // }
+            ],
+          },
           {
             href: 'https://www.exida.com/SILStat',
             label: 'Get SILstat',
@@ -96,7 +114,7 @@ const config = {
             href: 'https://silstat.exsilentia.com',
             label: 'Go to SILstat',
             position: 'right',
-          },          
+          },
         ],
       },
       footer: {
@@ -125,14 +143,64 @@ const config = {
         darkTheme: prismThemes.dracula,
         additionalLanguages: ['powershell', 'bash', 'csharp'],
       },
+      languageTabs: [
+        {
+          highlight: "powershell",
+          language: "powershell",
+          logoClass: "powershell",
+        },
+        {
+          highlight: "bash",
+          language: "curl",
+          logoClass: "curl",
+        },
+        {
+          highlight: "csharp",
+          language: "csharp",
+          logoClass: "csharp",
+        }
+      ]
     }),
-    plugins: [
-      [ require.resolve('docusaurus-lunr-search'), {
+  plugins: [
+    [
+      require.resolve('docusaurus-lunr-search'), {
         languages: ['en'], // language codes
-        excludeRoutes : ['pages', 'blogs'],
+        excludeRoutes: ['pages', 'blogs'],
         highlightResult: true
-      }]
-    ]
+      }
+    ],
+    [
+      require.resolve('docusaurus-plugin-openapi-docs'),
+      {
+        id: 'openapi',
+        docsPluginId: 'classic',
+        config: {
+          api_versioned: {
+            specPath: '../openapi/current/silstat-api.json',
+            outputDir: 'docs/api_versioned',
+            version: "current", // Current version
+            label: "current", // Current version label
+            baseUrl: "/api-versioned/silstat-api-json", // Leading slash is important
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+              categoryLinkSource: "tag",
+            },
+            hideSendButton: true,
+            downloadUrl: 'https://raw.githubusercontent.com/exida-Innovation/silstat-api-docs/refs/heads/main/openapi/current/silstat-api.json',
+            // versions: {
+            //   // Older versions can be added here
+            //   "2024-09-24-preview": {
+            //     specPath: '../openapi/2024-09-24-preview/silstat-api.json',
+            //     outputDir: 'docs/api_versioned/2024-09-24-preview', // No trailing slash
+            //     label: '2024-09-24-preview',
+            //     baseUrl: '/api-versioned/2024-09-24-preview/silstat-api-json', // Leading slash is important
+            //   },
+            // }
+          },
+        },
+      },
+    ],
+  ],
 };
 
 export default config;
