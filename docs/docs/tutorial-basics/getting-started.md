@@ -177,4 +177,4 @@ var result = await client.Areas.GetAsync();
 - 🛡️ [Authorization Guide](./authorization.md)
 - 🔄 [Eventing Overview](./eventing.mdx)
 - 🗂️ [Blob Resources](./blob-resources.mdx)
-- 📘 [API Reference](/category/api_versioned)
+- 📘 [API Reference](../api-versioned)
