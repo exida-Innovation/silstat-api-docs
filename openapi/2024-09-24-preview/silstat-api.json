@@ -3,7 +3,7 @@
   "info": {
     "title": "exida SILstat API",
     "description": "exSILentia Enterprise API provides programmatic access to the underlying data model for exSILentia SILstat and Dashboard.",
-    "version": "1.0.0-preview"
+    "version": "2024-09-24-preview"
   },
   "servers": [
     {

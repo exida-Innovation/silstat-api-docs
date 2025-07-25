@@ -94,12 +94,12 @@ const config = {
             items: [
               {
                 label: 'Current',
-                to: '/api_versioned',
+                to: '/docs/api-versioned',
               },
               {
-                label: '1.0.0-preview',
-                to: '/docs/api_versioned/1.0.0-preview/silstat-api-json',
-              },
+                label: '2024-09-24-preview',
+                to: '/docs/api-versioned-2024-09-24-preview',
+              }
             ],
           },
           {
@@ -178,21 +178,22 @@ const config = {
         docsPluginId: 'classic',
         config: {
           api_versioned: {
-            specPath: '../openapi/silstat-api.json',
+            specPath: '../openapi/current/silstat-api.json',
             outputDir: 'docs/api_versioned',
             version: "current", // Current version
             label: "current", // Current version label
-            baseUrl: "/api_versioned/silstat-api-json", // Leading slash is important
+            baseUrl: "/api-versioned/silstat-api-json", // Leading slash is important
             sidebarOptions: {
-              groupPathsBy: 'tag'
+              groupPathsBy: 'tag',
+              categoryLinkSource: "tag",
             },
             versions: {
               // Older versions can be added here
-              "1.0.0-preview": {
-                specPath: '../openapi/1.0.0-preview/silstat-api.json',
-                outputDir: 'docs/api_versioned/1.0.0-preview', // No trailing slash
-                label: 'v1.0.0-preview',
-                baseUrl: '/api_versioned/1.0.0-preview/silstat-api-json', // Leading slash is important
+              "2024-09-24-preview": {
+                specPath: '../openapi/2024-09-24-preview/silstat-api.json',
+                outputDir: 'docs/api_versioned/2024-09-24-preview', // No trailing slash
+                label: '2024-09-24-preview',
+                baseUrl: '/api-versioned/2024-09-24-preview/silstat-api-json', // Leading slash is important
               },
             }
           },
