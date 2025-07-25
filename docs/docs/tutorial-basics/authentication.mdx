@@ -25,10 +25,6 @@ Before you begin:
 
 - You must have a **Microsoft 365 tenant**
 - Access to the **Microsoft Entra admin center** ([entra.microsoft.com](https://entra.microsoft.com))
-- Permission to register an app (or use one pre-registered by your admin)
-- The following values once the app is registered:
-  - `client_id`
-  - `tenant_id`
 
 ---
 
@@ -81,23 +77,26 @@ To register the exida Entra Enterprise Applications an IT administrator (or simi
 The following Entra Enterprise Applications are to be registered by the Customer, please note that the order in which they are registered is important. 
 
 To support any exida software the following two Applications are required: 
+
 | Application Name | Application URI | Application GUID | Purpose |
 |------------------|-----------------|------------------|---------|
 | **exida Licensing API** | api://api.identity.licensing.innovation.exida.com | 216a3aa5-33e3-4d8c-bfdd-a8cb2e845a38 | Supports API access to Licensing for exida software and enables supporting API access to the Licensing Portal. |
 | **exida Licensing** | api://identity.licensing.innovation.exida.com | fa02c858-f4f3-42e9-90ad-b07a0543a531 | Supports sign-in to the Licensing Portal and allows customer maintenance of License and Licensing information. |
 
 If the customer has SILstat™ licenses, they require the following Applications to be registered: 
-| Application Name | Application Id | Purpose |
-|------------------|----------------|---------|
-| **exida SILstat API** | api://api.identity.silstat.innovation.exida.com | Supports direct API access and enables supporting API access to SILstat. |
-| **exida SILstat** | api://identity.silstat.innovation.exida.com | Supports sign-in to SILstat and all its supporting applications (Dashboard, Admin, Support and Docs). |
+
+| Application Name | Application Id | Application GUID | Purpose |
+|------------------|----------------|------------------|---------|
+| **exida SILstat API** | api://api.identity.silstat.innovation.exida.com | 46230ff1-4f58-459e-9a2d-a3811d5b8836 | Supports direct API access and enables supporting API access to SILstat. |
+| **exida SILstat** | api://identity.silstat.innovation.exida.com | 969b1815-326d-4f78-bfe7-d2b4f665af39 | Supports sign-in to SILstat and all its supporting applications (Dashboard, Admin, Support and Docs). |
 
 If the customer has exSILentia® licenses and they wish to support in app SSO, they require the following Application to be registered: 
-| Application Name | Application Id | Purpose |
-|------------------|----------------|---------|
-| **exida exSILentia** | api://identity.exsilentia.innovation.exida.com | Supports SSO for exSILentia applications (SILAlarm, Cyber, Functional Safety, SERH) and all its supporting modules. |
 
-> 🔎 **Note:** Certain exSILentia® Licenses allow offline activation which only require the customer to access the exida Licensing Portal. 
+| Application Name | Application Id | Application GUID | Purpose |
+|------------------|----------------|------------------|---------|
+| **exida exSILentia** | api://identity.exsilentia.innovation.exida.com | 695b0d51-e15b-4129-b8b7-925194e54418 | Supports SSO for exSILentia applications (SILAlarm, Cyber, Functional Safety, SERH) and all its supporting modules. |
+
+> **Note:** Certain exSILentia® Licenses allow offline activation which only require the customer to access the exida Licensing Portal. 
 
 ---
 
@@ -115,16 +114,32 @@ Before running the script in this section, please ensure your environment is set
 
 ### ✅ Requirements
 
-- **Azure CLI Installed**
+The script relies on the [Azure CLI](https://learn.microsoft.com/en-us/azure/cloud-shell/overview) for interacting with Microsoft Entra ID. You can use it in PowerShell or your favorite terminal.
 
-  The script relies on the Azure CLI for interacting with Microsoft Entra ID.
+[Install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 
-  - 📦 [Install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-  - 🔍 Verify installation:
+<Tabs>
+<TabItem value="Windows" label="windows">
 
-    ```bash
-    az --version
-    ```
+```powershell
+winget install --exact --id Microsoft.AzureCLI
+```
+
+</TabItem>
+<TabItem value="apt (Ubuntu, Debian)" label="linux-deb">
+
+```bash
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+```
+
+</TabItem>
+</Tabs>
+
+Verify installation:
+
+```powershell
+az --version
+```
 
 ### 🚀 Running the Script
 
@@ -134,6 +149,9 @@ You must be signed in to your Microsoft 365 tenant to perform authenticated oper
 
 ```powershell
 az login
+
+# If you don't have an Azure Subscription you can use this version:
+az login --allow-no-subscriptions
 ```
 
 **Set the $appId = 'Id' variable**
@@ -153,34 +171,41 @@ Once you’ve set the `appId`, you can run the command to register the applicati
 az ad sp create
  --id $appId `
  --query id `
- --output tsv `
- ```
+ --output tsv
+```
 
  **Register multiple Enterprise Applications**
 
  You can register multiple Enterprise Applications using a `foreach` loop in Powershell by iterating through a list of `appId` values:
 
- ```powershell
- # Sign into Azure and choose the correct tenant
-# az login
-
+```powershell
 # List of all exida's Entra Applications that need to be registered
 $appIds = @(
     # Licensing Core
-    'api://api.identity.licensing.innovation.exida.com',
-    'api://identity.licensing.innovation.exida.com',
+    '216a3aa5-33e3-4d8c-bfdd-a8cb2e845a38',
+    'fa02c858-f4f3-42e9-90ad-b07a0543a531',
     # SILstat (Optional)
-    'api://api.identity.silstat.innovation.exida.com',
-    'api://identity.silstat.innovation.exida.com',
+    '46230ff1-4f58-459e-9a2d-a3811d5b8836',
+    '969b1815-326d-4f78-bfe7-d2b4f665af39',
     # exSILentia (Optional)
-    'api://identity.exsilentia.innovation.exida.com'
+    '695b0d51-e15b-4129-b8b7-925194e54418'
 )
 
 foreach ($appId in $appIds) {
     # Registering the Enterprise Application (Service Principal)
     # See https://learn.microsoft.com/en-us/cli/azure/ad/sp
-    az ad sp create --id $appId ` --query id ` --output tsv `
+    az ad sp create --id $appId `
+        --query id `
+        --output tsv
+    # To confirm the app is registered use this command
+    az ad sp list --filter "appId eq $appId"
 }
+```
+
+If you make a mistake, you can always remove an application via:
+
+```powershell
+az ad sp delete --id $appId
 ```
 
 For more information about managing service principals with the Azure CLI, see the official Microsoft documentation:
