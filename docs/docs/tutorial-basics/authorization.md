@@ -71,7 +71,7 @@ These are the functions related to setting up and customizing the system to alig
 | User has the ability to Import Data into SILstat Database | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
 | User can add, edit or delete nodes from the Plant Hierarchies | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
 | User can add, edit or delete entries from the SILstat Libraries | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| User can configure Database Settings | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
+| **User can configure Database Settings** | | | | | | |
 | Plant Types | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 | Process Types | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 | Equipment Type (Node Type) | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
