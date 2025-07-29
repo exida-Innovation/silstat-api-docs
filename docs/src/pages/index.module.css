@@ -1,5 +1,5 @@
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
+ * CSS files with the .module.css suffix will be treated as CSS modules,
  * and scoped locally.
  */
 
@@ -8,10 +8,6 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-}
-
-.hero--primary {
-  background-color: #D6331E; /* or #b00020, or whatever you want */
 }
 
 @media screen and (max-width: 996px) {
