@@ -10,6 +10,10 @@
   overflow: hidden;
 }
 
+.hero--primary {
+  background-color: #D6331E; /* or #b00020, or whatever you want */
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
