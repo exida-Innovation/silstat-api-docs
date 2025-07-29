@@ -70,7 +70,7 @@ These are the functions related to setting up and customizing the system to alig
 |-------------------------|----------------------|-------|-----------|---------|--------|
 | User has the ability to Import Data into SILstat Database | ✅ | ❌ | ✅ | ❌ | ❌ |
 | User can add, edit or delete nodes from the Plant Hierarchies | ✅ | ❌ | ✅ | ❌ | ❌ |
-| User can add, edit or delete entries from the SILstat Libraries | ✅ | ❌ | ✅ | ❌ | ❌  |
+| User can add, edit or delete entries from the SILstat Libraries | ✅ | ❌ | ✅ | ❌ | ❌ |
 | User can configure Database Settings | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Plant Types | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Process Types | ✅ | ✅ | ✅ | ❌ | ❌ |
@@ -89,7 +89,7 @@ These are the functions related to capturing and recording events within the sys
 | Function                | Global Administrator | Admin | Configure | Collect | Report |
 |-------------------------|----------------------|-------|-----------|---------|--------|
 |***Record an Area Event*** |  |  |  |  |  |
-| Install | ✅ | ❌ | ✅ | ❌ | ❌  |
+| Install | ✅ | ❌ | ✅ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ✅ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ✅ | ❌ |
 | Move | ✅ | ❌ | ❌ | ✅ | ❌ |
@@ -101,7 +101,7 @@ These are the functions related to capturing and recording events within the sys
 |***Record an Equipment Event*** |  |  |  |  |  |
 | Install | ✅ | ❌ | ✅ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ✅ | ❌ |
-| Remove | ✅ | ❌ | ❌ | ✅ | ❌ 
+| Remove | ✅ | ❌ | ❌ | ✅ | ❌ |
 | Move | ✅ | ❌ | ❌ | ✅ | ❌ |
 |***Record a Procedure*** |  |  |  |  |
 | Proof Test | ✅ | ❌ | ❌ | ✅ | ❌ |
@@ -125,7 +125,7 @@ These functions are used to analyze events.
 
 | Function                | Global Administrator | Admin | Configure | Collect | Report |
 |-------------------------|----------------------|-------|-----------|---------|--------|
-|***Event Approval*** |  |  |  |  |  |  |
+|***Event Approval*** |  |  |  |  |  |
 | Install | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
 | Bypass | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Remove | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
